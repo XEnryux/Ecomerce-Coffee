@@ -13,10 +13,12 @@
 - Chocolate al 40 % de cacao
 - Chocolate al 70 % de cacao
 - Chocolate al 90 % de cacao
+- Acessorios
 
 **Servicios:**
 
 - Desde la finca a sus manos. Eliminamos por completo la intermediación y creamos un modelo en el que nosotros los agricultores vendemos directamente a los consumidores, logrando asegurar una alta calidad y un precio justo
+
 - Envió Nacional Gratis para compras de más de $150.000 / Envió Internacional disponible
 
 
@@ -24,8 +26,24 @@
 **Referentes:**
 
 https://tienda.cafebotero.co/index.php
+
+- Inspirados en los colores y lo simple.
+
 https://latiendadelcafe.co/collections/all/region_caldas+otros_dulces
+
+- Inspirados en la lista de productos que ofrece.
+
 https://momotostadores.com/tienda/?jsf=jet-woo-products-grid&tax=product_cat:101
+
+- Inspirados en la estética de la página.
+
+https://cafelamanchuria.com/shop/
+
+- Inspirados en la temática divertida y la variedad de productos.
+
+https://carrierroasting.com/
+
+- Inspirados en la forma y estructura.
 
 **Pubico:**
 
@@ -33,8 +51,6 @@ https://momotostadores.com/tienda/?jsf=jet-woo-products-grid&tax=product_cat:101
 - Cafeterias
 - Empresas
 
-**Creadores**
+**Creadores:**
 
-Jenny Tellez
-Marcos Gaviña
-David Jaramillo
+Jenny Tellez, Marcos Gaviña, David Jaramillo son agricultores apasionados por la naturaleza, con un toque del buen gusto y compartir esta preferencia que es disfrutar un buen Café.
