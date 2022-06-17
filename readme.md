@@ -15,7 +15,9 @@
 - Chocolate al 90 % de cacao
 
 **Servicios:**
-Desde la finca a sus manos. Eliminamos por completo la intermediación y creamos un modelo en el que nosotros los agricultores vendemos directamente a los consumidores, logrando asegurar una alta calidad y un precio justo
+
+- Desde la finca a sus manos. Eliminamos por completo la intermediación y creamos un modelo en el que nosotros los agricultores vendemos directamente a los consumidores, logrando asegurar una alta calidad y un precio justo
+- Envió Nacional Gratis para compras de más de $150.000 / Envió Internacional disponible
 
 
 
@@ -34,5 +36,5 @@ https://momotostadores.com/tienda/?jsf=jet-woo-products-grid&tax=product_cat:101
 **Creadores**
 
 Jenny Tellez
-Margos Gaviña
+Marcos Gaviña
 David Jaramillo
