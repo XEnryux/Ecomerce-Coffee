@@ -51,6 +51,9 @@ https://carrierroasting.com/
 - Cafeterias
 - Empresas
 
-**Creadores:**
+**Desarrolladores:**
 
-Jenny Tellez, Marcos Gaviña, David Jaramillo son agricultores apasionados por la naturaleza, con un toque del buen gusto y compartir esta preferencia que es disfrutar un buen Café.
+- Jenny Tellez, edad 37 años, desarrollador fullstack
+- Marcos Gaviña, edad 37 años, desarrollador fullstack
+- David Jaramillo, edad 37 años, desarrollador fullstack
+
