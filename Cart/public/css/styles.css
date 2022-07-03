@@ -106,6 +106,9 @@ nav > ul > li a {
     width: 20%;
     height: 100px;
 }
+
+/* seccion carro de compras */
+
 hr.solid{
     border-top: 3px solid #634832;
     margin: 10px;
@@ -117,18 +120,43 @@ section{
 
 .container{
     display: flex;
-    flex-wrap: wrap;
+   flex-direction: column;
+   justify-content: start;
+
+}
+.blank{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 20px;
+    width: 80%;
+    max-width: 300px;
+    background-color: #ece0d1;
+    align-items: center;
+
+}
+.quantity{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 24px;
+    width: 30vw;
+    background-color: #ece0d1;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
 
 }
 
 section div.product{
     display: flex;
-    align-self: center;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
     height: 50px;
-    width: 50%;
+    width: 80%;
     max-width: 300px;
     background-color: #967259;
     align-items: center;
@@ -146,13 +174,22 @@ section div.product img{
 
 section div.price{
     display: flex;
-    align-self: center;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
     height: 24px;
-    width: 50%;
-    max-width: 300px;
+    width: 30vw;
+    background-color: #ece0d1;
+    align-items: center;
+    font-size: 14px;
+}
+section div.total-price{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 24px;
+    width: 30vw;
     background-color: #ece0d1;
     align-items: center;
     font-size: 14px;
@@ -160,17 +197,89 @@ section div.price{
 
 section form{
     display: flex;
-    align-self: center;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 10px;
     height: 24px;
-    width: 50%;
-    max-width: 300px;
+    width: 30vw;
     background-color: #ece0d1;
     align-items: center;
     font-size: 14px;
 }
+
+.total-price{
+    display: flex;
+    padding-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 24px;
+    max-width: 200px;
+    background-color: #ece0d1;
+    align-items: flex-end;
+    justify-content: end;
+    font-size: 14px;
+
+
+}
+.total{
+    display: flex;
+    padding: 10px;
+    padding-right: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 24px;
+    background-color: #ece0d1;
+    align-items: flex-end;
+    justify-content: end;
+    font-size: 14px;
+
+}
+
+.recently-viewed{
+    background-color: #ece0d1;
+
+}
+.subtitle{
+    background-color: #967259;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #ece0d1;
+    border: 0;
+    padding: 5px;
+    font-weight: 400;
+
+}
+.viewed-container{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #967259;
+}
+.articles{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 47%;
+    background-color: #967259;
+    align-items: center;
+
+}
+
+.articles img{
+    padding: 4px;
+    flex-grow: 25%;
+    width: 80%;
+    max-width: fit-content;
+    height: 90%;
+
+
+}
+
 
 /*footer*/
 
@@ -208,6 +317,9 @@ footer ul li{
 }
 
 @media (min-width: 360px){
+    header h1 #logo{
+        font-size: 2.5rem;
+    }
     nav {display: none;
      }
 
@@ -228,13 +340,35 @@ footer ul li{
         padding: 10px;
         width: 40px;
     }
+    
+.blank{
+    display: none;
+}
+.quantity{
+    display:none;
+
+}
+section div.total-price{
+        display: none;
+
+
+    }
+   
+
+    
+    
 
 }
 
 
 @media (min-width: 768px){
+
     div.burger-menu i{
        display: none;
+    }
+    header h1 #logo{
+
+        font-size: 3rem;
     }
 
     nav {
@@ -249,8 +383,43 @@ footer ul li{
 
 
      }
+     .container{
+        flex-direction: row;
+        flex-wrap: nowrap;
+     }
+     .total-price{
+        display: flex;
+        justify-content: center;
+    }
+    section div.price{
+        justify-content: center;
+    }
+    
+    section form{
+        justify-content: center;
+    }
+    .blank{
+        display: flex;
+    }
+    .quantity{
+        display:flex;
+    
+    }
+    section div.total-price{
+            display: flex; 
+    }
+    .viewed-container{
+        flex-wrap: nowrap;
+        
+
+
+    }
+    
+}
+   
+    
+    
+    
     
 
-
-}
 
