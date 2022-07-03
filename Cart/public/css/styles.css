@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{ 
+    font-family: 'Jost', sans-serif;
+}
+/*Header*/
+
+header {
+    background-image: url(/images/GranosArriba.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:fit-content;
+    padding: 2%;
+    margin: 2%;    
+}
+
+header h1 #logo{
+    background-color: #ece0d1;
+    opacity: 0.8;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #634832;
+    text-decoration: none;
+    border: 0;
+    padding: 5px;
+    font-size: 3rem;
+    font-weight: 400;
+}
+header  #logo{
+    display: flex;
+    align-items: center;
+    margin:auto;
+    border: 2%;
+}
+nav {
+    background-color: #ece0d1;
+    opacity: 0.9;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+nav > ul > li {
+
+    display: inline-block;
+}
+
+nav > ul > li a {
+    display: inline-block;
+    display: flex;
+    color: #634832;
+    text-decoration: none;
+    padding: 0.25em;
+    margin: 0.25em;
+    font-weight: 400;
+}
+
+/*Cuerpo*/
+
+#cuerpo{
+    padding: 2%;
+    margin: 2%;
+    min-height: fit-content;
+}
+
+#BannerPpal{
+    display: flex;
+    min-height: fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:fit-content;
+    padding: 10%;
+    background-image: url(/images/manos.jpg);
+    text-decoration: none;
+    color: #634832;
+    text-decoration: none;
+}
+
+#TextoBanner {
+    background-color: #ece0d1;
+    opacity: 0.9;
+    padding: 2%;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#Cafes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    margin: 2%;
+    min-height: fit-content;
+}
+
+#Cafes article{
+    border: 1px solid grey;
+    background-color: #634832;
+    width: 20%;
+    height: 100px;
+}
+hr.solid{
+    border-top: 3px solid #634832;
+    margin: 10px;
+}
+section{
+    background-color: #ece0d1;
+
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+section div.product{
+    display: flex;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 50px;
+    width: 50%;
+    max-width: 300px;
+    background-color: #967259;
+    align-items: center;
+}
+
+section div.product img{
+    padding: 4px;
+    flex-grow: 25%;
+    width: 30%;
+    max-width: fit-content;
+    height: 90%;
+
+
+}
+
+section div.price{
+    display: flex;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 24px;
+    width: 50%;
+    max-width: 300px;
+    background-color: #ece0d1;
+    align-items: center;
+    font-size: 14px;
+}
+
+section form{
+    display: flex;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    height: 24px;
+    width: 50%;
+    max-width: 300px;
+    background-color: #ece0d1;
+    align-items: center;
+    font-size: 14px;
+}
+
+/*footer*/
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ece0d1;
+    height: fit-content;
+    align-items: center;
+    margin:auto
+}
+
+footer ul li .itemFooter{
+    display: flex;
+    font-weight: 900;
+    font-size:xx-large;
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    margin-left:3em;
+    padding: 0.25em;
+    margin: 0.25em;
+}
+
+footer ul li{
+    font-weight: 400;
+    font-size:xx-small;
+    position: relative;
+    display: inline-block;
+    margin-left:3em;
+    padding: 0.25em;
+    margin: 0.25em;
+    text-decoration: none;
+}
+
+@media (min-width: 360px){
+    nav {display: none;
+     }
+
+     .top-header{
+        display: flex;
+        justify-content: space-around;
+
+
+     }
+
+     div.burger-menu i{
+        background-color: #634832;
+        border-radius: 5px;
+        color: #FFF;
+        font-size: 20px;
+        height: 40px;
+        margin: 10px 0px 20px 0px;
+        padding: 10px;
+        width: 40px;
+    }
+
+}
+
+
+@media (min-width: 768px){
+    div.burger-menu i{
+       display: none;
+    }
+
+    nav {
+        background-color: #ece0d1;
+        opacity: 0.9;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    h1 {margin: auto;
+        
+
+
+     }
+    
+
+
+}
+
