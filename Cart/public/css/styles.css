@@ -414,12 +414,34 @@ section div.total-price{
 
 
     }
-    
+    /* desde aqui coloque los styles de register */
 }
-   
-    
-    
-    
-    
+div.burger-menu{
+    text-align: center;
+}
+
+div.burger-menu i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color:#967259;
+    font-size: 20px;
+    height: 40px;
+    margin: 20px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+    background-color:#ece0d1;
+    color:black;
+
+}
+.enviar:hover{
+    background-color:#f1cc9f;    
+}
+.borrar:hover{
+    background-color:#f1cc9f; 
+}  
 
 
