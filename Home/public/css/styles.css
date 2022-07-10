@@ -71,6 +71,7 @@ nav > ul > li a {
 #BannerPpal{
     display: flex;
     min-height: fit-content;
+    min-width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     height:fit-content;
@@ -89,23 +90,36 @@ nav > ul > li a {
     font-weight: 400;
 }
 
-#Cafes{
+#items {
+    display: flex;
+}
+
+section{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    padding: 2%;
-    margin: 2%;
+    padding: 1% 1%;
     min-width: fit-content;
     min-height: fit-content;
+    font-size: 2.5vmin;
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: fit-content;
+    flex-grow:1;
+    padding: 1%;
+    min-width: fit-content;
+    min-height: fit-content;
+    font-size: 2.5vmin;
+    border: black solid 0.5px;
+
 }
 
-#Cafes article{
-    border: 1px solid grey;
-    background-color: #634832;
-    width: 20%;
-    height: 100px;
-}
+
 /*footer*/
 
 footer {
