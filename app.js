@@ -1,26 +1,26 @@
 const express = require('express');
 const app = express();
-app.use(express.static('public'));
+const path = require("path"); 
 
+// para indicarle a express cual es nuestra carpeta estatica
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(3000, ()=>{
+const indexRouter = require('./routes/index.js');
+app.use('/', indexRouter);
+
+app.listen(3001, ()=>{
     console.log('Servidor funcionando');
 });
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+
 app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
+    res.render('views');
 });
 
-app.get('/Cart', (req,res)=>{
-    res.sendFile(__dirname + '/views/Cart.html');
-});
+module.exports = app;
 
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
-});
+console.log(1)
 
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
-});
-
-console.log(12)
