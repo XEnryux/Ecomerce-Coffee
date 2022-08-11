@@ -1,26 +1,36 @@
 const express = require('express');
 const app = express();
-app.use(express.static('public'));
+const path = require("path"); 
+
+const indexRouter = require('./routes/index');
+const rutasProductos = require('./routes/products');
 
 
-app.listen(3000, ()=>{
-    console.log('Servidor funcionando');
-});
+// para indicarle a express cual es nuestra carpeta estatica//
+app.use(express.static(path.join(__dirname, 'public')));
+
+// para ordenar las rutas de nuesto proyecto//
+app.use('/', indexRouter);
+app.use('/products', rutasProductos);
+app.use(express.urlencoded({extended:false})); /**esta linea permite poner seguridad al ingreso de personas a cada vista segun su categoria */
+app.use(express.json());
+
+// ************ Template Engine - (don't touch) ************
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
+    res.render('views');
 });
 
-app.get('/Cart', (req,res)=>{
-    res.sendFile(__dirname + '/views/Cart.html');
+
+/**Servidor funcionando */
+app.listen(3001, ()=>{
+    console.log('Servidor 3001 funcionando');
 });
 
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
-});
 
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
-});
+module.exports = app;
 
-console.log(1)
+console.log(13)
+
