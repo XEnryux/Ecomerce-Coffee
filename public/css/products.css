@@ -1,0 +1,20 @@
+/*Styles de Products*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{ 
+    font-family: 'Jost', sans-serif;
+}
+
+article.product_box {
+    background-color:#ffff;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 300ms;
+    margin: 20px 0;
+    padding: 5px;
+  }
+  

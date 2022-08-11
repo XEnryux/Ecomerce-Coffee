@@ -1,0 +1,22 @@
+[
+    {
+    "nombre y apellido":"",
+    "nombre de usuario":"",
+    "email":"",
+    "contraseña":"",
+    "fecha de nacimiento":"",
+    "domicilio":"",
+    "profile":"sell",
+    "imagen": ""
+    },
+    {
+    "nombre y apellido":"",
+    "nombre de usuario":"",
+    "email":"",
+    "contraseña":"",
+    "fecha de nacimiento":"",
+    "domicilio":"",
+    "profile":"buy",
+    "imagen": ""
+    }
+]

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <!-- head-->
+    <%- include('partials/head') %>
+
+  <body>
+<!-- header -->
+    <%- include('partials/header') %>
+    <main class="register">
+      <form action="/" method="POST">
+        <input type="text" name="name" placeholder="Nombre y apellido" /><br>
+        <input type="text" name="user" placeholder="Nombre de usuario" /><br>
+        <input type="email" name="email" placeholder="E-mail" /><br>
+        <br />
+        <label for="birth_date"><b>Fecha de nacimiento</b></label>
+        <br />
+        <input type="date" name="birth_date" id="birth_date" />
+        <br />
+        <input type="text" name="addres" placeholder="Domicilio" />
+        <h4>Perfil del usuario</h4>
+        <div class="profile">
+          <input type="radio" name="profile" value="buy" id="buy" />
+          <label for="buy">Comprador</label>
+          <input type="radio" name="profile" value="sell" id="sell" />
+          <label for="sell">Vendedor</label>
+        </div>
+        <h4>Intereses</h4>
+        <div class="interests">
+          <div>
+            <input type="checkbox" name="interests" value="a" id="a" />
+            <label for="a">Café Fuerte</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interests" value="b" id="b" />
+            <label for="b">Café Suave</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interests" value="c" id="c" />
+            <label for="c">Café Exótico</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interests" value="d" id="d" />
+            <label for="d">Café de Finca</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interests" value="e" id="e" />
+            <label for="e">Café Original</label>
+          </div>
+        </div>
+        <h4>Elegí tu foto de usuario</h4>
+        <input type="file" name="avatar" />
+        <br />
+        <br />
+        <input type="password" name="pass" placeholder="Elegí tu contraseña" maxlength="30" pattern="[A-Za-z0-9@#$%!]{8,20}"required/>
+        <input
+          type="password"
+          name="pass_confirm"
+          placeholder="Confirmá tu contraseña"
+        />
+        <br>
+        <br>
+        <input type="submit" value="Enviar" class="enviar" />
+        <br>
+        <input type="reset" value="Borrar" class="borrar" />
+        <br>
+        <br>
+      </form>
+    </main>
+      <!-- footer -->
+      <%- include('partials/footer') %>
+  </body>
+</html>

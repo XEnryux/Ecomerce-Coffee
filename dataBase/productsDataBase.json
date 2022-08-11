@@ -1,0 +1,160 @@
+[
+    {
+        "id":1,
+        "Nombre del producto": "Café Sensaciones Torrado Suave",
+        "Descripción": "El café ideal para disfrutar todos los días.",
+        "Imagen": "/images/productsImage/1A-cafe.jpg",
+        "Categoría": "molido",
+        "Presentación": "500 gm",
+        "Precio": 1065.00, 
+        "Destacado": false 
+    },
+    {
+        "id":2,
+        "Nombre del producto": "Café Sensaciones Torrado Intenso",
+        "Descripción": "El café ideal para disfrutar todos los días.",
+        "Imagen": "/images/productsImage/2A-cafe.jpg",
+        "Categoría": "molido",
+        "Presentación": "500 gm",
+        "Precio": 1150.00, 
+        "Destacado": true 
+    },
+    {
+        "id":3,
+        "Nombre del producto": "Café Blanco",
+        "Descripción": "Sabor intenso, aroma fuerte y persistente. Ideal para los amantes del café.",
+        "Imagen": "/images/productsImage/3-cafe.jpg",
+        "Categoría": "grano",
+        "Presentación": "500 gm",
+        "Precio": 3242.28,
+        "Destacado": true 
+    },
+    {
+        "id":4,
+        "Nombre del producto": "Café Sensaciones saquitos",
+        "Descripción": "Café tostado con azúcar blanco molido",
+        "Imagen": "/images/productsImage/4A-cafe.jpg",
+        "Categoría": "saquitos",
+        "Presentación": "10gr 25 unidades",
+        "Precio": 640.00, 
+        "Destacado": false 
+    },
+    {
+        "id":5,
+        "Nombre del producto": "Café Molido Intenso saquitos",
+        "Descripción": "El café ideal para la oficina",
+        "Imagen": "/images/productsImage/5A-cafe.jpg",
+        "Categoría": "saquitos",
+        "Presentación": "20gm 8 saquitos",
+        "Precio": 530.00,
+        "Destacado": false 
+    },
+    {
+        "id":6,
+        "Nombre del producto": "Café Franja Blanca",
+        "Descripción": "Blend de Colombia y Brasil con un tostado natural tipo suizo y un torrado español. Sabor fino, fuerte y natural con un aroma fino, pronunciado y fuerte. Ideal para tomar solo o con leche.",
+        "Imagen": "/images/productsImage/6A-cafe.jpg",
+        "Imagen2":"/images/productsImage/6B-cafe.jpg",
+        "Categoría": "premium",
+        "Presentación": "1kg",
+        "Precio": 5820, 
+        "Destacado": false 
+    },
+    {
+        "id":7,
+        "Nombre del producto": "Fluminense",
+        "Descripción": "Blend de Brasil con un tostado natural tipo suizo y un torrado español. Sabor y aroma fuerte. Ideal para tomar solo o con leche.",
+        "Imagen": "/images/productsImage/7A-cafe.jpg",
+        "Imagen2": "/images/productsImage/7B-cafe.jpg",
+        "Categoría": "premium",
+        "Presentación": "1kg",
+        "Precio": 5310, 
+        "Destacado": false 
+    },
+    {
+        "id":8,
+        "Nombre del producto": "Express",
+        "Descripción": "Blend de Brasil con un tostado natural tipo suizo. Sabor delicado, profundo y pronunciado con un aroma fuerte y persistente. Para tomar solo o con leche.",
+        "Imagen": "/images/productsImage/8A-cafe.jpg",
+        "Imagen2":"/images/productsImage/8B-cafe.jpg",
+        "Categoría": "premium",
+        "Presentación": "1kg",
+        "Precio": 9400.00,
+        "Destacado": false 
+    },
+    {
+        "id":9,
+        "Nombre del producto": "Descafeinado",
+        "Descripción": "Blend Colombiano con un tostado natural tipo italiano. Sabor delicado y suave, con un aroma fino y persistente. Para tomar solo o con leche.",
+        "Imagen": "/images/productsImage/9A-cafe.jpg",
+        "Imagen2":"/images/productsImage/9B-cafe.jpg",
+        "Categoría": "premium",
+        "Presentación": "1kg",
+        "Precio": 5310.00,
+        "Destacado": false 
+    },
+    {
+        "id":10,
+        "Nombre del producto": "Cinta Azul",
+        "Descripción": "Blend de Colombia y Brasil con un tostado natural tipo suizo y torrado español. Sabor delicado con un aroma persistente. Ideal para tomar con leche.",
+        "Imagen": "/images/productsImage/10A-cafe.jpg",
+        "Imagen2":"/images/productsImage/10B-cafe.jpg",
+        "Categoría": "premium",
+        "Presentación": "1kg",
+        "Precio": 6280.00,
+        "Destacado": false 
+    },
+    {
+        "id":11,
+        "Nombre del producto": "Noir",
+        "Descripción": "Blend de Brasil con un torrado tipo español. Sabor y aroma muy fuerte. Para tomar con leche.",
+        "Imagen": "/images/productsImage/11A-cafe.jpg",
+        "Imagen2":"/images/productsImage/11B-cafe.jpg",
+        "Categoría": "premium",
+        "Presentación": "1kg",
+        "Precio": 5000.00,
+        "Destacado": false 
+    },
+    {
+        "id":12,
+        "Nombre del producto": "Seleccion",
+        "Descripción": "Blend Colombiano y Brasileño, con un tostado natural tipo suizo. Sabor delicado y suave con un aroma profundo, fino y persistente. Ideal para tomar solo.",
+        "Imagen": "/images/productsImage/12A-cafe.jpg",
+        "Imagen2":"/images/productsImage/12B-cafe.jpg",
+        "Categoría": "premium",
+        "Presentación": "1kg",
+        "Precio": 10000.00,
+        "Destacado": true 
+    },
+    {
+        "id":13,
+        "Nombre del producto": "Barra de chocolate 60% cacao",
+        "Descripción": "Barra de chocolate al 60% de Cacao. Nace de las montañas Andinas de Calda, con su aroma que brinda una experiencia inigualable.",
+        "Imagen": "/images/productsImage/13-chocolate.jpg",
+        "Categoría": "chocolate",
+        "Presentación": "50gr",
+        "Precio": 510.00,
+        "Destacado": true 
+    },
+    {
+        "id":14,
+        "Nombre del producto": "Barra de chocolate 70% cacao",
+        "Descripción": "Chocolate negro semiamargo con 70% de Cacao, con las caracteristicas del sabor único de Calda",
+        "Imagen": "/images/productsImage/14-chocolate.jpg",
+        "Categoría": "chocolate",
+        "Presentación": "50gr",
+        "Precio": 800.00,
+        "Destacado": true 
+    },
+    {
+        "id":15,
+        "Nombre del producto": "Chocolate 90% Cacao",
+        "Descripción": "Chocolate Santo Aroma semiamargo 90% de cacao",
+        "Imagen": "/images/productsImage/15-chocolate.jpg",
+        "Categoría": "chocolate",
+        "Presentación": "50gr",
+        "Precio": 900.00,
+        "Destacado": true 
+    }
+
+]
