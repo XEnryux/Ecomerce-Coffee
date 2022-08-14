@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 //Esta parte del codigo no estoy segura */
-const productsBaseDatos = require('../dataBase/productsDataBase.json')
+const productsBaseDatos = require('../data/productsDataBase.json')
 //const usuariosController =require('usuariosController')
 //-----//
 
@@ -20,7 +20,9 @@ const mainController = {
     register: (req, res) => {
         res.render('register');
      },
-    
+//    products: (req, res) =>{
+//     res.render('products');
+//    } 
 };
 
 module.exports = mainController;
