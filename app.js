@@ -3,7 +3,7 @@ const app = express();
 const path = require("path"); 
 
 const indexRouter = require('./routes/index');
-const rutasProductos = require('./routes/products');
+const rutesProducts = require('./routes/products');
 
 
 // para indicarle a express cual es nuestra carpeta estatica//
@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // para ordenar las rutas de nuesto proyecto//
 app.use('/', indexRouter);
-app.use('/products', rutasProductos);
+app.use('/products', rutesProducts);
 app.use(express.urlencoded({extended:false})); /**esta linea permite poner seguridad al ingreso de personas a cada vista segun su categoria */
 app.use(express.json());
 
