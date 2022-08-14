@@ -1,7 +1,7 @@
 // const express = require('express');
 // const path = require('path');
 
-// const productsBaseDatos = require('../dataBase/productsDataBase.json')
+// const productsBaseDatos = require('../data/productsDataBase.json')
 // const mainController= require('/mainControllers')
 
 // const usersController ={
