@@ -1,20 +1,22 @@
 const express = require('express');
 const router = express.Router();
-const mainController = require('../controllers/mainControllers');
+
+const multer = require('multer');
+const mainControllers = require('../controllers/mainControllers');
 
 /* rutas de home */
-router.get('/', mainController.home);
+router.get('/', mainControllers.home);
 
 /* rutas de carrito */ 
-router.get('/cart', mainController.cart);
+router.get('/cart', mainControllers.cart);
 
 /* ruta login */
-router.get('/login', mainController.login);
+router.get('/login', mainControllers.login);
 
 
 
 /* ruta register */
-router.get('/register', mainController.register);
-//router.post('/register', mainController.create);// no funciona
+router.get('/register', mainControllers.register);
+//router.post('/register', mainControllers.create);// no funciona
 
 module.exports = router;
