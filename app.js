@@ -5,6 +5,8 @@ const path = require("path");
 const indexRouter = require('./routes/index');
 const rutesProducts = require('./routes/products');
 
+//* override* sirve para poder utilizar en htlm put y delete/
+const methodOverride = require('method-override');
 
 // para indicarle a express cual es nuestra carpeta estatica//
 app.use(express.static(path.join(__dirname, 'public')));
@@ -15,9 +17,12 @@ app.use('/products', rutesProducts);
 app.use(express.urlencoded({extended:false})); /**esta linea permite poner seguridad al ingreso de personas a cada vista segun su categoria */
 app.use(express.json());
 
-// ************ Template Engine - (don't touch) ************
+// * Template Engine  *
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+///* con el method Override instalado */
+app.use(methodOverride('_method'));
 
 app.get('/', (req,res)=>{
     res.render('views');
