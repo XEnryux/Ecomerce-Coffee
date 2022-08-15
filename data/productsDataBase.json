@@ -1,7 +1,7 @@
 [
     {
         "id":1,
-        "Nombre del producto": "Café Sensaciones Torrado Suave",
+        "Nombre": "Café Sensaciones Torrado Suave",
         "Descripción": "El café ideal para disfrutar todos los días.",
         "Imagen": "/images/productsImage/1A-cafe.jpg",
         "Categoría": "molido",
@@ -11,7 +11,7 @@
     },
     {
         "id":2,
-        "Nombre del producto": "Café Sensaciones Torrado Intenso",
+        "Nombre": "Café Sensaciones Torrado Intenso",
         "Descripción": "El café ideal para disfrutar todos los días.",
         "Imagen": "/images/productsImage/2A-cafe.jpg",
         "Categoría": "molido",
@@ -21,7 +21,7 @@
     },
     {
         "id":3,
-        "Nombre del producto": "Café Blanco",
+        "Nombre": "Café Blanco",
         "Descripción": "Sabor intenso, aroma fuerte y persistente. Ideal para los amantes del café.",
         "Imagen": "/images/productsImage/3-cafe.jpg",
         "Categoría": "grano",
@@ -31,7 +31,7 @@
     },
     {
         "id":4,
-        "Nombre del producto": "Café Sensaciones saquitos",
+        "Nombre": "Café Sensaciones saquitos",
         "Descripción": "Café tostado con azúcar blanco molido",
         "Imagen": "/images/productsImage/4A-cafe.jpg",
         "Categoría": "saquitos",
@@ -41,7 +41,7 @@
     },
     {
         "id":5,
-        "Nombre del producto": "Café Molido Intenso saquitos",
+        "Nombre": "Café Molido Intenso saquitos",
         "Descripción": "El café ideal para la oficina",
         "Imagen": "/images/productsImage/5A-cafe.jpg",
         "Categoría": "saquitos",
@@ -51,7 +51,7 @@
     },
     {
         "id":6,
-        "Nombre del producto": "Café Franja Blanca",
+        "Nombre": "Café Franja Blanca",
         "Descripción": "Blend de Colombia y Brasil con un tostado natural tipo suizo y un torrado español. Sabor fino, fuerte y natural con un aroma fino, pronunciado y fuerte. Ideal para tomar solo o con leche.",
         "Imagen": "/images/productsImage/6A-cafe.jpg",
         "Imagen2":"/images/productsImage/6B-cafe.jpg",
@@ -62,7 +62,7 @@
     },
     {
         "id":7,
-        "Nombre del producto": "Fluminense",
+        "Nombre": "Fluminense",
         "Descripción": "Blend de Brasil con un tostado natural tipo suizo y un torrado español. Sabor y aroma fuerte. Ideal para tomar solo o con leche.",
         "Imagen": "/images/productsImage/7A-cafe.jpg",
         "Imagen2": "/images/productsImage/7B-cafe.jpg",
@@ -73,7 +73,7 @@
     },
     {
         "id":8,
-        "Nombre del producto": "Express",
+        "Nombre": "Express",
         "Descripción": "Blend de Brasil con un tostado natural tipo suizo. Sabor delicado, profundo y pronunciado con un aroma fuerte y persistente. Para tomar solo o con leche.",
         "Imagen": "/images/productsImage/8A-cafe.jpg",
         "Imagen2":"/images/productsImage/8B-cafe.jpg",
@@ -84,7 +84,7 @@
     },
     {
         "id":9,
-        "Nombre del producto": "Descafeinado",
+        "Nombre": "Descafeinado",
         "Descripción": "Blend Colombiano con un tostado natural tipo italiano. Sabor delicado y suave, con un aroma fino y persistente. Para tomar solo o con leche.",
         "Imagen": "/images/productsImage/9A-cafe.jpg",
         "Imagen2":"/images/productsImage/9B-cafe.jpg",
@@ -95,7 +95,7 @@
     },
     {
         "id":10,
-        "Nombre del producto": "Cinta Azul",
+        "Nombre": "Cinta Azul",
         "Descripción": "Blend de Colombia y Brasil con un tostado natural tipo suizo y torrado español. Sabor delicado con un aroma persistente. Ideal para tomar con leche.",
         "Imagen": "/images/productsImage/10A-cafe.jpg",
         "Imagen2":"/images/productsImage/10B-cafe.jpg",
@@ -106,7 +106,7 @@
     },
     {
         "id":11,
-        "Nombre del producto": "Noir",
+        "Nombre": "Noir",
         "Descripción": "Blend de Brasil con un torrado tipo español. Sabor y aroma muy fuerte. Para tomar con leche.",
         "Imagen": "/images/productsImage/11A-cafe.jpg",
         "Imagen2":"/images/productsImage/11B-cafe.jpg",
@@ -117,7 +117,7 @@
     },
     {
         "id":12,
-        "Nombre del producto": "Seleccion",
+        "Nombre": "Seleccion",
         "Descripción": "Blend Colombiano y Brasileño, con un tostado natural tipo suizo. Sabor delicado y suave con un aroma profundo, fino y persistente. Ideal para tomar solo.",
         "Imagen": "/images/productsImage/12A-cafe.jpg",
         "Imagen2":"/images/productsImage/12B-cafe.jpg",
@@ -128,7 +128,7 @@
     },
     {
         "id":13,
-        "Nombre del producto": "Barra de chocolate 60% cacao",
+        "Nombre": "Barra de chocolate 60% cacao",
         "Descripción": "Barra de chocolate al 60% de Cacao. Nace de las montañas Andinas de Calda, con su aroma que brinda una experiencia inigualable.",
         "Imagen": "/images/productsImage/13-chocolate.jpg",
         "Categoría": "chocolate",
@@ -138,7 +138,7 @@
     },
     {
         "id":14,
-        "Nombre del producto": "Barra de chocolate 70% cacao",
+        "Nombre": "Barra de chocolate 70% cacao",
         "Descripción": "Chocolate negro semiamargo con 70% de Cacao, con las caracteristicas del sabor único de Calda",
         "Imagen": "/images/productsImage/14-chocolate.jpg",
         "Categoría": "chocolate",
@@ -148,7 +148,7 @@
     },
     {
         "id":15,
-        "Nombre del producto": "Chocolate 90% Cacao",
+        "Nombre": "Chocolate 90% Cacao",
         "Descripción": "Chocolate Santo Aroma semiamargo 90% de cacao",
         "Imagen": "/images/productsImage/15-chocolate.jpg",
         "Categoría": "chocolate",
