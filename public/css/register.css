@@ -1,0 +1,64 @@
+.register *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.register body{ 
+    font-family: 'Jost', sans-serif;
+}
+.register form {
+    /* Centrar el formulario en la página */
+    margin: 0 auto;
+    width: 400px;
+    /* Esquema del formulario */
+    padding: 1em;
+    border: 1px solid 	#38220f;
+    border-radius: 1em;
+  }
+  
+ .register ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .register form li + li {
+    margin-top: 1em;
+  }
+  
+  .register label {
+    /* Tamaño y alineación uniforme */
+    display: inline-block;
+    width: 190px;
+    text-align: left;
+    color: 	#38220f
+  }
+  
+  .register input,
+  textarea {
+    font: 1em sans-serif;
+      width: 300px;
+    box-sizing: border-box;
+    border: 1px solid 	#634832;
+  }
+  
+  .register input:focus,
+  textarea:focus {
+    /* Destacado adicional para elementos que tienen el cursor */
+    border-color:	#38220f;
+  }
+  
+  .register textarea {
+    /* Alinear los campos de texto multilínea con sus etiquetas */
+    vertical-align: top;
+      /* Proporcionar espacio para escribir texto */
+    height: 5em;
+
+  }
+  
+  .botones {
+    /* Alinear los botones con los campos de texto */
+    padding: 30px; /* mismo tamaño que los elementos de la etiqueta */
+    width: 50px;
+    }
