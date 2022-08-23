@@ -1,0 +1,61 @@
+.login {
+   background-image: url('../images/cafe_chocolate.jpg'); 
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: contain;
+   display: flex;
+   justify-content: center;
+}
+.login form {
+    display: flex;
+    justify-content: center;
+    /* Centrar el formulario en la página */
+    
+    margin:4em;
+    width: 300px;
+    /* Esquema del formulario */
+    padding: 2em;
+    border: 2px solid #ece0d1;
+    border-radius: 1em;
+  }
+  
+ .login ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .login form li + li {
+    margin-top: 1em;
+  }
+
+  .login label {
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    color: 	#38220f
+  }
+
+  .login input,
+  textarea {
+    font: 1em sans-serif;
+    width: 200px;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid 	#634832;
+    background-color: #ece0d1;  
+}
+  
+  .login input:focus,
+  textarea:focus {
+   border-color:	#38220f;
+   
+  }
+
+  .login input.enviar{
+   width: 100px; 
+   margin-top:20px;
+   margin-left: 60px;
+   background-color: #ece0d1;
+   color: #634832;
+  } 
