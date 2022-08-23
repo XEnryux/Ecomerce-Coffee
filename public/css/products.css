@@ -9,12 +9,63 @@ body{
     font-family: 'Jost', sans-serif;
 }
 
-article.product_box {
-    background-color:#ffff;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: 300ms;
-    margin: 20px 0;
-    padding: 5px;
-  }
-  
+.productsH3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color:#38220f;
+    background-color: #dbc1ac;
+}
+
+#Cafes_products{
+    display: flex;
+    background-color: #967259;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    
+}
+
+ section.Cafe_molido{
+    display: flex;
+    background-color: #ece0d1;
+    width: 50em;
+} 
+
+ section.cafe_grano{
+    background-color: #ece0d1;
+    width: 50em;
+ }
+ 
+ section.saquitos{
+    background-color: #ece0d1;
+    width: 50em;
+} 
+section.cafe_especial{
+    background-color: #ece0d1;
+    width: 50em;
+}
+
+
+#chocolates {
+    margin: 0.5em;
+    padding: 0.2;
+    border: #38220f solid 0.25em;    
+}
+
+#chocolates articles.product_box{ 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+  margin: 1em;
+  padding: 0.5em
+}
+
+#chocolates p{
+ font-size: large;   
+ color: #38220f;
+ 
+}
