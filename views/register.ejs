@@ -3,28 +3,51 @@
   <!-- head-->
     <%- include('partials/head') %>
 
-  <body>
+<a link rel="stylesheet" href="../public/css/register.css"></a> 
+ 
+<body>
 <!-- header -->
     <%- include('partials/header') %>
+
     <main class="register">
-      <form action="/" method="POST">
-        <input type="text" name="name" placeholder="Nombre y apellido" /><br>
-        <input type="text" name="user" placeholder="Nombre de usuario" /><br>
-        <input type="email" name="email" placeholder="E-mail" /><br>
-        <br />
+      <form action="register" method="POST">
+        <ul>
+        <li> 
+          <label for="name"><b>Nombre y apellido:</b></label>
+          <input type="text" name="name" placeholder="Nombre y apellido" required><br>
+        </li>
+        <li> 
+          <label for="user"><b>Nombre de usuario:</b></label>
+          <input type="text" name="user" placeholder="Nombre de usuario" required><br>
+        </li> 
+       <li>
+        <label for="email"><b>E-mail:</b></label>
+        <input type="email" name="email" placeholder="E-mail" required><br>
+        <br></li>
+        <li>
         <label for="birth_date"><b>Fecha de nacimiento</b></label>
-        <br />
         <input type="date" name="birth_date" id="birth_date" />
-        <br />
-        <input type="text" name="addres" placeholder="Domicilio" />
-        <h4>Perfil del usuario</h4>
+        <br>
+        </li>
+        <li>
+        <label for="adrees"><b>Domicilio</b></label>
+        <input type="text" name="adressStreet" placeholder="Calle">
+        <input type="number" name="adressNumber" placeholder="altura">
+        <input type="text" name="adressSpecific" placeholder="departamento">  
+        <input type="city" name="adressCity" placeholder="Ciudad">
+      </li>  
+      </ul>
+      <br>
+        <label><B>Perfil del usuario</B></label>
         <div class="profile">
-          <input type="radio" name="profile" value="buy" id="buy" />
-          <label for="buy">Comprador</label>
-          <input type="radio" name="profile" value="sell" id="sell" />
-          <label for="sell">Vendedor</label>
-        </div>
-        <h4>Intereses</h4>
+             <ul>
+            <li><label for="buy">Comprador</label><input type="radio" name="profile" value="buy" id="buy"></li>
+          
+           <li><label for="sell">Vendedor</label><input type="radio" name="profile" value="sell" id="sell"></li>
+          </ul>
+                </div>
+
+        <label><B>Intereses</B></label>
         <div class="interests">
           <div>
             <input type="checkbox" name="interests" value="a" id="a" />
@@ -47,23 +70,23 @@
             <label for="e">Café Original</label>
           </div>
         </div>
-        <h4>Elegí tu foto de usuario</h4>
-        <input type="file" name="avatar" />
-        <br />
-        <br />
+        <br>
+        <label><b>Elegí tu foto de usuario</b></label>
+        <ul>
+          <li>
+            <input type="file" name="avatar" />
+          </li>
+        </ul>
+          <br>
+        <label><b>Contraseña</b></label>
         <input type="password" name="pass" placeholder="Elegí tu contraseña" maxlength="30" pattern="[A-Za-z0-9@#$%!]{8,20}"required/>
-        <input
-          type="password"
-          name="pass_confirm"
-          placeholder="Confirmá tu contraseña"
-        />
+        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" required>
         <br>
+      <div class="botones"> 
+        <input type="submit" value="Enviar" class="enviar">
         <br>
-        <input type="submit" value="Enviar" class="enviar" />
-        <br>
-        <input type="reset" value="Borrar" class="borrar" />
-        <br>
-        <br>
+        <input type="reset" value="Borrar" class="borrar">
+      </div>
       </form>
     </main>
       <!-- footer -->

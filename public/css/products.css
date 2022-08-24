@@ -8,23 +8,38 @@
 body{ 
     font-family: 'Jost', sans-serif;
 }
+div .productDescription{
+    display: flex;
+        align-items: center;
+    flex-direction: column;
+}
 
 .productsH3{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
+    font-size: 1.7em;
     color:#38220f;
     background-color: #dbc1ac;
 }
 
+.producto {
+    padding: 0.5em;
+    font-size: large;
+}
 #Cafes_products{
     display: flex;
     background-color: #967259;
     flex-direction: column;
     align-self: center;
     align-items: center;
+    justify-content: space-between;
     
+}
+
+section#Cafes{
+    display: flex;
+    flex-direction: column;
 }
 
  section.Cafe_molido{

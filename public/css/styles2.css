@@ -62,6 +62,7 @@ nav > ul > li a {
 
 /*Cuerpo*/
 
+
 #cuerpo{
     padding: 2%;
     margin: 2%;
@@ -90,6 +91,7 @@ nav > ul > li a {
 }
 
 #Cafes{
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -100,12 +102,46 @@ nav > ul > li a {
 }
 
 #Cafes article{
+    box-sizing: border-box;
     border: 1px solid grey;
     background-color: #634832;
     width: 20%;
     height: 100px;
+    padding: auto;
 }
 
+.destacados{ 
+    display: flex;
+    background-color:	#dbc1ac;
+    color: #38220f;
+    justify-content: center;
+    font-size: 3em
+    }
+
+.slider-container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+}
+      
+.slider-container img {
+        flex: 0 0 100%;
+        width: 100%;
+        object-fit: cover;
+        scroll-snap-align: center;
+      }
+
+article.product{
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1% 1%;
+    font-size: 2.5vmin;
+}
 /* seccion carro de compras */
 
 hr.solid{
@@ -218,9 +254,8 @@ section form{
     align-items: flex-end;
     justify-content: end;
     font-size: 14px;
-
-
 }
+
 .total{
     display: flex;
     padding: 10px;
@@ -281,16 +316,37 @@ section form{
 
 
 /*footer*/
+.div#colum-1 {
+    flex-direction: column;
+    width: min-content;
+}
+.div#colum-2{
+flex-direction: column;
+width: min-content;
+}
+.div#colum-3{
+flex-direction: column;
+width: min-content;
+
+}
 
 footer {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    background-color: #ece0d1;
+    background-color: #fef2e3;
     height: fit-content;
     align-items: center;
-    margin:auto
+    margin:auto;
+    font: 1em sans-serif;
 }
+footer div{
+    width: min-content;
+    display: flex;
+    margin: 2px;
+    padding: 5px; 
+    
+}
+
 
 footer ul li .itemFooter{
     display: flex;
@@ -300,9 +356,9 @@ footer ul li .itemFooter{
     position: relative;
     display: inline-block;
     margin-left:3em;
-    padding: 0.25em;
-    margin: 0.25em;
-}
+    padding: 0.3em;
+    margin: 0.3em;
+    }
 
 footer ul li{
     font-weight: 400;
@@ -315,9 +371,18 @@ footer ul li{
     text-decoration: none;
 }
 
+footer p {
+
+        align-items: center;
+        color: #634832;
+        margin-right: 5em;
+        margin-top: 1em;
+    }
+    
 .itemFooter ul{
     display: flex;
     flex-direction: column;
+    margin: 6em;
 }
 
 @media (min-width: 360px){
@@ -440,6 +505,11 @@ main{
     background-color:#ece0d1;
     color:black;
 
+}
+
+.enviar, .borrar{
+    border: #634832;
+    border-radius: 1em;
 }
 .enviar:hover{
     background-color:#f1cc9f;    
