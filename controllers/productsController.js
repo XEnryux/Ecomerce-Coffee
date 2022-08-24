@@ -17,8 +17,6 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productsBaseDatos = require('../data/productsDataBase.json');
 const mainControllers = require('./mainControllers');
 
-
-
 //** empece la logica de controllers faltan logicas*/
 const productsController = {
     products: (req, res) =>{
@@ -28,9 +26,14 @@ const productsController = {
 		})
     },
     
-    mostrarPorId:(req, res) =>{
-    req.render('detail')
-    },
+    detail: (req, res) => {
+		let id = req.params.id
+		let productDetail = product.find(product => product.id == id)
+		res.render('productDetail', {
+			productDetail,
+			toThousand
+		})
+	},
 
     createProducts: (req, res) =>{
         res.render('productsCreate');
@@ -60,23 +63,57 @@ const productsController = {
 			image = 'default-image.png'
 		}
 		let newProduct = {
-			id: products[products.length - 1].id + 1,
+			id: product[product.length - 1].id + 1,
 			...req.body,
 			image: image
 		};
-		products.push(newProduct)
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		product.push(newProduct)
+		fs.writeFileSync(productsFilePath, JSON.stringify(product, null, ' '));
 		res.redirect('/');
 	},
-    // edit: (req, res) => {
-	// 	res.render('products-edit-form');
-    //     res.redirect('/');
-	// },   
-    // //     // Delete - Delete one product from DB
-    // destroy : (req, res) => {
-    //     res.render('products-delete')
-    //     res.redirect('/');/**a donde redireccionaria despues de hacer a accion */
-    // }}
+
+    /*editar productos*/
+    edit: (req, res) => {
+		let id = req.params.id
+		let productToEdit = product.find(product => product.id == id)
+		res.render('product-edit-form', {productToEdit})
+	},
+	// Update - Method to update
+	update: (req, res) => {
+		let id = req.params.id;
+		let productToEdit = product.find(product => product.id == id)
+		let image
+
+		if(req.files[0] != undefined){
+			image = req.files[0].filename
+		} else {
+			image = productToEdit.image
+		}
+
+		productToEdit = {
+			id: productToEdit.id,
+			...req.body,
+			image: image,
+		};
+		
+		let newProducts = product.map(product => {
+			if (product.id == productToEdit.id) {
+				return product = {...productToEdit};
+			}
+			return product;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/');
+	},
+
+    //     // Delete - Delete one product from DB
+    destroy : (req, res) => {
+		let id = req.params.id;
+		let finalProducts = product.filter(product => product.id != id);
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect('/');
+	}
 }
 
 module.exports = productsController;
