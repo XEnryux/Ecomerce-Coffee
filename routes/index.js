@@ -13,10 +13,11 @@ router.get('/cart', mainControllers.cart);
 /* ruta login */
 router.get('/login', mainControllers.login);
 
-
-
-/* ruta register */
+/*register*/
 router.get('/register', mainControllers.register);
-//router.post('/register', mainControllers.create);// no funciona
+router.post('register', (req, res)=>{
+    console.log(req.body)
+});
+
 
 module.exports = router;
