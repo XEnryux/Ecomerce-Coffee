@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/headHome') -%>
+    <%- include('partials/head') -%>
 <link rel="stylesheet" href="/css/products.css"
     
 <body class="products">
@@ -128,24 +128,40 @@
     <h3 class="productsH3">Nuestro Chocolate</h3>
         
     <section id="chocolates"> 
-        <articles class="product_box">
-            <h3>Chocolate 40% Cacao</h3>
-        <img src="/images/productsImage/13-chocolate.jpg" width="200">
-        </articles>
+      <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <h2 class="center-align titulo">¿Cuál se te antoja hoy?</h2>
 
-        <articles class="product_box">
-            <h3>Chocolate 70% Cacao</h3>
-        <img src="/images/productsImage/14-chocolate.jpg" width="200">
-        </articles>
-
-        <articles class="product_box">
-            <h3>Chocolate 90% Cacao</h3>
-            <img src="/images/productsImage/15-chocolate.jpg" width="200">
-        </articles>
+                <div class="carousel center-align">
+                    <div class="carousel-item">
+                        <h2 class="subtitulo">Chocolate 40% Cacao</h2>
+                        <div class="linea-division"></div>
+                        <p class="sabor"></p>
+                        <img src="/images/productsImage/13-chocolate.jpg" alt="" width="200">
+                    </div> 
+                    
+                    <div class="carousel-item">
+                      <h2 class="subtitulo">Chocolate 70% Cacao</h2>
+                      <div class="linea-division"></div>
+                      <p class="sabor"></p>
+                      <img src="/images/productsImage/14-chocolate.jpg" alt="" width="200">
+                  </div> 
+                  
+                   
+                  <div class="carousel-item">
+                    <h2 class="subtitulo">Chocolate 90% Cacao</h2>
+                    <div class="linea-division"></div>
+                    <p class="sabor"></p>
+                    <img src="/images/productsImage/15-chocolate.jpg" alt="" width="200">
+                </div> 
+                </div>
+            </div>
 
     </section><br>
 
     <%- include('partials/footer') %>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 </html>
