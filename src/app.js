@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require("path"); 
+const logger = require('morgan');
+
 
 const indexRouter = require('./routes/index');
 const rutesProducts = require('./routes/products');
@@ -36,6 +38,18 @@ app.listen(3001, ()=>{
     console.log('Servidor 3001 funcionando');
 });
 
+// ************ error  ************
+app.use((err, req, res, next) => {
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.path = req.path;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+  
+    // render la vista de error
+    res.status(err.status || 404);
+    res.render('error');
+  });
+  
 
 module.exports = app;
 

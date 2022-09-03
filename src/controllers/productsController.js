@@ -76,7 +76,7 @@ const productsController = {
     edit: (req, res) => {
 		let id = req.params.id
 		let productToEdit = product.find(product => product.id == id)
-		res.render('product-edit-form', {productToEdit})
+		res.render('productEdit', {productToEdit})
 	},
 	// Update - Method to update
 	update: (req, res) => {
@@ -116,4 +116,5 @@ const productsController = {
 	}
 }
 
+  
 module.exports = productsController;

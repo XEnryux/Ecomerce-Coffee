@@ -23,6 +23,7 @@ var upload = multer({storage: storage})
 // *Ruta de productos* /
 
 router.get('/', productsController.products)
+router.get('/:id', productsController.detail)
 
 
 router.get('/create', productsController.createProducts);
