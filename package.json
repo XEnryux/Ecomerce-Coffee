@@ -16,7 +16,6 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.4"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/XEnryux/Grupo-8-curso-de-programacion-web-full-stack.git"
