@@ -5,23 +5,24 @@
   <body>
     <%- include('partials/header') %>   
 
-     <title>Crear productos</title>
+     <title>Editando productos</title>
 
      
-<main class="CrearProductos">
-<form action="products/create" method="POST"> 
+<main class="EditarProductos">
+<form action="/products/edit/<%= productsEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data"></form>
     
-   <p> <label> Nombre del producto</label></p>
-    <input type="text" value="nombreProducto" class="nombreProducto"><br>
+   <p> <label> Edita el nombre del producto</label></p>
     
+    <input type="text" id="name" name="name" placeholder="<%= productsEdit.name %>" class="form-input">
+
     <p><label>Descripción</label></p>
-    <textarea name="description" id="description" class="description" cols="30" rows="10"></textarea><br>
+    <textarea name="description" id="description" class="form-input" placeholder="<%= productsEdit.description%>" cols="30" rows="10"></textarea><br>
     
     <p><label>Imagen</label></p>
-    <input type="file" value="imageProduct" class="imageProduct"><br>
+    <input type="file" value="imageProduct" class="form-input"><br>
     
     <p><label>Categoría</label></p>
-    <select value="categoria" class="categoria"> 
+    <select value="categoria" class="form-input"  placeholder="<%= productsEdit.category%>"> 
       
       <p> <option value="1">Grano</option></p>
       <p> <option value="2">Molido</option></p>
@@ -31,7 +32,7 @@
         </select><br>
     <p><label>Presentación</label></p>
 
-    <input type="text" value="presentacion" class="presentacion"><br>
+    <input type="text" value="presentacion" class="form-input" placeholder="<%= productsEdit.presentation%>"><br>
     
     <p><label>Precio</label></p>
     <input type="number" value="precio" class="precio"><br>
@@ -46,7 +47,7 @@
     <input type="submit"  value="Crear" class="Crear"><br>
     
     <p><label>Borrar</label></p>
-    <input type="reset" value="Borrar" class="borrar"><br>
+    <input type="reset" value="Borrar" class="Borrar"><br>
 
 </form>
 </main>

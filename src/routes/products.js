@@ -23,20 +23,20 @@ var upload = multer({storage: storage})
 // *Ruta de productos* /
 
 router.get('/', productsController.products)
-router.get('/:id', productsController.detail)
-
-
 router.get('/create', productsController.createProducts);
 router.post('/create', upload.any(), productsController.store);
-
 
 /* EDIT un producto */ 
 router.get('/edit/:id', productsController.edit); 
 router.patch('/edit/:id', upload.any(),productsController.update); 
 
+
+
 /* DELETE un producto */ 
 
 router.delete('/:id', productsController.destroy); 
+
+router.get('/:id', productsController.detail)
 
 
 module.exports = router; 
