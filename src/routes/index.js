@@ -9,15 +9,6 @@ router.get('/', mainControllers.home);
 
 /* rutas de carrito */ 
 router.get('/cart', mainControllers.cart);
-
-/* ruta login */
-router.get('/login', mainControllers.login);
-
-/*register*/
-router.get('/register', mainControllers.register);
-router.post('register', (req, res)=>{
-    console.log(req.body)
-});
-
+router.get('/as', mainControllers.as);
 
 module.exports = router;

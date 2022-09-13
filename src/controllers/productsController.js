@@ -36,23 +36,9 @@ const productsController = {
 	},
 
     createProducts: (req, res) =>{
-        res.render('productsCreate');
-        
-        // let nuevoProducto= {
-        // Nombre_del_producto: req.body.Nombre_del_producto,
-        // Descripción: req.body.Descripción,
-        // Imagen: req.body.Imagen,
-        // Categoría:req.body.Categoría,
-        // Presentación: req.body.Presentación,
-        // Precio: req.body.Precio, 
-        // Destacado: req.body.Destacado 
+        res.render('productsCreate')
     },
-     
-       // res.send(),
-        //res.redirect('/'),
-    //},
-    
-    
+        
 	//* Create -  Method to store/
 	store: (req, res) => {
 		let image
@@ -81,24 +67,24 @@ const productsController = {
 	// Update - Method to update
 	update: (req, res) => {
 		let id = req.params.id;
-		let productToEdit = product.find(product => product.id == id)
+		let productsEdit = product.find(product => product.id == id)
 		let image
 
 		if(req.files[0] != undefined){
 			image = req.files[0].filename
 		} else {
-			image = productToEdit.image
+			image = productsEdit.image
 		}
 
-		productToEdit = {
-			id: productToEdit.id,
+		productsEdit = {
+			id: productsEdit.id,
 			...req.body,
 			image: image,
 		};
 		
 		let newProducts = product.map(product => {
-			if (product.id == productToEdit.id) {
-				return product = {...productToEdit};
+			if (product.id == productsEdit.id) {
+				return product = {...productsEdit};
 			}
 			return product;
 		})
@@ -116,5 +102,4 @@ const productsController = {
 	}
 }
 
-  
 module.exports = productsController;

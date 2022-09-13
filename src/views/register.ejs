@@ -4,36 +4,38 @@
     <%- include('partials/head') -%>
 
 <a link rel="stylesheet" href="../public/css/register.css"></a> 
- 
+
+
 <body>
 <!-- header -->
     <%- include('partials/header') %>
 
     <main class="register">
-      <form action="register" method="POST">
+      <% if (locals.errors) { 
+        errors.forEach(error =>{ %>
+        <p><%= error.msg %></p>
+      <%})
+        }%>
+      <form action="/users/register" method="POST">
         <ul>
         <li> 
           <label for="name"><b>Nombre y apellido:</b></label>
-          <input type="text" name="name" placeholder="Nombre y apellido" required><br>
+          <input type="text" name="name" value="<%= locals.old && old.name ? old.name : " " %>" required><br>
         </li>
-        <li> 
-          <label for="user"><b>Nombre de usuario:</b></label>
-          <input type="text" name="user" placeholder="Nombre de usuario" required><br>
-        </li> 
-       <li>
+        <li>
         <label for="email"><b>E-mail:</b></label>
-        <input type="email" name="email" placeholder="E-mail" required><br>
+        <input type="email" name="email" value="<%= locals.old && old.email ? old.email : " " %>" required><br>
         <br></li>
         <li>
         <label for="birth_date"><b>Fecha de nacimiento</b></label>
-        <input type="date" name="birth_date" id="birth_date" />
+        <input type="date" name="birth_date" id="birth_date" value="<%= locals.old && old.birth_date ? old.birth_date : "" %>" />
         <br>
         </li>
         <li>
         <label for="adrees"><b>Domicilio</b></label>
-        <input type="text" name="adressStreet" placeholder="Calle">
-        <input type="number" name="adressNumber" placeholder="altura">
-        <input type="text" name="adressSpecific" placeholder="departamento">  
+        <input type="text" name="adressStreet" placeholder="Calle" value="<%= locals.old && old.adressStreet ? old.adressStreet : "" %>">
+        <input type="number" name="adressNumber" placeholder="altura" <%= locals.old && old.adressNumber ? old.adressNumber : "" %>">
+        <input type="text" name="adressSpecific" placeholder="departamento" value="<%= locals.old && old.adressSpecific ? old.adressSpecific : "" %>">  
         <input type="city" name="adressCity" placeholder="Ciudad">
       </li>  
       </ul>
@@ -41,9 +43,9 @@
         <label><B>Perfil del usuario</B></label>
         <div class="profile">
              <ul>
-            <li><label for="buy">Comprador</label><input type="radio" name="profile" value="buy" id="buy"></li>
+            <li><label>Comprador</label><input type="radio" name="profile" value="buy <%= locals.old && old.category ==="buy" ? "selected":"" %>" id="buy"></li>
           
-           <li><label for="sell">Vendedor</label><input type="radio" name="profile" value="sell" id="sell"></li>
+           <li><label>Vendedor</label><input type="radio" name="profile" value="sell <%= locals.old && old.category === "sell" ? "selected":"" %>" id="sell"></li>
           </ul>
                 </div>
 
@@ -74,7 +76,7 @@
         <label><b>Elegí tu foto de usuario</b></label>
         <ul>
           <li>
-            <input type="file" name="avatar" />
+            <input type="file" name="avatar" value="<%= local.old && old.file ? old.file : "" %>"/>
           </li>
         </ul>
           <br>
@@ -83,7 +85,7 @@
         <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" required>
         <br>
       <div class="botones"> 
-        <input type="submit" value="Enviar" class="enviar">
+        <input type="submit" value="Registrarse" class="enviar">
         <br>
         <input type="reset" value="Borrar" class="borrar">
       </div>

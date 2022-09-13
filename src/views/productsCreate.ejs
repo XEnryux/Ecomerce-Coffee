@@ -12,16 +12,16 @@
 <form action="products/create" method="POST"> 
     
    <p> <label> Nombre del producto</label></p>
-    <input type="text" value="nombreProducto" class="nombreProducto"><br>
+    <input type="text" name="name"  class="nombreProducto" required><br>
     
     <p><label>Descripción</label></p>
     <textarea name="description" id="description" class="description" cols="30" rows="10"></textarea><br>
     
     <p><label>Imagen</label></p>
-    <input type="file" value="imageProduct" class="imageProduct"><br>
+    <input type="file" value="imageProduct" name="image" class="imageProduct" required><br>
     
     <p><label>Categoría</label></p>
-    <select value="categoria" class="categoria"> 
+    <select value="categoria" name="category" class="categoria" required> 
       
       <p> <option value="1">Grano</option></p>
       <p> <option value="2">Molido</option></p>
@@ -29,24 +29,22 @@
       <p> <option value="4">Saquitos</option></p>
       <p> <option value="4">Chocolate</option></p>
         </select><br>
-    <p><label>Presentación</label></p>
 
-    <input type="text" value="presentacion" class="presentacion"><br>
+    <p><label>Presentación</label></p>
+    <input type="text"  name="presentation" class="presentacion" required><br>
     
     <p><label>Precio</label></p>
-    <input type="number" value="precio" class="precio"><br>
+    <input type="text" name="price" class="precio" required><br>
     
     <p><label>Destacado</label></p>
     <select> 
-    <  p><option value="true">Si</option></p>
+    <p><option value="true">Si</option></p>
     <p><option value="false">No</option></p>
     </select><br>
     
-    <p><label>Crear</label></p>
-    <input type="submit"  value="Crear" class="Crear"><br>
+    <input type="submit"  value="Crear" class="create"><br>
     
-    <p><label>Borrar</label></p>
-    <input type="reset" value="Borrar" class="borrar"><br>
+    <input type="reset" value="Borrar" class="delete"><br>
 
 </form>
 </main>

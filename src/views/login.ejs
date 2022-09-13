@@ -4,17 +4,17 @@
 
   <body>
 <%- include('partials/header') -%>
-
+    
 <main class="login">
-      <form action="/" method="POST">
+      <form action="/users/login" method="POST">
         <ul>
           <li>
-          <input type="text" name="user" placeholder="Nombre de usuario" />
+          <input type="email" name="name" placeholder="E-mail" required/>
           </li>
           <li>
-          <input type="password" name="pass" placeholder="Contraseña" />
+          <input type="password" name="pass" placeholder="Contraseña" required/>
           </li> 
-        <input type="submit" value="Enviar" class="enviar" />
+        <input type="submit" value="Ingresar" class="enviar" />
       </ul>
       </form><br>
     </main>

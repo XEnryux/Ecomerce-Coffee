@@ -7,7 +7,7 @@ const path = require('path');
 /** Controller requiere */
 
 const mainControllers = require('../controllers/mainControllers');
-const productsController=require('../controllers/productsController')
+const productsController=require('../controllers/productsController');
 
 // ** Multer */  
 var storage = multer.diskStorage({
@@ -29,8 +29,6 @@ router.post('/create', upload.any(), productsController.store);
 /* EDIT un producto */ 
 router.get('/edit/:id', productsController.edit); 
 router.patch('/edit/:id', upload.any(),productsController.update); 
-
-
 
 /* DELETE un producto */ 
 
