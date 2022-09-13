@@ -33,9 +33,9 @@
         </li>
         <li>
         <label for="adrees"><b>Domicilio</b></label>
-        <input type="text" name="adressStreet" placeholder="Calle" value="<%= locals.old && old.adressStreet ? old.adressStreet : "" %>">
-        <input type="number" name="adressNumber" placeholder="altura" <%= locals.old && old.adressNumber ? old.adressNumber : "" %>">
-        <input type="text" name="adressSpecific" placeholder="departamento" value="<%= locals.old && old.adressSpecific ? old.adressSpecific : "" %>">  
+        <input type="text" name="adressStreet" placeholder="Calle" value="<%= locals.old && old.adressStreet ? old.adressStreet : " " %>">
+        <input type="number" name="adressNumber" placeholder="altura" <%= locals.old && old.adressNumber ? old.adressNumber : " " %>">
+        <input type="text" name="adressSpecific" placeholder="departamento" value="<%= locals.old && old.adressSpecific ? old.adressSpecific : " " %>">  
         <input type="city" name="adressCity" placeholder="Ciudad">
       </li>  
       </ul>
@@ -43,9 +43,9 @@
         <label><B>Perfil del usuario</B></label>
         <div class="profile">
              <ul>
-            <li><label>Comprador</label><input type="radio" name="profile" value="buy <%= locals.old && old.category ==="buy" ? "selected":"" %>" id="buy"></li>
+            <li><label>Comprador</label><input type="radio" name="profile" value="buy <%= locals.old && old.category ==="buy" ? "selected":" " %>" id="buy"></li>
           
-           <li><label>Vendedor</label><input type="radio" name="profile" value="sell <%= locals.old && old.category === "sell" ? "selected":"" %>" id="sell"></li>
+           <li><label>Vendedor</label><input type="radio" name="profile" value="sell <%= locals.old && old.category === "sell" ? "selected":" " %>" id="sell"></li>
           </ul>
                 </div>
 
@@ -76,7 +76,7 @@
         <label><b>Elegí tu foto de usuario</b></label>
         <ul>
           <li>
-            <input type="file" name="avatar" value="<%= local.old && old.file ? old.file : "" %>"/>
+            <input type="file" name="avatar" />
           </li>
         </ul>
           <br>

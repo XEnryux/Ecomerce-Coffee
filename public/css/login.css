@@ -1,7 +1,7 @@
 .login {
-   background-image: url('../images/cafe_chocolate.jpg'); 
+   background-image: url('../images/default-image.jpg'); 
    background-attachment: fixed;
-   background-repeat: no-repeat;
+   background-repeat: repeat;
    background-size: contain;
    display: flex;
    justify-content: center;

@@ -9,7 +9,7 @@
 
      
 <main class="CrearProductos">
-<form action="products/create" method="POST"> 
+<form action="/products/create" method="POST" enctype="multipart/form-data"> 
     
    <p> <label> Nombre del producto</label></p>
     <input type="text" name="name"  class="nombreProducto" required><br>
@@ -18,7 +18,8 @@
     <textarea name="description" id="description" class="description" cols="30" rows="10"></textarea><br>
     
     <p><label>Imagen</label></p>
-    <input type="file" value="imageProduct" name="image" class="imageProduct" required><br>
+    <input type="file" class="form-input"><br>
+     
     
     <p><label>Categoría</label></p>
     <select value="categoria" name="category" class="categoria" required> 

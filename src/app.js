@@ -7,6 +7,11 @@ const app = express();
 app.use(express.json());
 //app.use(cookieParser()),
 
+///* con el method Override instalado */
+//* override* sirve para poder utilizar en htlm put y delete/
+const methodOverride = require('method-override');
+const { Cookie } = require('express-session');
+
 const indexRouter = require('./routes/index');
 const rutesProducts = require('./routes/products');
 const rutesUsers = require ('./routes/users');
@@ -24,10 +29,7 @@ app.use(express.urlencoded({extended:false})); /**esta linea permite poner segur
 app.use('/', indexRouter);
 app.use('/products', rutesProducts);
 app.use('/users', rutesUsers)
-///* con el method Override instalado */
-//* override* sirve para poder utilizar en htlm put y delete/
-const methodOverride = require('method-override');
-const { Cookie } = require('express-session');
+
 
 app.use(methodOverride('_method'));
 

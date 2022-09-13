@@ -13,10 +13,6 @@ const product = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-/** llamamos a la base de datos de productos */
-//const productsBaseDatos = require('../data/productsDataBase.json');
-//const mainControllers = require('./mainControllers');
-
 //** empece la logica de controllers faltan logicas*/
 const productsController = {
     products: (req, res) =>{
@@ -46,7 +42,7 @@ const productsController = {
 		if(req.files[0] != undefined){
 			image = req.files[0].filename
 		} else {
-			image = 'default-image.png'
+			image = 'default-image.jpg'
 		}
 		let newProduct = {
 			id: product[product.length - 1].id + 1,
