@@ -11,7 +11,8 @@ const productsController=require('../controllers/productsController');
 // ** Multer */  
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null, 'public/images/productsImage')
+        cb(null, '/public/images/productsImage') 
+
     },
     filename: function(req,file,cb){
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
@@ -35,5 +36,6 @@ router.delete('/:id', productsController.destroy);
 
 router.get('/:id', productsController.detail)
 
+router.get('/prueba', productsController.prueba)
 
 module.exports = router; 

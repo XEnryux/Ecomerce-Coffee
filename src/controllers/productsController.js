@@ -54,6 +54,14 @@ const productsController = {
 		res.redirect('/');
 	},
 
+	prueba: (req,res)=>{
+		let pruebaproductos = [];
+		forEach(product => {
+			
+		});
+	res.render("pruebaproductos")
+	}	,
+
     /*editar productos*/
     edit: (req, res) => {
 		let id = req.params.id

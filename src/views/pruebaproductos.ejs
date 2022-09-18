@@ -1,7 +1,47 @@
 <%- include('partials/head') -%>
 <%- include ('partials/header') -%>
+<body>
 
 <h1>listado de productos</h1>
+<div class="container products-wrapper">
+    <div class="row">
+        <% products.forEach(function(products){ 
+ (let i = 0 , i < product.length, i ++ )
+            %>
 
+           <div class="col-12">
+                <h2 class="products-title">Detalle del producto: <%products= products.name %></h2>
+           </div>
+       </div>
+       <div class="product-detail">
+           <div class="row">
+               <div class="col-12 col-lg-8">
+                   <img src="/images/productsImage/<%= products.image %>" alt="product image" class="product-detail-img">
+                   <p class="product-detail-description">
+                       <%= products.description %>
+                   </p>
+               </div>
+               <div class="col-12 col-lg-4">
+                   <article class="product-detail-info">
+                       <h2 class="product-detail-title"><%= products.name %></h2>
+                           <p class="product-detail-price">
+                               $<%= toThousand(products.price) %>
+                           </p>
+                                      
+                       <% } %>
+                       <ul class="actions-list">
+                           <li>
+                               <i class="fas fa-credit-card"></i>
+                               <p>Pagá en 12 cuotas sin interes</p>
+                           </li>
+                           <li>
+                               <i class="fas fa-store"></i>
+                               <p>Retiro gratis en locales del vendedor</p>
+                           </li>
+                       </ul>
+                       <a href="#" class="buy-now-button">COMPRAR AHORA</a>
+                       <hr>
+                       
 
 <%- include('partials/footer') -%>
+</body>
