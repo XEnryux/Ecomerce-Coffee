@@ -42,7 +42,7 @@ router.get('/', usersController.list);
 
 /*ruta Login*/
 router.get('/login', usersController.login);
-router.post('/login', validationLoginMiddleware, usersController.processLogin);
+//router.post('/login', validationLoginMiddleware, usersController.processLogin);
 
 
 /*register*/

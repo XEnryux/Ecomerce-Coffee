@@ -37,17 +37,24 @@ const usersController ={
         let users = [
             {id:1, name:'rodo'},
             {id:2, name: 'paula'},
-            {id:3, name: 'jaimo'            }
+            {id:3, name: 'jaimo'}
         ];
         let UserToEdit = users[idUser];
         res.render('userEdit', {UserToEdit: UserToEdit})
     },
 
     login: (req, res) => {
-       return res.render('login');
+     res.render('login');
     },
     
-    guardarUsuario: 
+    register: (req, res) => {
+        res.render('register');
+
+    },
+
+    // guardarUsuario: (req, res) => {
+       
+    // },
 
     // processLogin:(req, res) =>{
     //     let errors = validationResult(req);
@@ -77,12 +84,7 @@ const usersController ={
     //         return res.render('login', {errors:errors.errors})
     //     };
     // },
-
-    register: (req, res) => {
-        return res.render('register');
-
-    },
-
+    
     store: (res, req) => {
         let errors= validationResult(req);
         if (errors.isEmpty()){
@@ -96,7 +98,7 @@ const usersController ={
         }
         
         res.send(errors)
-//seguir por aca en la validadcion 
+        //seguir por aca en la validadcion 
     }
  
 
