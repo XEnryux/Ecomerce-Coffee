@@ -51,5 +51,9 @@ router.post('/register', validationRegister, (req, res)=>{
     console.log(req.body)
 });
 
+router.get('/search', usersController.search);
+router.get('/edit/:idUser', usersController.edit);
+//router.get('/delete', usersController.delete);
+//router.gep('/delete', usersController.destroy);
 
 module.exports = router; 

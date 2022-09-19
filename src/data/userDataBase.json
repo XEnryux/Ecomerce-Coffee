@@ -1,11 +1,11 @@
 [
     {
-    "nombre y apellido":"",
-    "nombre de usuario":"",
-    "email":"",
-    "contraseña":"",
-    "fecha de nacimiento":"",
-    "domicilio":"",
+    "nombre y apellido":"a",
+    "nombre de usuario":"a",
+    "email":"e",
+    "contraseña":"f",
+    "fecha de nacimiento":"10/2/89",
+    "domicilio":"cs",
     "profile":"sell",
     "imagen": ""
     },
