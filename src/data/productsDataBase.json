@@ -162,7 +162,23 @@
   "description": "ta",
   "category": "1",
   "presentation": "200gr",
-  "price": "100",
+  "price": 100,
+  "image": "default-image.jpg"
+ },
+ {
+  "id": 17,
+  "name": "Cafe inventado",
+  "description": "",
+  "price": "1",
+  "image": "default-image.jpg"
+ },
+ {
+  "id": 18,
+  "name": "Mariana Elstner",
+  "description": "ddd",
+  "category": "1",
+  "presentation": "d",
+  "price": "1",
   "image": "default-image.jpg"
  }
 ]

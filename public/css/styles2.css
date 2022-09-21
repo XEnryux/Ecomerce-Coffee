@@ -14,8 +14,8 @@ header {
     background-size:cover;
     background-repeat: no-repeat;
     height:fit-content;
-    padding: 2%;
-    margin: 2%;    
+    padding: 3.5%;
+    margin-bottom: 1%;    
 }
 
 header h1 #logo{
@@ -26,8 +26,8 @@ header h1 #logo{
     color: #634832;
     text-decoration: none;
     border: 0;
-    padding: 5px;
-    font-size: 6vmin;
+    padding: 1px;
+    font-size: 4vmin;
     font-weight: 400;
 }
 header  #logo{
@@ -35,6 +35,11 @@ header  #logo{
     align-items: center;
     margin:auto;
     border: 2%;
+}
+.header {    
+    display: inline-table;
+    align-content: center;
+    
 }
 nav {
     background-color: #ece0d1;
@@ -86,8 +91,8 @@ nav > ul > li a {
     background-color: #ece0d1;
     opacity: 0.9;
     padding: 2%;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 #Cafes{

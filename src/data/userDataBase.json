@@ -1,22 +1,46 @@
 [
-    {
-    "nombre y apellido":"a",
-    "nombre de usuario":"a",
-    "email":"e",
-    "contraseña":"f",
-    "fecha de nacimiento":"10/2/89",
-    "domicilio":"cs",
-    "profile":"sell",
-    "imagen": ""
-    },
-    {
-    "nombre y apellido":"",
-    "nombre de usuario":"",
-    "email":"",
-    "contraseña":"",
-    "fecha de nacimiento":"",
-    "domicilio":"",
-    "profile":"buy",
-    "imagen": ""
-    }
+ {
+  "id": 1,
+  "name": "a",
+  "user": "a",
+  "email": "e@a.com",
+  "birth_date": "10/2/89",
+  "adressStreet": "cs",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "profile": "sell",
+  "interests": "",
+  "avatar:": "",
+  "pass": ""
+ },
+ {
+  "id": 2,
+  "name": "",
+  "user": "",
+  "email": "",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "profile": "buy",
+  "interests": "",
+  "avatar:": "",
+  "pass": ""
+ },
+ {
+  "id": 3,
+  "name": "Mariana Elstner",
+  "email": "elstnermariana@gmail.com",
+  "birth_date": "",
+  "adressStreet": "Camargo 351 PB B",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "Ciudad Autónoma de Buenos Aires",
+  "profile": "on",
+  "interests": "a",
+  "pass": "Marulete01",
+  "pass_confirm": "Marulete01",
+  "image": "default-image.jpg"
+ }
 ]

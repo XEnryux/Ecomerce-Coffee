@@ -1,20 +1,19 @@
 const express = require('express');
 const path = require('path');
-const {validationResult} = require('express-validator');
+//const {validationResult} = require('express-validator');
 const fs = require('fs');
 //const { json } = require('sequelize/types');
 
-const userBaseDatos = require('../data/userDataBase.json')
+const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
 const usersController ={
     search: (req, res) => {
         let buscaUsuario = req.query.search;
-        let users = [
-            {id:1, name:'rodo'},
-            {id:2, name: 'paula'},
-            {id:3, name: 'jaimo'}];
-
+        users
         let usersResults = []; 
         
         for (let i = 0; i < users.length; i ++){
@@ -26,35 +25,49 @@ const usersController ={
     },
 
     list: (req, res) => {
-        let users = [
-            {id:1, name:'rodo'},
-            {id:2, name: 'paula'},
-            {id:3, name: 'jaimo'}]
-       res.render('usersList', {'users': users});
+        res.render('usersList', {
+        users, 
+        toThousand
+    })
     },
+    detail: (req, res) => {
+		let id = req.params.id
+		let usersDetail = users.find(users => users.id == id)
+		res.render('usersDetail', {
+			usersDetail,
+			toThousand
+		})
+	},
     edit:(res, req) =>{
         let idUser = req.params.idUser;
-        let users = [
-            {id:1, name:'rodo'},
-            {id:2, name: 'paula'},
-            {id:3, name: 'jaimo'}
-        ];
-        let UserToEdit = users[idUser];
+        let UserToEdit = users.find(users => users.id==id);
         res.render('userEdit', {UserToEdit: UserToEdit})
     },
-
     login: (req, res) => {
      res.render('login');
     },
-    
     register: (req, res) => {
         res.render('register');
 
     },
 
-    // guardarUsuario: (req, res) => {
-       
-    // },
+    create: (req, res) => {
+        let image
+		console.log(req.files);
+		if(req.files[0] != undefined){
+			image = req.files[0].filename
+		} else {
+			image = 'default-image.jpg'
+		}
+       let newUser = {
+			id: users[users.length - 1].id + 1,
+			...req.body,
+			image: image
+		};
+		users.push(newUser)
+		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+		res.redirect('/');
+     },
 
     // processLogin:(req, res) =>{
     //     let errors = validationResult(req);
@@ -85,21 +98,6 @@ const usersController ={
     //     };
     // },
     
-    store: (res, req) => {
-        let errors= validationResult(req);
-        if (errors.isEmpty()){
-            let user =req.body;
-            res.redirect('users/login')
-        }else{
-            res.redirect('users/register', {
-            errors: errors.array(),
-            old: req.body   
-        })
-        }
-        
-        res.send(errors)
-        //seguir por aca en la validadcion 
-    }
  
 
      //store: (req, res) =>{
@@ -107,24 +105,13 @@ const usersController ={
 //userId = usersModel.create(users);
 //res.redirec('/users/')         
 
-
-//let usuario ={
-//             name: req.body.name, 
-//             user: req.body.user, 
-//             email:req.body.email,
-//             birth_date:req.body.birth_date,
-//             addres: req.body.addres,
-//             profile: req.body.profile,
-//             interests:req.body.interests,
-//             avatar:req.body.avatar,
-//             pass: req.body.pass
-//         }
         
 //         /*guardar info*/
 //         res.redirect('/');
      //}
-,
+
    
  }
+ 
 
  module.exports = usersController;

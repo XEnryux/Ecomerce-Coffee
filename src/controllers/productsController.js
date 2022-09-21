@@ -13,7 +13,7 @@ const product = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-//** empece la logica de controllers faltan logicas*/
+//** logica de controllers */
 const productsController = {
     products: (req, res) =>{
         res.render('products', {

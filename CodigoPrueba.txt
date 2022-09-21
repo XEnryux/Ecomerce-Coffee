@@ -1,41 +1,39 @@
-<!DOCTYPE html>
-<html>
-  <!-- head-->
-    <%- include('partials/head') -%>
+ruote usersController
 
-<a link rel="stylesheet" href="../public/css/register.css"></a> 
+router.post('/login', validationLoginMiddleware, usersController.processLogin);
 
+validacion del metodo create
+   // let errors= validationResult(req);
+        // if (errors.isEmpty()){
+        //     let user =req.body;
+        //     res.redirect('users/login')
+        // }else{
+        //     res.redirect('users/register', {
+        //     errors: errors.array(),
+        //     old: req.body   
+        // })
+        // }
+        // res.send(errors)
+     
 
-<body>
-<!-- header -->
-    <%- include('partials/header') %>
-
-    <main class="register">
-      <!-- <% if (locals.errors) { 
-        errors.forEach(error =>{ %>
-        <p><%= error.msg %></p>
-      <%})
-        }%> -->
-      <form action="/users/register" method="POST" enctype="multipart/form-data">
-        <ul>
-        <li> 
-          <p><label>Nombre y apellido:</label></p>
-          <input type="text" name="name" required><br>
+views
+      <p><label>Nombre y apellido:</label></p>
+          <input type="text" name="name" value="<%= locals.old && old.name ? old.name : " "  %>" required><br>
         </li>
         <li>
         <label><b>E-mail:</b></label>
-        <input type="email" name="email" required><br>
+        <input type="email" name="email" value="<%= locals.old && old.email ? old.email : " " %>" required><br>
         <br></li>
         <li>
         <label><b>Fecha de nacimiento</b></label>
-        <input type="date" name="birth_date" id="birth_date" />
+        <input type="date" name="birth_date" id="birth_date" value="<%= locals.old && old.birth_date ? old.birth_date : "" %>" />
         <br>
         </li>
         <li>
         <label><b>Domicilio</b></label>
-        <input type="text" name="adressStreet" placeholder="Calle">
-        <input type="number" name="adressNumber" placeholder="altura">
-        <input type="text" name="adressSpecific" placeholder="departamento" >  
+        <input type="text" name="adressStreet" placeholder="Calle" value="<%= locals.old && old.adressStreet ? old.adressStreet : " " %>">
+        <input type="number" name="adressNumber" placeholder="altura" <%= locals.old && old.adressNumber ? old.adressNumber : " " %>">
+        <input type="text" name="adressSpecific" placeholder="departamento" value="<%= locals.old && old.adressSpecific ? old.adressSpecific : " " %>">  
         <input type="city" name="adressCity" placeholder="Ciudad">
       </li>  
       </ul>
@@ -43,9 +41,9 @@
         <label><B>Perfil del usuario</B></label>
         <div class="profile">
              <ul>
-            <li><label>Comprador</label><input type="radio" name="profile" id="buy"></li>
+            <li><label>Comprador</label><input type="radio" name="profile" value="buy <%= locals.old && old.category ==="buy" ? "selected":" " %>" id="buy"></li>
           
-           <li><label>Vendedor</label><input type="radio" name="profile" id="sell"></li>
+           <li><label>Vendedor</label><input type="radio" name="profile" value="sell <%= locals.old && old.category === "sell" ? "selected":" " %>" id="sell"></li>
           </ul>
                 </div>
 
@@ -84,14 +82,8 @@
         <input type="password" name="pass" placeholder="Elegí tu contraseña" maxlength="30" pattern="[A-Za-z0-9@#$%!]{8,20}"required/>
         <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" required>
         <br>
-       
+      <div class="botones"> 
         <input type="submit" value="Registrarse" class="enviar">
-       
-       <a href="/"><input type="button" value="Volver" class='borrar'></a>
-     
-      </form>
-    </main>
-      <!-- footer -->
-      <%- include('partials/footer') %>
-  </body>
-</html>
+      </div> 
+      <a href="/"><input type="button" value="Volver" class='borrar'></a>
+    

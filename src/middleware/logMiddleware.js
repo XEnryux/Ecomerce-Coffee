@@ -1,9 +1,9 @@
-const fs = requiere('fs'); 
+// const fs = requiere('fs'); 
 
-function logMiddleware(req, res, next){
-    fs.appendFileSync(login.txt, "se logeo..")
+// function logMiddleware(req, res, next){
+//     fs.appendFileSync(login.txt, "se logeo..")
     
-next();
-}
+// next();
+// }
 
-module.exports = logMiddleware;
+// module.exports = logMiddleware;
