@@ -38,7 +38,7 @@ app.use(session({secret: "hay cafe cafe"}));
 
 /**Servidor funcionando */
 app.listen(3001, ()=>{
-    console.log('Servidor 3001 funcionando');
+    console.log('Servidor 3001 funcionando http://localhost:3001/');
 });
 
 // ************ error  ************

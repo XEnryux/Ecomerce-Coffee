@@ -32,9 +32,9 @@ const usersController ={
     },
     detail: (req, res) => {
 		let id = req.params.id
-		let usersDetail = users.find(users => users.id == id)
-		res.render('usersDetail', {
-			usersDetail,
+		let userDetail = users.find(users => users.id == id)
+		res.render('userDetail', {
+			userDetail,
 			toThousand
 		})
 	},
