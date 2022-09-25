@@ -4,12 +4,13 @@ const express = require('express');
 const fs = require('fs');
 /** metodo para manejar las rutas relativas y absolutas */
 const path = require('path');
-
+ 
 /**
  * editar archivos del json
  */
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const product = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { gzip } = require('zlib');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -117,6 +118,7 @@ const productsController = {
 
     destroy : (req, res) => {
 		let id = req.params.id;
+		let productDetail = product.find(product => product.id == id)
 		let finalProducts = product.filter(product => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
 		res.redirect('/');
