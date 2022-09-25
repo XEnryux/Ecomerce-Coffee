@@ -65,7 +65,7 @@ router.post('/register', upload.any(), usersController.create);
 router.get('/search', usersController.search);
 router.get('/edit/:idUser', usersController.edit);
 router.get('/detail/:idUser', usersController.detail)
-//router.get('/delete', usersController.delete);
-//router.gep('/delete', usersController.destroy);
+//router.get('/delete/:idUser', usersController.delete);
+//router.gep('/delete/:idUser', usersController.destroy);
 
 module.exports = router; 

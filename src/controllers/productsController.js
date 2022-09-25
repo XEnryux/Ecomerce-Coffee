@@ -98,6 +98,23 @@ const productsController = {
 	},
 
     //     // Delete - Delete one product from DB
+	// delete: function (req,res) {
+    //     let productId = req.params.id;
+    //     Product
+    //     .findByPk(productId)
+    //     .then(Product => {
+    //         return res.render(path.resolve(__dirname, '..', 'views',  'productDelete'), {Product})})
+    //     .catch(error => res.send(error))
+    // // },
+    // destroy: function (req,res) {
+    //     let productId = req.params.id;
+    //     Products
+    //     .destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
+    //     .then(()=>{
+    //         return res.redirect('/')})
+    //     .catch(error => res.send(error)) 
+    // }
+
     destroy : (req, res) => {
 		let id = req.params.id;
 		let finalProducts = product.filter(product => product.id != id);

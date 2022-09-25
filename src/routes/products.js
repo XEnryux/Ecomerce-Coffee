@@ -32,7 +32,8 @@ router.patch('/edit/:id', upload.any(),productsController.update);
 
 /* DELETE un producto */ 
 
-router.delete('/:id', productsController.destroy); 
+//router.get('delete/:id', productsController.delete); 
+router.delete('/delete/:id', productsController.destroy);
 
 router.get('/:id', productsController.detail)
 

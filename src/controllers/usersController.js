@@ -110,6 +110,23 @@ const usersController ={
 //         res.redirect('/');
      //}
 
+    //  delete: function (req,res) {
+    //     let usersId = req.params.id;
+    //     Users
+    //     .findByPk(usersId)
+    //     .then(User => {
+    //         return res.render(path.resolve(__dirname, '..', 'views',  'userDelete'), {User})})
+    //     .catch(error => res.send(error))
+    // },
+    // destroy: function (req,res) {
+    //     let userId = req.params.id;
+    //     Users
+    //     .destroy({where: {id: userId}, force: true}) // force: true es para asegurar que se ejecute la acción
+    //     .then(()=>{
+    //         return res.redirect('/users')})
+    //     .catch(error => res.send(error)) 
+    // }
+
    
  }
  
