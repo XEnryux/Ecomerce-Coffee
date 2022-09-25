@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <%- include('partials/head') %>
+
+  <body>
+    <%- include('partials/header') %>
+    <section>
+      <div class="container">
+        <div class="blank"></div>
+        <div class="total-price">PRECIO</div>
+        <div class="quantity">CANT</div>
+        <div class="total-price">TOTAL</div>
+      </div>
+      <hr class="solid" />
+      <div class="container">
+        <div class="product">
+          <img src="/images/productsImage/3A-cafe.jpg" alt="img product 1" /> Café en grano
+        </div>
+        <div class="price">Precio $1150</div>
+        <form class="form" action="/cant" method="get">
+          <select name="quantity" id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </form>
+        <div class="total-price">$ #</div>
+      </div>
+      <div class="container">
+        <div class="product">
+          <img src="/images/productsImage/2A-cafe.jpg" alt="img product 2" />Café molido
+        </div>
+        <div class="price">Precio $5820</div>
+        <form class="form" action="/cant" method="get">
+          <select name="quantity" id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </form>
+        <div class="total-price">$ #</div>
+      </div>
+      <div class="container">
+        <div class="product">
+          <img src="/images/productsImage/12A-cafe.jpg" alt="img product 3" />Café especial
+        </div>
+        <div class="price">Precio $10000</div>
+        <form class="form" action="/cant" method="get">
+          <select name="quantity" id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </form>
+        <div class="total-price">$ #</div>
+      </div>
+
+      <hr class="solid" />
+      <div class="total">TOTAL $#</div>
+    </section>
+    <section class="recently-viewed">
+      <h3 class="subtitle">Recientemente vistos</h3>
+      <hr class="solid2" />
+
+      <div class="viewed-container">
+        <div class="articles">
+          Café en grano<img src="/images/productsImage/3A-cafe.jpg" alt="img product 1" />
+        </div>
+        <div class="articles">
+          Café molido<img src="/images/productsImage/1A-cafe.webp" alt="img product 2" />
+        </div>
+        <div class="articles">
+          Café especial<img src="/images/productsImage/10A-cafe.jpg" alt="img product 3" />
+        </div>
+      </div>
+    </section>
+<!-- footer -->
+    <%- include('partials/footer') %>
+</html>

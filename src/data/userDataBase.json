@@ -1,0 +1,46 @@
+[
+ {
+  "id": 1,
+  "name": "a",
+  "user": "a",
+  "email": "e@a.com",
+  "birth_date": "10/2/89",
+  "adressStreet": "cs",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "profile": "sell",
+  "interests": "",
+  "avatar:": "",
+  "pass": ""
+ },
+ {
+  "id": 2,
+  "name": "",
+  "user": "",
+  "email": "",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "profile": "buy",
+  "interests": "",
+  "avatar:": "",
+  "pass": ""
+ },
+ {
+  "id": 3,
+  "name": "Mariana Elstner",
+  "email": "elstnermariana@gmail.com",
+  "birth_date": "",
+  "adressStreet": "Camargo 351 PB B",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "Ciudad Autónoma de Buenos Aires",
+  "profile": "on",
+  "interests": "a",
+  "pass": "Mariana01",
+  "pass_confirm": "Mariana01",
+  "image": "default-image.jpg"
+ }
+]
