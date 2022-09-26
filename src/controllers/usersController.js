@@ -21,11 +21,11 @@ const usersController ={
                 usersResults.push(users[i]);
             }
         };
-        res.render('usersResults',{usersResults:usersResults})
+        res.render('users/usersResults',{usersResults:usersResults})
     },
 
     list: (req, res) => {
-        res.render('usersList', {
+        res.render('users/usersList', {
         users, 
         toThousand
     })
@@ -33,7 +33,7 @@ const usersController ={
     detail: (req, res) => {
 		let id = req.params.id
 		let userDetail = users.find(users => users.id == id)
-		res.render('userDetail', {
+		res.render('users/detail', {
 			userDetail,
 			toThousand
 		})
@@ -41,13 +41,13 @@ const usersController ={
     edit:(res, req) =>{
         let idUser = req.params.idUser;
         let UserToEdit = users.find(users => users.id==id);
-        res.render('userEdit', {UserToEdit: UserToEdit})
+        res.render('users/userEdit', {UserToEdit: UserToEdit})
     },
     login: (req, res) => {
-     res.render('login');
+     res.render('users/login');
     },
     register: (req, res) => {
-        res.render('register');
+        res.render('users/register');
 
     },
 
@@ -127,7 +127,13 @@ const usersController ={
     //     .catch(error => res.send(error)) 
     // }
 
-   
+   delete: (req, res) =>{
+    // let idUser = req.params.idUser;
+    // let UserToDelete = users.find(users => users.id==id);
+
+        res.render('users/delete')
+        // , {UserToDelete: UserToDelete})
+   }
  }
  
 
