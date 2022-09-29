@@ -4,14 +4,12 @@ const express = require('express');
 const fs = require('fs');
 /** metodo para manejar las rutas relativas y absolutas */
 const path = require('path');
- 
-/**
- * editar archivos del json
- */
+
+/** editar archivos del json */
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const product = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const { gzip } = require('zlib');
 
+const { gzip } = require('zlib');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 

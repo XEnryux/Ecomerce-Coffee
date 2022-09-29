@@ -171,5 +171,14 @@
   "description": "",
   "price": "1",
   "image": "default-image.jpg"
+ },
+ {
+  "id": 18,
+  "name": "Mariana Elstner",
+  "description": "ddd",
+  "category": "1",
+  "presentation": "d",
+  "price": "1",
+
  }
 ]
