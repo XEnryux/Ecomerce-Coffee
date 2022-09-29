@@ -46,9 +46,9 @@ const usersController ={
     login: (req, res) => {
      res.render('users/login');
     },
+
     register: (req, res) => {
         res.render('users/register');
-
     },
 
     create: (req, res) => {
@@ -57,7 +57,7 @@ const usersController ={
 		if(req.files[0] != undefined){
 			image = req.files[0].filename
 		} else {
-			image = 'default-image.jpg'
+			image = 'user-image-default.png'
 		}
        let newUser = {
 			id: users[users.length - 1].id + 1,

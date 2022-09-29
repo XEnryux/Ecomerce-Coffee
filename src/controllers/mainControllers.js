@@ -17,7 +17,7 @@ const mainController = {
     home: (req, res) => {
         res.render('home');
     },
-    as:(req, res) =>{
+    us:(req, res) =>{
         res.render('as')
     },
     legales: (req, res) => {
