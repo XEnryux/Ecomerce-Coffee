@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <!-- head-->
+    <%- include('partials/head') -%>
+
+<a link rel="stylesheet" href="../public/css/register.css"></a> 
+
+
+<body>
+<!-- header -->
+    <%- include('partials/header') %>
+
+    <main class="register">
+      <!-- <% if (locals.errors) { 
+        errors.forEach(error =>{ %>
+        <p><%= error.msg %></p>
+      <%})
+        }%> -->
+      <form action="/users/register" method="POST" enctype="multipart/form-data">
+        <ul>
+        <li> 
+          <p><label>Nombre y apellido:</label></p>
+          <input type="text" name="name" required><br>
+        </li>
+        <li>
+        <label><b>E-mail:</b></label>
+        <input type="email" name="email" required><br>
+        <br></li>
+        <li>
+        <label><b>Fecha de nacimiento</b></label>
+        <input type="date" name="birth_date" id="birth_date" />
+        <br>
+        </li>
+        <li>
+        <label><b>Domicilio</b></label>
+        <input type="text" name="adressStreet" placeholder="Calle">
+        <input type="number" name="adressNumber" placeholder="altura">
+        <input type="text" name="adressSpecific" placeholder="departamento" >  
+        <input type="city" name="adressCity" placeholder="Ciudad">
+      </li>  
+      </ul>
+      <br>
+        <label><B>Perfil del usuario</B></label>
+        <div class="profile">
+             <ul>
+            <li><label>Comprador</label><input type="radio" name="profile" id="buy"></li>
+          
+           <li><label>Vendedor</label><input type="radio" name="profile" id="sell"></li>
+          </ul>
+                </div>
+
+        <label><B>Intereses</B></label>
+        <div class="interests">
+          <div>
+            <input type="checkbox" name="interests" value="a" id="a" />
+            <label for="a">Café Fuerte</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interests" value="b" id="b" />
+            <label for="b">Café Suave</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interests" value="c" id="c" />
+            <label for="c">Café Exótico</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interests" value="d" id="d" />
+            <label for="d">Café de Finca</label>
+          </div>
+          <div>
+            <input type="checkbox" name="interests" value="e" id="e" />
+            <label for="e">Café Original</label>
+          </div>
+        </div>
+        <br>
+        <label><b>Elegí tu foto de usuario</b></label>
+        <ul>
+          <li>
+            <input type="file" name="avatar" />
+          </li>
+        </ul>
+          <br>
+        <label><b>Contraseña</b></label>
+        <input type="password" name="pass" placeholder="Elegí tu contraseña" maxlength="30" pattern="[A-Za-z0-9@#$%!]{8,20}"required/>
+        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" required>
+        <br>
+       
+        <input type="submit" value="Registrarse" class="enviar">
+       
+       <a href="/"><input type="button" value="Volver" class='borrar'></a>
+     
+      </form>
+    </main>
+      <!-- footer -->
+      <%- include('partials/footer') %>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-//const {validationResult} = require('express-validator');
+const {validationResult} = require('express-validator');
 const fs = require('fs');
 //const { json } = require('sequelize/types');
 
@@ -53,9 +53,8 @@ const usersController ={
 
     create: (req, res) => {
         let image
-		console.log(req.files);
-		if(req.files[0] != undefined){
-			image = req.files[0].filename
+		if(req.file != undefined){
+			image = req.file.filename
 		} else {
 			image = 'user-image-default.png'
 		}
@@ -69,34 +68,34 @@ const usersController ={
 		res.redirect('/');
      },
 
-    // processLogin:(req, res) =>{
-    //     let errors = validationResult(req);
-    //     if (errors.isEmpty()){
-    //         let usersJSON = fs.readFileSync('usersDataBase.json', {})
-    //         let users; 
-    //         if (usersJSON == ""){
-    //             users=[];
-    //             }else{
-    //                 users = JSON.parse(usersJSON)
-    //             }
+    processLogin:(req, res) =>{
+        let errors = validationResult(req);
+        if (errors.isEmpty()){
+            let usersJSON = fs.readFileSync('usersDataBase.json', {})
+            let users; 
+            if (usersJSON == ""){
+                users=[];
+                }else{
+                    users = JSON.parse(usersJSON)
+                }
 
-    //         for (let i = 0; i < users.length; i ++) {
-    //             if (users[i].email == req.boby.email){
-    //                 if (bcrypt.compareSync(req.boby.password, users[i].password)) {
-    //                     let usuarioALoguearse = users[i];
-    //                     break
-    //                 }
-    //             }
-    //         } if (usuarioALoguearse == undefined){
-    //             res.render('login', {errors:[
-    //                 {msg:"Usuario o contraña invalida"}
-    //             ]})
-    //         }
-    //         req.session.usuarioLogueado = usuarioALoguearse;
-    //     }else{
-    //         return res.render('login', {errors:errors.errors})
-    //     };
-    // },
+            for (let i = 0; i < users.length; i ++) {
+                if (users[i].email == req.boby.email){
+                    if (bcrypt.compareSync(req.boby.password, users[i].password)) {
+                        let usuarioALoguearse = users[i];
+                        break
+                    }
+                }
+            } if (usuarioALoguearse == undefined){
+                res.render('login', {errors:[
+                    {msg:"Usuario o contraña invalida"}
+                ]})
+            }
+            req.session.usuarioLogueado = usuarioALoguearse;
+        }else{
+            return res.render('users/login', {errors:errors.errors})
+        };
+    },
     
  
 

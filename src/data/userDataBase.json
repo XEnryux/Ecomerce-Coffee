@@ -40,5 +40,63 @@
   "pass": "Mariana01",
   "pass_confirm": "Mariana01",
   "image": "default-image.jpg"
+ },
+ {
+  "id": 4,
+  "name": "Mariana Elstner",
+  "email": "elstnermariana@gmail.com",
+  "birth_date": "",
+  "adressStreet": "Camargo 351 PB B",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "Ciudad Autónoma de Buenos Aires",
+  "profile": "on",
+  "interests": "a",
+  "pass": "MAruMaur3",
+  "pass_confirm": "MaruMaruu2",
+  "image": "default-image.jpg"
+ },
+ {
+  "id": 5,
+  "name": "juan",
+  "email": "juan@juan.com",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "pass": "Juan0101",
+  "pass_confirm": "Juan0101",
+  "image": "default-image.jpg"
+ },
+ {
+  "id": 6,
+  "name": "pedro",
+  "email": "pedro@jeuen.com",
+  "birth_date": "",
+  "adressStreet": "pedro",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "profile": "on",
+  "interests": "b",
+  "pass": "pedroperdo01",
+  "pass_confirm": "PedroPedro01",
+  "image": "1664416105245-img.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Paula ",
+  "email": "paula@paula.com",
+  "birth_date": "",
+  "adressStreet": "Camargo 351 PB B",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "Ciudad Autónoma de Buenos Aires",
+  "profile": "on",
+  "interests": "b",
+  "pass": "Paula0101",
+  "pass_confirm": "Paula0101",
+  "image": "1664418544201-img.jpg"
  }
 ]

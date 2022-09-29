@@ -3,7 +3,7 @@ const path = require("path");
 const logger = require('morgan');
 const session= require('express-session')
 const app = express();
-//app.use(cookieParser()),
+//app.use(cookieParser());
 
 ///* con el method Override instalado */
 const methodOverride = require('method-override');

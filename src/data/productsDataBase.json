@@ -171,14 +171,5 @@
   "description": "",
   "price": "1",
   "image": "default-image.jpg"
- },
- {
-  "id": 19,
-  "name": "Chocolate de leche",
-  "description": "Exquisito producto de cacao con leche.",
-  "category": "4",
-  "presentation": "200gr",
-  "price": "1200",
-  "image": "default-image.jpg"
  }
 ]
