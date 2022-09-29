@@ -11,14 +11,25 @@ const usersController = require('../controllers/usersController');
 // ** Multer */  
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null, '/public/images/usersImage') 
-
+        cb(null, '../../public/images/usersImage');
     },
     filename: function(req,file,cb){
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+      let fileName = `${Date.now()}_img${path.extname(file.originalname)} `;
+      cb(null, fileName);
+        //  cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
 })
-var upload = multer({storage: storage})
+ const upload = multer({storage})
+
+//       cb(null, '/public/images/usersImage') 
+//
+//  },
+//    filename: function(req,file,cb){
+//        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+//    }
+//})
+//var upload = multer({storage: storage})
+
 
 
 /**VALIDACIONES */
@@ -59,12 +70,15 @@ router.get('/login', usersController.login);
 
 /*register*/
 router.get('/register', usersController.register);
-router.post('/register', upload.any(), usersController.create);
+
+router.post('/register', upload.single('usersImage'), usersController.create);
 //router.post('/register', validationRegister, usersController.create);
 
 router.get('/search', usersController.search);
 router.get('/edit/:idUser', usersController.edit);
-router.get('/detail/:idUser', usersController.detail)
+
+router.get('/detail/:idUser', usersController.detail);
+
 //router.get('/delete/:idUser', usersController.delete);
 //router.gep('/delete/:idUser', usersController.destroy);
 

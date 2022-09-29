@@ -2,7 +2,6 @@
  {
   "id": 1,
   "name": "a",
-  "user": "a",
   "email": "e@a.com",
   "birth_date": "10/2/89",
   "adressStreet": "cs",
@@ -11,12 +10,12 @@
   "profile": "sell",
   "interests": "",
   "avatar:": "",
-  "pass": ""
+  "pass": "aaaa0202"
+
  },
  {
   "id": 2,
   "name": "",
-  "user": "",
   "email": "",
   "birth_date": "",
   "adressStreet": "",
