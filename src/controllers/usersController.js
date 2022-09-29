@@ -21,6 +21,7 @@ const usersController ={
                 usersResults.push(users[i]);
             }
         };
+
         res.render('users/usersResults',{usersResults:usersResults})
     },
 
@@ -34,6 +35,7 @@ const usersController ={
 		let id = req.params.id
 		let userDetail = users.find(users => users.id == id)
 		res.render('users/detail', {
+
 			userDetail,
 			toThousand
 		})
@@ -49,6 +51,7 @@ const usersController ={
 
     register: (req, res) => {
         res.render('users/register');
+
     },
 
     create: (req, res) => {
@@ -58,6 +61,7 @@ const usersController ={
 			image = req.files[0].filename
 		} else {
 			image = 'user-image-default.png'
+
 		}
        let newUser = {
 			id: users[users.length - 1].id + 1,

@@ -22,7 +22,6 @@ const mainController = {
     },
     legales: (req, res) => {
         res.render('legales')
-    } 
-};
+====};
 
 module.exports = mainController;

@@ -1,0 +1,17 @@
+<html>
+  <%- include('partials/head') %>
+
+  <body>
+    <%- include('partials/header') %>   
+
+     <h1>Editar Usuario</h1>
+     
+<main class="EditarUsuario">
+<form action="/users/edit" method="POST" enctype="multipart/form-data"> 
+    <input type="text" name="name" value="<%=userToEdit.name %>">
+</form>
+</main>
+    <!-- footer -->
+    <%- include('partials/footer') %>   
+</body>
+</html>

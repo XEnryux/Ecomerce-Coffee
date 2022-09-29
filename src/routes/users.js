@@ -21,6 +21,16 @@ var storage = multer.diskStorage({
 })
  const upload = multer({storage})
 
+//       cb(null, '/public/images/usersImage') 
+//
+//  },
+//    filename: function(req,file,cb){
+//        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+//    }
+//})
+//var upload = multer({storage: storage})
+
+
 
 /**VALIDACIONES */
 // const validationLoginMiddleware = require('../middleware/validationLoginMiddleware');
@@ -60,13 +70,15 @@ router.get('/login', usersController.login);
 
 /*register*/
 router.get('/register', usersController.register);
+
 router.post('/register', upload.single('usersImage'), usersController.create);
 //router.post('/register', validationRegister, usersController.create);
 
 router.get('/search', usersController.search);
 router.get('/edit/:idUser', usersController.edit);
+
 router.get('/detail/:idUser', usersController.detail);
-router.get('/delete', usersController.delete)
+
 //router.get('/delete/:idUser', usersController.delete);
 //router.gep('/delete/:idUser', usersController.destroy);
 
