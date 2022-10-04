@@ -5,6 +5,7 @@ const path = require('path');
 const {body} = require('express-validator');
 
 
+
 /** Controller requiere */
 const usersController = require('../controllers/usersController');
 
@@ -23,30 +24,36 @@ var storage = multer.diskStorage({
 
 /**VALIDACIONES */
 const validationLoginMiddleware = require('../middleware/validationLoginMiddleware');
-const validationRegister =  [
-    body('name').notEmpty().withMessage('Debes completar tu nombre').bail(),
-    body('email').isEmail().withMessage('Debes completar el Email').bail(),
-    body('adressStreet').notEmpty().withMessage('Debes completar tu calle').bail(),
-    body("adressNumber").notEmpty().withMessage('Debes completar la altura de la calle'),
-    body("adressCity").notEmpty().withMessage('Debes completar tu ciudad'),
-    body('profile').notEmpty().withMessage('').bail(),
-    body('pass').isStrongPassword({
-        minLength: 8,
-        minLowercase: 1,
-        minUppercase: 1,
-        minNumbers: 1,
-        minSymbols: 1,
-        returnScore: false,
-        pointsPerUnique: 1,
-        pointsPerRepeat: 0.5,
-        pointsForContainingLower: 10,
-        pointsForContainingUpper: 10,
-        pointsForContainingNumber: 10,
-        pointsForContainingSymbol: 10,
-      }).withMessage('Tu contraseña debe tener un minimo de 8 caracteres, letras, numeros o simbolos'),
-    body('pass_confirm').notEmpty().withMessage('')
-
+//const validationRegister = require('../middleware/validationRegister');
+const validationRegister = [
+  body('name')
+  .notEmpty()
+  .withMessage('Debes completar tu nombre')
+  .bail(),
+  body('email')
+  .isEmail()
+  .withMessage('Debes completar el Email')
+  .bail(),
+  body('adressStreet')
+  .notEmpty()
+  .withMessage('Debes completar tu calle')
+  .bail(),
+  body("adressNumber")
+  .notEmpty()
+  .withMessage('Debes completar la altura de la calle'),
+  body("adressCity")
+  .notEmpty()
+  .withMessage('Debes completar tu ciudad'),
+  body('profile')
+  .notEmpty()
+  .withMessage('Debes elegir tu perfil')
+  .bail(),
+  body('pass')
+  .notEmpty()
+  .withMessage('Tu contraseña debe tener un minimo de 8 caracteres, letras, numeros o simbolos'),
+  
 ]
+
 
 /**ruta "users/"  */
 
@@ -59,8 +66,8 @@ router.post('/login', validationLoginMiddleware, usersController.processLogin);
 
 /*register*/
 router.get('/register', usersController.register);
-router.post('/register', upload.single('usersImage'), usersController.create);
-router.post('/register', validationRegister, usersController.create);
+// router.post('/register',, usersController.create);
+router.post('/register', validationRegister, upload.single('usersImage'), usersController.create);
 
 router.get('/search', usersController.search);
 router.get('/edit/:idUser', usersController.edit);

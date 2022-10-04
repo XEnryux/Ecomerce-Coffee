@@ -52,6 +52,14 @@ const usersController ={
     },
 
     create: (req, res) => {
+        const resultValidation = validationResult(req);
+        
+        if (resultValidation.errors.length > 0){
+            return res.render('users/register', {
+                errors: resultValidation.mapped(),
+            })
+         }else{
+
         let image
 		if(req.file != undefined){
 			image = req.file.filename
@@ -66,7 +74,8 @@ const usersController ={
 		users.push(newUser)
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
 		res.redirect('/');
-     },
+         } 
+    },
 
     processLogin:(req, res) =>{
         let errors = validationResult(req);

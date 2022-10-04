@@ -11,11 +11,12 @@
     <%- include('../partials/header') %>
 
     <main class="register">
-      <!-- <% if (locals.errors) { 
-        errors.forEach(error =>{ %>
-        <p><%= error.msg %></p>
-      <%})
-        }%> -->
+      <% if (locals.errors) { %>
+       <% for(let oneError in errors) { %> 
+         <p><%= errors[oneError].msg %> </p>
+        <% } %>
+       <% }%>
+
       <form action="/users/register" method="POST" enctype="multipart/form-data">
         <ul>
         <li> 
@@ -35,7 +36,7 @@
         <label><b>Domicilio</b></label>
         <input type="text" name="adressStreet" placeholder="Calle">
         <input type="number" name="adressNumber" placeholder="altura">
-        <input type="text" name="adressSpecific" placeholder="departamento" >  
+        <input type="text" name="adressSpecific" placeholder="departamento">  
         <input type="city" name="adressCity" placeholder="Ciudad">
       </li>  
       </ul>
@@ -82,8 +83,7 @@
           <br>
         <label><b>Contraseña</b></label>
         <input type="password" name="pass" placeholder="Elegí tu contraseña" maxlength="30" pattern="[A-Za-z0-9@#$%!]{8,20}"required/>
-        <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña" required>
-        <br>
+
        
         <input type="submit" value="Registrarse" class="enviar">
        

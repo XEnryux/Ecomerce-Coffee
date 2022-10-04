@@ -38,7 +38,6 @@
   "profile": "on",
   "interests": "a",
   "pass": "Mariana01",
-  "pass_confirm": "Mariana01",
   "image": "default-image.jpg"
  },
  {
@@ -53,7 +52,6 @@
   "profile": "on",
   "interests": "a",
   "pass": "MAruMaur3",
-  "pass_confirm": "MaruMaruu2",
   "image": "default-image.jpg"
  },
  {
@@ -66,7 +64,6 @@
   "adressSpecific": "",
   "adressCity": "",
   "pass": "Juan0101",
-  "pass_confirm": "Juan0101",
   "image": "default-image.jpg"
  },
  {
@@ -81,7 +78,6 @@
   "profile": "on",
   "interests": "b",
   "pass": "pedroperdo01",
-  "pass_confirm": "PedroPedro01",
   "image": "1664416105245-img.jpg"
  },
  {
@@ -96,7 +92,91 @@
   "profile": "on",
   "interests": "b",
   "pass": "Paula0101",
-  "pass_confirm": "Paula0101",
   "image": "1664418544201-img.jpg"
+ },
+ {
+  "id": 8,
+  "name": "Mariana Elst",
+  "email": "elstnermariana@gmail.com",
+  "birth_date": "",
+  "adressStreet": "Camargo 351 PB B",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "Ciudad Autónoma de Buenos Aires",
+  "interests": "a",
+  "pass": "MaruMaru",
+  "image": "1664844972038-img.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Javier",
+  "email": "elstner@jsjsjjs",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "pass": "shsbanna",
+  "image": "user-image-default.png"
+ },
+ {
+  "id": 10,
+  "name": "xxxx",
+  "email": "xxxx@xx",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "pass": "xxxxccc1",
+  "image":"user-image-default.png"
+ },
+ {
+  "id": 11,
+  "name": "rrrr",
+  "email": "rrrr@rrr",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "pass": "1223123Aa",
+  "image": "user-image-default.png"
+ },
+ {
+  "id": 12,
+  "name": "rrrr",
+  "email": "rrrr@rrr",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "pass": "msjskskAa",
+  "image": "user-image-default.png"
+ },
+ {
+  "id": 13,
+  "name": "wwww",
+  "email": "www@ww",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "pass": "allalala123",
+  "image": "user-image-default.png"
+ },
+ {
+  "id": 14,
+  "name": "sss",
+  "email": "sss@www",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "pass": "skskksks1",
+  "image": "user-image-default.png"
  }
 ]
