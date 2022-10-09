@@ -50,37 +50,39 @@ const usersController ={
     register: (req, res) => {
         res.render('users/register');
     },
-
+//processRegister
     create: (req, res) => {
-        const resultValidation = validationResult(req);
-        
-        if (resultValidation.errors.length > 0){
+        let errors = validationResult(req);
+         //console.log(errors)
+        if (errors && errors.errors.length == 0){
+            let image
+            if(req.file != undefined){
+                image = req.file.filename
+            } else {
+                image = 'user-image-default.png'
+            }
+            let newUser = {
+                id: users[users.length - 1].id + 1,
+                ...req.body,
+                image: image
+            };
+            users.push(newUser)
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+            res.redirect('/users/login'); //Si no hay errores hace el registr
+         }else {
+           // console.log(errors.errors);
+//            console.table(errors.mapped())
             return res.render('users/register', {
-                errors: resultValidation.mapped(),
+                errors: errors.errors,
+                oldData: req.body
             })
-         }else{
-
-        let image
-		if(req.file != undefined){
-			image = req.file.filename
-		} else {
-			image = 'user-image-default.png'
-		}
-       let newUser = {
-			id: users[users.length - 1].id + 1,
-			...req.body,
-			image: image
-		};
-		users.push(newUser)
-		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-		res.redirect('/');
-         } 
+        } 
     },
 
     processLogin:(req, res) =>{
         let errors = validationResult(req);
-        if (errors.isEmpty()){
-            let usersJSON = fs.readFileSync('usersDataBase.json', {})
+        if (errors){
+            let usersJSON = fs.readFileSync('usersDataBase.json', {encoding:'utf-8'});
             let users; 
             if (usersJSON == ""){
                 users=[];
@@ -89,18 +91,19 @@ const usersController ={
                 }
 
             for (let i = 0; i < users.length; i ++) {
-                if (users[i].email == req.boby.email){
-                    if (bcrypt.compareSync(req.boby.password, users[i].password)) {
-                        let usuarioALoguearse = users[i];
+                if (users[i].email == req.body.email){
+                    if (bcrypt.compareSync(req.body.password, users[i].password)) {
+                        let userToLogin = users[i];
                         break
                     }
                 }
-            } if (usuarioALoguearse == undefined){
+            } if (userToLogin == undefined){
                 res.render('login', {errors:[
                     {msg:"Usuario o contraña invalida"}
                 ]})
             }
-            req.session.usuarioLogueado = usuarioALoguearse;
+            req.session.userLogin = userToLogin;
+            res.render('/')
         }else{
             return res.render('users/login', {errors:errors.errors})
         };

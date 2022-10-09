@@ -35,8 +35,9 @@ router.patch('/edit/:id', upload.any(),productsController.update);
 //router.get('delete/:id', productsController.delete); 
 router.delete('/delete/:id', productsController.destroy);
 
-router.get('/:id', productsController.detail)
+router.get('/prueba', productsController.prueba);
+router.get('/detail/:id', productsController.detail)
 
-router.get('/prueba', productsController.prueba)
+
 
 module.exports = router; 

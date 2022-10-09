@@ -163,22 +163,25 @@
   "category": "1",
   "presentation": "200gr",
   "price": 100,
-  "image": "default-image.jpg"
+  "image": "default-image.jpg",
+  "offer": false
  },
  {
   "id": 17,
   "name": "Cafe inventado",
   "description": "",
   "price": "1",
-  "image": "default-image.jpg"
+  "image": "default-image.jpg",
+  "offer": false
  },
  {
   "id": 18,
-  "name": "Mariana Elstner",
+  "name": "Cafe firulete",
   "description": "ddd",
   "category": "1",
   "presentation": "d",
   "price": "1",
-  "image": "default-image.jpg"
+  "image": "default-image.jpg",
+  "offer": false
 }
 ]

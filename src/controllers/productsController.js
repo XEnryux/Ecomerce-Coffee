@@ -15,7 +15,8 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 //** logica de controllers */
 const productsController = {
-    products: (req, res) =>{
+
+	products: (req, res) =>{
         res.render('products', {
 			product,
 			toThousand
@@ -55,11 +56,7 @@ const productsController = {
 	},
 
 	prueba: (req,res)=>{
-		let pruebaproductos = [];
-		forEach(product => {
-			
-		});
-	res.render("pruebaproductos")
+		res.render("pruebaproductos", {products:product})
 	}	,
 
     /*editar productos*/

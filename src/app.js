@@ -12,7 +12,7 @@ const { Cookie } = require('express-session');
 const indexRouter = require('./routes/index');
 const rutesProducts = require('./routes/products');
 const rutesUsers = require ('./routes/users');
-
+const rutesAdmin = require('./routes/admin');
 
 // * Template Engine  *
 app.set('views', path.resolve(__dirname, './views'));
@@ -28,13 +28,14 @@ app.use(methodOverride('_method'));
 // para ordenar las rutas de nuesto proyecto//
 app.use('/', indexRouter);
 app.use('/products', rutesProducts);
-app.use('/users', rutesUsers)
-
+app.use('/users', rutesUsers);
+app.use('/admin', rutesAdmin);
 
 
 /**Middleware */
 app.use(session({secret: "hay cafe cafe"}));
-//app.use(validationLoginMiddleware);
+
+
 
 /**Servidor funcionando */
 app.listen(3001, ()=>{

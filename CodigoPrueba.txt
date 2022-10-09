@@ -32,7 +32,7 @@ views
         <li>
         <label><b>Domicilio</b></label>
         <input type="text" name="adressStreet" placeholder="Calle" value="<%= locals.old && old.adressStreet ? old.adressStreet : " " %>">
-        <input type="number" name="adressNumber" placeholder="altura" <%= locals.old && old.adressNumber ? old.adressNumber : " " %>">
+        <input type="number" name="adressNumber" placeholder="altura" value="<%= locals.old && old.adressNumber ? old.adressNumber : '' %>" >
         <input type="text" name="adressSpecific" placeholder="departamento" value="<%= locals.old && old.adressSpecific ? old.adressSpecific : " " %>">  
         <input type="city" name="adressCity" placeholder="Ciudad">
       </li>  
