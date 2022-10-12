@@ -3,6 +3,7 @@ const path = require('path');
 const {validationResult} = require('express-validator');
 const fs = require('fs');
 //const { json } = require('sequelize/types');
+const bcryptjs = require('bcryptjs')
 
 const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -64,7 +65,8 @@ const usersController ={
             let newUser = {
                 id: users[users.length - 1].id + 1,
                 ...req.body,
-                image: image
+                image: image,
+                pass: bcryptjs.hashSync(req.body.pass, 10)
             };
             users.push(newUser)
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
@@ -81,29 +83,29 @@ const usersController ={
 
     processLogin:(req, res) =>{
         let errors = validationResult(req);
-        if (errors){
-            let usersJSON = fs.readFileSync('usersDataBase.json', {encoding:'utf-8'});
-            let users; 
-            if (usersJSON == ""){
-                users=[];
-                }else{
-                    users = JSON.parse(usersJSON)
-                }
-
+        //res.send(errors)
+        //res.send(errors.isEmpty())
+        if (errors.isEmpty()){
+            let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+            let userToLogin = undefined;           
             for (let i = 0; i < users.length; i ++) {
                 if (users[i].email == req.body.email){
-                    if (bcrypt.compareSync(req.body.password, users[i].password)) {
-                        let userToLogin = users[i];
-                        break
+                    if (bcryptjs.compareSync(req.body.pass, users[i].pass)) {
+                        userToLogin = users[i];
+                        //res.send(userToLogin)
+                        req.session.usuario = userToLogin;
+                        res.redirect('/')
                     }
                 }
-            } if (userToLogin == undefined){
-                res.render('login', {errors:[
-                    {msg:"Usuario o contraña invalida"}
-                ]})
+            } 
+            
+            if (userToLogin == undefined){
+                res.render('users/login', {errors:
+                    {msg:"Usuario o contraseña invalidos"}                
+                })
             }
-            req.session.userLogin = userToLogin;
-            res.render('/')
+            
+            
         }else{
             return res.render('users/login', {errors:errors.errors})
         };

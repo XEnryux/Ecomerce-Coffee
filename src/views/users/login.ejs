@@ -6,10 +6,15 @@
 <%- include('../partials/header') -%>
     
 <main class="login">
+  <% if (locals && locals.errors) { %>
+    <p><%= locals.errors.msg %> </p>
+  <% }%>
+
+
       <form action="/users/login" method="POST">
         <ul>
           <li>
-          <input type="email" name="name" placeholder="E-mail" required/>
+          <input type="email" name="email" placeholder="E-mail" required/>
           </li>
           <li>
           <input type="password" name="pass" placeholder="Contraseña" required/>

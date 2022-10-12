@@ -17,10 +17,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productsController = {
 
 	products: (req, res) =>{
-        res.render('products', {
-			product,
-			toThousand
-		})
+        res.render('products', {products:product})
     },
     
     detail: (req, res) => {

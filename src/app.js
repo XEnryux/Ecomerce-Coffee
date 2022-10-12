@@ -24,16 +24,19 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(express.urlencoded({extended:false})); /**esta linea permite poner seguridad al ingreso de personas a cada vista segun su categoria */
 app.use(methodOverride('_method'));
 
+/**Middleware */
+app.use(session({
+  secret: "hay cafe cafe",
+  resave: true,
+  saveUninitialized: true
+}));
+
 
 // para ordenar las rutas de nuesto proyecto//
 app.use('/', indexRouter);
 app.use('/products', rutesProducts);
 app.use('/users', rutesUsers);
 app.use('/admin', rutesAdmin);
-
-
-/**Middleware */
-app.use(session({secret: "hay cafe cafe"}));
 
 
 
