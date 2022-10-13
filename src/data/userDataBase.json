@@ -174,5 +174,31 @@
   "interests": "a",
   "pass": "$2a$10$VDNHNg9ZZDbQNdAhmsS.Aujidvbt78vSin47FHOOpS4qDxQ0GB/qm",
   "image": "user-image-default.png"
+ },
+ {
+  "id": 14,
+  "nombre": " david",
+  "email": "",
+  "birth_date": "",
+  "adressStreet": "",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "",
+  "pass": "$2a$10$Hxp/cLTfrGFXwxdhh1mei.39UrabdWBccQFVR5shJjYh0mHDJFYW6",
+  "image": "user-image-default.png"
+ },
+ {
+  "id": 15,
+  "nombre": " david",
+  "email": "djaramm10@gmail.com",
+  "birth_date": "2022-10-05",
+  "adressStreet": "CALLE 5A # 33-40",
+  "adressNumber": "",
+  "adressSpecific": "",
+  "adressCity": "MEDELLIN",
+  "profile": "buy ",
+  "interests": "a",
+  "pass": "$2a$10$ubbSyaQcm8m1QH0MocTlme3Nbug54u9IPLcbyeETTEZEzaP61M5p6",
+  "image": "1665622760797-img.jpg"
  }
 ]

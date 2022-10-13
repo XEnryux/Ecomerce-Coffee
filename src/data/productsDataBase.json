@@ -167,14 +167,6 @@
   "offer": false
  },
  {
-  "id": 17,
-  "name": "Cafe inventado",
-  "description": "",
-  "price": "1",
-  "image": "default-image.jpg",
-  "offer": false
- },
- {
   "id": 18,
   "name": "Cafe firulete",
   "description": "ddd",
@@ -183,5 +175,5 @@
   "price": "1",
   "image": "default-image.jpg",
   "offer": false
-}
+ }
 ]

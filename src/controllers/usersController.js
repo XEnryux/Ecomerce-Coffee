@@ -28,7 +28,7 @@ const usersController ={
     list: (req, res) => {
         res.render('users/usersList', {
         users, 
-        toThousand
+     
     })
     },
     detail: (req, res) => {
@@ -36,7 +36,7 @@ const usersController ={
 		let userDetail = users.find(users => users.id == id)
 		res.render('users/detail', {
 			userDetail,
-			toThousand
+		
 		})
 	},
     edit:(res, req) =>{
@@ -141,11 +141,11 @@ const usersController ={
     // }
 
    delete: (req, res) =>{
-    // let idUser = req.params.idUser;
-    // let UserToDelete = users.find(users => users.id==id);
+     let idUser = req.params.idUser;
+     let UserToDelete = users.find(users => users.id==id);
 
-        res.render('users/delete')
-        // , {UserToDelete: UserToDelete})
+        res.render('users/delete'),
+       {UserToDelete: UserToDelete}
    }
  }
  
