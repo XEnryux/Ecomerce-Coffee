@@ -109,7 +109,7 @@
  },
  {
   "id": 9,
-  "nombre": " Usuario",
+  "name": " Usuario",
   "email": "usuario@usurioa.com",
   "birth_date": "",
   "adressStreet": "julian",
@@ -121,7 +121,7 @@
  },
  {
   "id": 10,
-  "nombre": " Pabli",
+  "name": " Pabli",
   "email": "PAbli@pabli.com",
   "birth_date": "",
   "adressStreet": "",
@@ -135,7 +135,7 @@
  },
  {
   "id": 11,
-  "nombre": " padro",
+  "name": " padro",
   "email": "pedro@pedro.com",
   "birth_date": "",
   "adressStreet": "pedrito",
@@ -149,7 +149,7 @@
  },
  {
   "id": 12,
-  "nombre": " juana",
+  "name": " juana",
   "email": "juana@Juliana.com",
   "birth_date": "",
   "adressStreet": "Camargo 351 PB B",
@@ -163,7 +163,7 @@
  },
  {
   "id": 13,
-  "nombre": " admin",
+  "name": " admin",
   "email": "admin@gmail.com",
   "birth_date": "",
   "adressStreet": "",
@@ -177,7 +177,7 @@
  },
  {
   "id": 14,
-  "nombre": " david",
+  "name": " david",
   "email": "",
   "birth_date": "",
   "adressStreet": "",
@@ -189,7 +189,7 @@
  },
  {
   "id": 15,
-  "nombre": " david",
+  "name": " david",
   "email": "djaramm10@gmail.com",
   "birth_date": "2022-10-05",
   "adressStreet": "CALLE 5A # 33-40",

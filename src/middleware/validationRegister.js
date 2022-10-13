@@ -1,7 +1,7 @@
 const { check } = require ('express-validator');
 
 const validationRegister = [
-        check('nombre')
+        check('name')
         .notEmpty()
         .withMessage('Debes completar tu nombre')
         
