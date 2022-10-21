@@ -163,18 +163,6 @@
   "image": "user-image-default.png"
  },
  {
-  "id": 14,
-  "name": " david",
-  "email": "",
-  "birth_date": "",
-  "adressStreet": "",
-  "adressNumber": "",
-  "adressSpecific": "",
-  "adressCity": "",
-  "pass": "$2a$10$Hxp/cLTfrGFXwxdhh1mei.39UrabdWBccQFVR5shJjYh0mHDJFYW6",
-  "image": "user-image-default.png"
- },
- {
   "id": 15,
   "name": " david",
   "email": "djaramm10@gmail.com",
