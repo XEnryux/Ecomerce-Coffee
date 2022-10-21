@@ -1,18 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "a",
-  "email": "e@a.com",
-  "birth_date": "10/2/89",
-  "adressStreet": "cs",
-  "adressNumber": "",
-  "adressSpecific": "",
-  "profile": "sell",
-  "interests": "",
-  "avatar:": "",
-  "pass": "aaaa0202"
- },
- {
   "id": 2,
   "name": "",
   "email": "",
@@ -173,18 +160,6 @@
   "profile": "sell ",
   "interests": "a",
   "pass": "$2a$10$VDNHNg9ZZDbQNdAhmsS.Aujidvbt78vSin47FHOOpS4qDxQ0GB/qm",
-  "image": "user-image-default.png"
- },
- {
-  "id": 14,
-  "name": " david",
-  "email": "",
-  "birth_date": "",
-  "adressStreet": "",
-  "adressNumber": "",
-  "adressSpecific": "",
-  "adressCity": "",
-  "pass": "$2a$10$Hxp/cLTfrGFXwxdhh1mei.39UrabdWBccQFVR5shJjYh0mHDJFYW6",
   "image": "user-image-default.png"
  },
  {
