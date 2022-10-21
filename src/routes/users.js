@@ -43,7 +43,8 @@ router.post('/register'/* , validationRegister */, upload.single('usersImage'), 
 router.get('/search', usersController.search);
 router.get('/edit/:idUser', authMiddleware, usersController.edit);
 router.get('/detail/:idUser', usersController.detail);
-router.get('/delete', usersController.delete)
+router.get('/delete/:idUser', usersController.delete)
+router.delete('/delete/:id', usersController.destroy);
 //router.get('/delete/:idUser', usersController.delete);
 //router.gep('/delete/:idUser', usersController.destroy);
 

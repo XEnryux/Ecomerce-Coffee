@@ -142,12 +142,18 @@ const usersController ={
 
    delete: (req, res) =>{
      let idUser = req.params.idUser;
-     let UserToDelete = users.find(users => users.id==id);
+     let user = users.find(users => users.id==idUser);
+        res.render('users/delete',
+       {user: user})
+   },
+   destroy : (req, res) => {
+    let id = req.params.id;
+    let finalUsers = users.filter(user => user.id != id);
+    fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
+    res.redirect('/');
 
-        res.render('users/delete'),
-       {UserToDelete: UserToDelete}
-   }
  }
+}
  
 
  module.exports = usersController;
