@@ -1,19 +1,5 @@
 [
  {
-  "id": 2,
-  "name": "",
-  "email": "",
-  "birth_date": "",
-  "adressStreet": "",
-  "adressNumber": "",
-  "adressSpecific": "",
-  "adressCity": "",
-  "profile": "buy",
-  "interests": "",
-  "avatar:": "",
-  "pass": ""
- },
- {
   "id": 3,
   "name": "Mariana Elstner",
   "email": "elstnermariana@gmail.com",
