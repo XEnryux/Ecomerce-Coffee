@@ -33,6 +33,7 @@ const usersController ={
     },
     detail: (req, res) => {
 		let id = req.params.id
+        console.log(id)
 		let userDetail = users.find(users => users.id == id)
 		res.render('users/detail', {
 			userDetail,

@@ -165,15 +165,5 @@
   "price": 100,
   "image": "default-image.jpg",
   "offer": false
- },
- {
-  "id": 18,
-  "name": "Cafe firulete",
-  "description": "ddd",
-  "category": "1",
-  "presentation": "d",
-  "price": "1",
-  "image": "default-image.jpg",
-  "offer": false
  }
 ]

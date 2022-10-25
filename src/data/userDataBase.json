@@ -149,20 +149,6 @@
   "image": "user-image-default.png"
  },
  {
-  "id": 13,
-  "name": " admin",
-  "email": "admin@gmail.com",
-  "birth_date": "",
-  "adressStreet": "",
-  "adressNumber": "",
-  "adressSpecific": "",
-  "adressCity": "",
-  "profile": "sell ",
-  "interests": "a",
-  "pass": "$2a$10$VDNHNg9ZZDbQNdAhmsS.Aujidvbt78vSin47FHOOpS4qDxQ0GB/qm",
-  "image": "user-image-default.png"
- },
- {
   "id": 15,
   "name": " david",
   "email": "djaramm10@gmail.com",

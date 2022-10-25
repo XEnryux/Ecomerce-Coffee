@@ -1,8 +1,8 @@
 <!DOCTYPE html>
     <html>
-        <%- include('./partials/head') -%>
+        <%- include('./../partials/head') -%>
         <body>
-          <%- include('./partials/header') -%>
+          <%- include('./../partials/header') -%>
 
 <div class="container products-wrapper">
      <div class="row">
@@ -25,16 +25,16 @@
                             let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
                         %>
                             <p class="product-detail-price small">
-                                <span>$<%= toThousand(product.price) %></span>
+                                <span>$<%= (product.price) %></span>
                                 /
                                 <b><%= product.discount %>% OFF</b>
                             </p>
                             <p class="product-detail-price">
-                                $<%= toThousand(finalPrice) %>
+                                $<%= (finalPrice) %>
                             </p>
                         <% } else { %> -->
                             <p class="product-detail-price">
-                                $<%= toThousand(productDetail.price) %>
+                                $<%= (productDetail.price) %>
                             </p>
                                        
                         <% } %>
@@ -62,7 +62,7 @@
     </div>
     <!-- /product detail -->
     <!-- footer -->
-    <%- include('partials/footer') -%>
+    <%- include('./../partials/footer') -%>
     <!-- /footer -->
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head') -%>  
+    <%- include('./../partials/head') -%>  
     <body class="products">
-    <%- include('partials/header') -%>    
+    <%- include('./../partials/header') -%>    
 
 <section class="Conozca nuestros productos">
     <main class="mainDestacados">
@@ -10,11 +10,11 @@
 
     <% products.forEach(function(articulo){ %>
 
-          <section class="containerProductos">
+          <section id="productos" class="containerProductos">
 
             <div class="producto">
               <div class="col-12 col-lg-8">
-                <section class = "product-box">
+                <section class = "Cafes_products">
                    <article>
                     <a href="/products/detail/<%= articulo.id %>">
                      <img src="/images/productsImage/<%= articulo.image %>" width='200' alt="product image" class="product-detail-img">
@@ -30,7 +30,7 @@
                                <p>Pagá en 12 cuotas sin interes</p>
                            </li>
                         </ul>
-                       <a href="/cart" class="buy-now-button">COMPRAR AHORA</a>
+                       <a href="../cart" class="buy-now-button">COMPRAR AHORA</a>
                        <hr>
                     </a>
                     </article>
@@ -70,11 +70,10 @@
                   </article>
                 
             </div>
-
     </section><br>
 
 
-    <%- include('partials/footer') %>
+    <%- include('./../partials/footer') %>
 
   <scrip src="/public/js/front.js">
   </body>
