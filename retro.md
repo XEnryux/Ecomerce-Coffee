@@ -1,8 +1,8 @@
 ### Retrospectiva SPRINT 1
 
-**1. Comenzar a hacer:**Se dan a conocer las habilidades individuales, y en un común acuerdo de los participantes se asignan las tareas.
+**1. Comenzar a hacer:** Se dan a conocer las habilidades individuales, y en un común acuerdo de los participantes se asignan las tareas.
 
-**2. Hacer más:**Para este Sprint cada cada participante estuvo espectante y espera aportar cada vez mas en cada uno de los Sprint siguientes. Se esta de acuerdo con un trabajo colaborativo
+**2. Hacer más:** Para este Sprint cada cada participante estuvo espectante y espera aportar cada vez mas en cada uno de los Sprint siguientes. Se esta de acuerdo con un trabajo colaborativo
 
 **3. Continuar haciendo:** Trabajo en equipo colaborativo y conversaciones de como vamos.
 
