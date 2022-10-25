@@ -11,26 +11,23 @@ const product = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const { gzip } = require('zlib');
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 //** logica de controllers */
 const productsController = {
 
 	products: (req, res) =>{
-        res.render('products', {products:product})
+        res.render('products/products', {products:product})
     },
     
     detail: (req, res) => {
 		let id = req.params.id
 		let productDetail = product.find(product => product.id == id)
-		res.render('productDetail', {
+		res.render('products/productDetail', {
 			productDetail,
-			toThousand
-		})
+			})
 	},
 
     createProducts: (req, res) =>{
-        res.render('productsCreate')
+        res.render('products/productsCreate')
     },
         
 	//* Create -  Method to store/
@@ -53,14 +50,14 @@ const productsController = {
 	},
 
 	prueba: (req,res)=>{
-		res.render("pruebaproductos", {products:product})
+		res.render("products/pruebaproductos", {products:product})
 	}	,
 
     /*editar productos*/
     edit: (req, res) => {
 		let id = req.params.id
 		let productsEdit = product.find(product => product.id == id)
-		res.render('productsEdit', {productsEdit})
+		res.render('products/productsEdit', {productsEdit})
 	},
 	// Update - Method to update
 	update: (req, res) => {

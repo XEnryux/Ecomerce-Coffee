@@ -33,19 +33,16 @@
         </li>
         <li>
         <label><b>Domicilio</b></label>
-        <input type="text" name="adressStreet" placeholder="Calle" value="<%= locals.old && old.adressStreet ? old.adressStreet : '' %>">
-        <input type="number" name="adressNumber" placeholder="altura" value="<%= locals.old && old.adressNumber ? old.adressNumber : '' %>" >
-        <input type="text" name="adressSpecific" placeholder="departamento" value="<%= locals.old && old.adressSpecific ? old.adressSpecific : '' %>">  
-        <input type="city" name="adressCity" placeholder="Ciudad" value="<%= locals.old && old.adressCity ? old.adressCity : '' %>"> 
-      </li>  
+        <input type="text" name="adress" placeholder="Direccion" value="<%= locals.old && old.adress ? old.adress : '' %>">
+        </li>  
       </ul>
       <br>
         <label><B>Perfil del usuario</B></label>
         <div class="profile">
              <ul>
-            <li><label>Comprador</label><input type="radio" name="profile" id="buy" value="buy <%= locals.old && old.category ==='buy' ? 'selected':'' %>"></li>
+            <li><label>Comprador</label><input type="radio" name="profile" id="buy" value="buy<%= locals.old && old.category ==='buy' ? 'selected':'' %>"></li>
           
-           <li><label>Vendedor</label><input type="radio" name="profile" id="sell" value="sell <%= locals.old && old.category === 'sell' ? 'selected':'' %>"></li>
+           <li><label>Vendedor</label><input type="radio" name="profile" id="sell" value="sell<%= locals.old && old.category === 'sell' ? 'selected':'' %>"></li>
           </ul>
                 </div>
 

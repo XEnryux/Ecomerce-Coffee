@@ -42,7 +42,7 @@ router.post('/register'/* , validationRegister */, upload.single('usersImage'), 
 
 router.get('/search', usersController.search);
 router.get('/edit/:idUser', authMiddleware, usersController.edit);
-router.get('/detail/:idUser', usersController.detail);
+router.get('/detail/:id', usersController.detail);
 router.get('/delete/:idUser', usersController.delete)
 router.delete('/delete/:id', usersController.destroy);
 //router.get('/delete/:idUser', usersController.delete);
