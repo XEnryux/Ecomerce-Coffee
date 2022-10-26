@@ -32,11 +32,27 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
             }, 
         product_interest_id:{
-            type: dataTypes.INTEGER  
+            type: dataTypes.INTEGER,  
+            foreign_id: {
+                type: dataTypes.INTEGER,
+                references: {
+                  model: 'Products',
+                  key: 'id',
+                  deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
+                }
+              }
         }, 
         profile_id:{
-            type: dataTypes.INTEGER
-            }
+            type: dataTypes.INTEGER,
+            foreign_id: {
+                type: Sequelize.INTEGER,
+                references: {
+                  model: 'Profile_users',
+                  key: 'id',
+                  deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
+                }
+              }    
+        }
     }
 
     const Users = sequelize.define(alias, cols, config);

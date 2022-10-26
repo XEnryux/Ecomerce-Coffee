@@ -79,7 +79,7 @@ INSERT INTO cafe_antonia.products (id, name, description, image, price, offer, c
 (12, "Seleccion", "Blend Colombiano y Brasileño, con un tostado natural tipo suizo. Sabor delicado y suave con un aroma profundo, fino y persistente. Ideal para tomar solo.", "12A-cafe.jpg", 10000, 0, 1, 2),
 (13, "Barra de chocolate 60% cacao", "Barra de chocolate al 60% de Cacao. Nace de las montañas Andinas de Calda, con su aroma que brinda una experiencia inigualable.", "13-chocolate.jpg", 510, 1, 5, 5),
 (14, "Barra de chocolate 70% cacao", "Chocolate negro semiamargo con 70% de Cacao, con las caracteristicas del sabor único de Calda", "14-chocolate.jpg", 800, 1, 5, 5),
-(15, "Chocolate 90% Cacao", "Chocolate Santo Aroma semiamargo 90% de cacao", "15-chocolate.jpg", 900, 1, 5, 5)
+(15, "Chocolate 90% Cacao", "Chocolate Santo Aroma semiamargo 90% de cacao", "15-chocolate.jpg", 900, 1, 5, 5);
 
 INSERT INTO cafe_antonia.users (id, name, email, birth_date, adress, pass, image, product_interest_id, profile_id) VALUES  
 (1, "Mariana Elstner", "elstnermariana@gmail.com", "1986-10-05", "Camargo 351 PB B", "$2a$10$HTxonUeMcmDtXAH7S..HgOKGjLAsL7RRXCaDzDma77.vUmgz9m1mC", "default-image.jpg", 5, 1),
