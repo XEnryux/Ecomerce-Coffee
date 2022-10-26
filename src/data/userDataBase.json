@@ -1,19 +1,5 @@
 [
  {
-  "id": 2,
-  "name": "",
-  "email": "",
-  "birth_date": "",
-  "adressStreet": "",
-  "adressNumber": "",
-  "adressSpecific": "",
-  "adressCity": "",
-  "profile": "buy",
-  "interests": "",
-  "avatar:": "",
-  "pass": ""
- },
- {
   "id": 3,
   "name": "Mariana Elstner",
   "email": "elstnermariana@gmail.com",
@@ -161,5 +147,16 @@
   "interests": "a",
   "pass": "$2a$10$ubbSyaQcm8m1QH0MocTlme3Nbug54u9IPLcbyeETTEZEzaP61M5p6",
   "image": "1665622760797-img.jpg"
+ },
+ {
+  "id": 16,
+  "name": "Usuario",
+  "email": "usuario@usuario.com",
+  "birth_date": "1992-11-30",
+  "adress": "usuario 123",
+  "profile": "buy",
+  "interests": "e",
+  "pass": "$2a$10$HTxonUeMcmDtXAH7S..HgOKGjLAsL7RRXCaDzDma77.vUmgz9m1mC",
+  "image": "1666713445226-img.jpeg"
  }
 ]
