@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const {validationResult} = require('express-validator');
+const { validationResult } = require('express-validator');
 const fs = require('fs');
 //const { json } = require('sequelize/types');
 const bcryptjs = require('bcryptjs')
@@ -11,54 +11,54 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
-const usersController ={
+const usersController = {
     search: (req, res) => {
         let buscaUsuario = req.query.search;
         users
-        let usersResults = []; 
-        
-        for (let i = 0; i < users.length; i ++){
-            if (users[i].name.includes(buscaUsuario)){
+        let usersResults = [];
+
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].name.includes(buscaUsuario)) {
                 usersResults.push(users[i]);
             }
         };
-        res.render('users/usersResults',{usersResults:usersResults})
+        res.render('users/usersResults', { usersResults: usersResults })
     },
 
     list: (req, res) => {
         res.render('users/usersList', {
-        users, 
-     
-    })
+            users,
+
+        })
     },
     detail: (req, res) => {
-		let id = req.params.id
+        let id = req.params.id
         console.log(id)
-		let userDetail = users.find(users => users.id == id)
-		res.render('users/detail', {
-			userDetail,
-		
-		})
-	},
-    edit:(res, req) =>{
+        let userDetail = users.find(users => users.id == id)
+        res.render('users/detail', {
+            userDetail,
+
+        })
+    },
+    edit: (res, req) => {
         let idUser = req.params.idUser;
-        let UserToEdit = users.find(users => users.id==id);
-        res.render('users/userEdit', {UserToEdit: UserToEdit})
+        let UserToEdit = users.find(users => users.id == id);
+        res.render('users/userEdit', { UserToEdit: UserToEdit })
     },
     login: (req, res) => {
-     res.render('users/login');
+        res.render('users/login');
     },
 
     register: (req, res) => {
         res.render('users/register');
     },
-//processRegister
+    //processRegister
     create: (req, res) => {
         let errors = validationResult(req);
-         //console.log(errors)
-        if (errors && errors.errors.length == 0){
+        //console.log(errors)
+        if (errors && errors.errors.length == 0) {
             let image
-            if(req.file != undefined){
+            if (req.file != undefined) {
                 image = req.file.filename
             } else {
                 image = 'user-image-default.png'
@@ -72,57 +72,60 @@ const usersController ={
             users.push(newUser)
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
             res.redirect('/users/login'); //Si no hay errores hace el registr
-         }else {
-           // console.log(errors.errors);
-//            console.table(errors.mapped())
+        } else {
+            // console.log(errors.errors);
+            //            console.table(errors.mapped())
             return res.render('users/register', {
                 errors: errors.errors,
                 oldData: req.body
             })
-        } 
+        }
     },
 
-    processLogin:(req, res) =>{
+    processLogin: (req, res) => {
         let errors = validationResult(req);
         //res.send(errors)
         //res.send(errors.isEmpty())
-        if (errors.isEmpty()){
+        if (errors.isEmpty()) {
             let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-            let userToLogin = undefined;           
-            for (let i = 0; i < users.length; i ++) {
-                if (users[i].email == req.body.email){
-                    if (bcryptjs.compareSync(req.body.pass, users[i].pass)) {
+            let userToLogin = undefined;
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].email == req.body.email) {
+                    if (bcryptjs.compareSync(req.body.password, users[i].password)) {
                         userToLogin = users[i];
+
                         //res.send(userToLogin)
                         req.session.usuario = userToLogin;
-                        res.redirect('/')
+                        res.render("Success");
+                        //res.redirect('/')
                     }
                 }
-            } 
-            
-            if (userToLogin == undefined){
-                res.render('users/login', {errors:
-                    {msg:"Usuario o contraseña invalidos"}                
+            }
+
+            if (userToLogin == undefined) {
+                res.render('users/login', {
+                    errors:
+                        { msg: "Usuario o contraseña invalidos" }
                 })
             }
-            
-            
-        }else{
-            return res.render('users/login', {errors:errors.errors})
+
+
+        } else {
+            return res.render('users/login', { errors: errors.errors })
         };
     },
-    
- 
 
-     //store: (req, res) =>{
 
-//userId = usersModel.create(users);
-//res.redirec('/users/')         
 
-        
-//         /*guardar info*/
-//         res.redirect('/');
-     //}
+    //store: (req, res) =>{
+
+    //userId = usersModel.create(users);
+    //res.redirec('/users/')         
+
+
+    //         /*guardar info*/
+    //         res.redirect('/');
+    //}
 
     //  delete: function (req,res) {
     //     let usersId = req.params.id;
@@ -141,20 +144,20 @@ const usersController ={
     //     .catch(error => res.send(error)) 
     // }
 
-   delete: (req, res) =>{
-     let idUser = req.params.idUser;
-     let user = users.find(users => users.id==idUser);
+    delete: (req, res) => {
+        let idUser = req.params.idUser;
+        let user = users.find(users => users.id == idUser);
         res.render('users/delete',
-       {user: user})
-   },
-   destroy : (req, res) => {
-    let id = req.params.id;
-    let finalUsers = users.filter(user => user.id != id);
-    fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
-    res.redirect('/');
+            { user: user })
+    },
+    destroy: (req, res) => {
+        let id = req.params.id;
+        let finalUsers = users.filter(user => user.id != id);
+        fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
+        res.redirect('/');
 
- }
+    }
 }
- 
 
- module.exports = usersController;
+
+module.exports = usersController;
