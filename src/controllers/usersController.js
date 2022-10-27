@@ -23,16 +23,18 @@ const usersController ={
     //             });
     //     },
 
-    'list': (req, res) => {
-        db.Users.findAll()
-        .then( respuesta => {
-            res.render( 'users/usersList' )
-        })
-        .catch( error => {
-            res.send( error )
+    list: (req, res) => {
+        res.render('users/usersList', {
+            users, 
+        // db.Users.findAll()
+        // .then( respuesta => {
+        //     res.render( 'users/usersList' )
+        // })
+        // .catch( error => {
+        //     res.send( error )
+        // })
         })
     },
-
     detail: (req, res) => {
 		// let id = req.params.id
         // console.log(id)
@@ -66,58 +68,58 @@ const usersController ={
 
 //processRegister
     create: (req, res) => {
-//         let errors = validationResult(req);
-//          //console.log(errors)
-//         if (errors && errors.errors.length == 0){
-//             let image
-//             if(req.file != undefined){
-//                 image = req.file.filename
-//             } else {
-//                 image = 'user-image-default.png'
-//             }
-//             let newUser = {
-//                 id: users[users.length - 1].id + 1,
-//                 ...req.body,
-//                 image: image,
-//                 pass: bcryptjs.hashSync(req.body.pass, 10)
-//             };
-//             users.push(newUser)
-//             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-//             res.redirect('/users/login'); //Si no hay errores hace el registr
-//          }else {
-//            // console.log(errors.errors);
-// //            console.table(errors.mapped())
-//             return res.render('users/register', {
-//                 errors: errors.errors,
-//                 oldData: req.body
-//             })
-//         } 
         let errors = validationResult(req);
-        //console.log(errors)
+         //console.log(errors)
         if (errors && errors.errors.length == 0){
-            Users.create({
-                name: req.body.name,
-                email: req.body.email,
-                birth_date: req.body.birth_date,
-                adress: req.body.adress,
-                pass:req.body.pass,
-                image: req.body.image,
-                product_interest_id:req.body.product_interest_id,
-                profile_id: req.body.profile_id
-                })
-                .then(()=>{
-                    return res.redirect('users/login')
-                 })
-                .catch(error => res.send(error))
-                }else {
-                   // console.log(errors.errors);
-                   // console.table(errors.mapped())
+            let image
+            if(req.file != undefined){
+                image = req.file.filename
+            } else {
+                image = 'user-image-default.png'
+            }
+            let newUser = {
+                id: users[users.length - 1].id + 1,
+                ...req.body,
+                image: image,
+                pass: bcryptjs.hashSync(req.body.pass, 10)
+            };
+            users.push(newUser)
+            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
+            res.redirect('/users/login'); //Si no hay errores hace el registr
+         }else {
+           // console.log(errors.errors);
+//            console.table(errors.mapped())
+            return res.render('users/register', {
+                errors: errors.errors,
+                oldData: req.body
+            })
+        } 
+    //     let errors = validationResult(req);
+    //     //console.log(errors)
+    //     if (errors && errors.errors.length == 0){
+    //         Users.create({
+    //             name: req.body.name,
+    //             email: req.body.email,
+    //             birth_date: req.body.birth_date,
+    //             adress: req.body.adress,
+    //             pass:req.body.pass,
+    //             image: req.body.image,
+    //             product_interest_id:req.body.product_interest_id,
+    //             profile_id: req.body.profile_id
+    //             })
+    //             .then(()=>{
+    //                 return res.redirect('users/login')
+    //              })
+    //             .catch(error => res.send(error))
+    //             }else {
+    //                // console.log(errors.errors);
+    //                // console.table(errors.mapped())
                 
-                   return res.render('users/register', {
-                       errors: errors.errors,
-                       oldData: req.body
-                    })       
-    }
+    //                return res.render('users/register', {
+    //                    errors: errors.errors,
+    //                    oldData: req.body
+    //                 })       
+    // }
     },
 
     processLogin:(req, res) =>{
@@ -191,7 +193,7 @@ const usersController ={
     fs.writeFileSync(usersFilePath, JSON.stringify(finalUsers, null, ' '));
     res.redirect('/');
 
- }
+}
 }
  
 

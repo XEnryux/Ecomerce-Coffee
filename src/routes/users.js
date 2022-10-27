@@ -38,13 +38,13 @@ router.post('/login', [
     check('password').isLength({ min: 8 }).withMessage("La contraseña debe tener un minimo de 8 caracteres")
 ], usersController.processLogin)
 
-router.get("/check", function (req, res) {
-    if (req.session.usuarioLogueado == undefined) {
-        res.send("No estas Logueado");
-    } else {
-        res.send("El usuario Logueado es" + req.session.usuarioLogueado)
-    }
-})
+// router.get("/check", function (req, res) {
+//     if (req.session.userToLogin == undefined) {
+//         res.send("No estas Logueado");
+//     } else {
+//         res.send("El usuario Logueado es" + req.session.usuarioLogueado)
+//     }
+// })
 router.post('/login', validationLoginMiddleware, usersController.processLogin);
 
 

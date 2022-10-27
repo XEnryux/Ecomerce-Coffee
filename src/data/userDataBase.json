@@ -158,5 +158,25 @@
   "interests": "e",
   "pass": "$2a$10$HTxonUeMcmDtXAH7S..HgOKGjLAsL7RRXCaDzDma77.vUmgz9m1mC",
   "image": "1666713445226-img.jpeg"
+ },
+ {
+  "id": 17,
+  "name": "Admin",
+  "email": "admin@admin.com",
+  "birth_date": "",
+  "adress": "ddd",
+  "profile": "sell",
+  "interests": "b",
+  "pass": "$2a$10$MFzuLedI7HAUTSKH6HNEw.4pBPBCjqrCSlkkryVP7bSe69U.Q.yj2",
+  "image": "user-image-default.png"
+ },
+ {
+  "id": 18,
+  "name": "",
+  "email": "elstnermariana@gmail.com",
+  "birth_date": "",
+  "adress": "",
+  "pass": "$2a$10$A5e/fFkHgdAHn3ZH3IiiTeL4h9TCiD9zzR0eVxX4l6shNK6d39GFC",
+  "image": "user-image-default.png"
  }
 ]
