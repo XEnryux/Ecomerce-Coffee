@@ -2,12 +2,20 @@ const express = require('express');
 const path = require('path');
 const { validationResult } = require('express-validator');
 const fs = require('fs');
-//const { json } = require('sequelize/types');
+
+/* para llamar la Base de datos 
+const { json } = require('sequelize/types');*/
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
+/* para encriptar la contraseña */
 const bcryptjs = require('bcryptjs')
 
+/* Para usar el json en Data */
 const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
+<<<<<<< HEAD
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
@@ -24,6 +32,15 @@ const usersController = {
         };
         res.render('users/usersResults', { usersResults: usersResults })
     },
+=======
+const usersController ={
+    search: (req, res) => {
+        db.Cafe_Antonia.findByPk(req.params.id)
+            .then(users => {
+                res.render('users/usersResults',{usersResults})
+                });
+        },
+>>>>>>> 83d2039a1630d25356c5a3231c379eecbc94f0e8
 
     list: (req, res) => {
         res.render('users/usersList', {
