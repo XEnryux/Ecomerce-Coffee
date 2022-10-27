@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require("path"); 
 const logger = require('morgan');
-const session= require('express-session')
+const session= require('express-session');
 const app = express();
 //app.use(cookieParser());
 
@@ -28,9 +28,11 @@ app.use(methodOverride('_method'));
 app.use(session({
   secret: "hay cafe cafe",
   resave: true,
-  saveUninitialized: true
+  saveUninitialized: true,
 }));
+ /**Habilitar las cookies */
 
+// app.use(cookieParser())
 
 // para ordenar las rutas de nuesto proyecto//
 app.use('/', indexRouter);
