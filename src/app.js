@@ -39,9 +39,6 @@ app.use('/', indexRouter);
 app.use('/products', rutesProducts);
 app.use('/users', rutesUsers);
 
-
-
-
 /**Servidor funcionando */
 app.listen(3001, ()=>{
     console.log('Servidor 3001 funcionando http://localhost:3001/');

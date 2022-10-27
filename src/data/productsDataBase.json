@@ -155,15 +155,5 @@
   "presentation": "50gr",
   "price": 900,
   "offer": true
- },
- {
-  "id": 16,
-  "name": "nas",
-  "description": "ta",
-  "category": "1",
-  "presentation": "200gr",
-  "price": 100,
-  "image": "default-image.jpg",
-  "offer": false
  }
 ]
