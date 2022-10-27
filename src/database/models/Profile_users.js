@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
         }
     };
-}
 
 const Profile_users = sequelize.define(alias, cols, config);
 return Profile_users;
+}

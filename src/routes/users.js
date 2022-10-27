@@ -40,7 +40,7 @@ router.post('/login', validationLoginMiddleware, usersController.processLogin);
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register'/* , validationRegister */, upload.single('usersImage'), usersController.create);
 
-router.get('/search', usersController.search);
+// router.get('/search', usersController.search);
 router.get('/edit/:idUser', authMiddleware, usersController.edit);
 router.get('/detail/:id', usersController.detail);
 router.get('/delete/:idUser', usersController.delete)

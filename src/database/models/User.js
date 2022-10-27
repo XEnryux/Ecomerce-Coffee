@@ -1,12 +1,7 @@
-const sequelize = require ("sequelize");
-
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, dataTypes) => {    
     let alias = 'Users';
-    let config = {
-        tableName: 'users',
-        timestamps: false
-    };
-    let cols ={
+    
+    let cols = {
         id: {      
                 type: dataTypes.INTEGER,
                 primaryKey: true, 
@@ -33,29 +28,16 @@ module.exports = (sequelize, dataTypes) => {
             }, 
         product_interest_id:{
             type: dataTypes.INTEGER,  
-            foreign_id: {
-                type: dataTypes.INTEGER,
-                references: {
-                  model: 'Products',
-                  key: 'id',
-                  deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
-                }
-              }
-        }, 
+            },
         profile_id:{
             type: dataTypes.INTEGER,
-            foreign_id: {
-                type: Sequelize.INTEGER,
-                references: {
-                  model: 'Profile_users',
-                  key: 'id',
-                  deferrable: Sequelize.Deferrable.INITIALLY_IMMEDIATE
-                }
-              }    
-        }
-    }
+           }    
+        };
 
-    const Users = sequelize.define(alias, cols, config);
+    let config = {
+        tableName: 'users',
+        timestamps: false
+    };
+       const Users = sequelize.define(alias, cols, config);
     return Users;
-    
 }
