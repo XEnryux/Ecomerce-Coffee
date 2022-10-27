@@ -31,10 +31,6 @@ const usersController ={
         .catch( error => {
             res.send( error )
         })
-    //     res.render('users/usersList', {
-    //     users, 
-     
-    // })
     },
 
     detail: (req, res) => {
