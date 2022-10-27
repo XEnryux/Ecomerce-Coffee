@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 const multer = require('multer');
 const path = require('path');
-let {check, validationResult, body} = require('express-validator');
+let { check, validationResult, body } = require('express-validator');
 let guestMiddleware = require('../middleware/guestMiddleware');
 let authMiddleware = require('../middleware/authMiddleware');
 
@@ -11,15 +11,15 @@ const usersController = require('../controllers/usersController');
 
 // ** Multer */  
 var storage = multer.diskStorage({
-    destination:function(req,file,cb){
+    destination: function (req, file, cb) {
         cb(null, './public/images/usersImage');
     },
-    filename: function(req,file,cb){
-      let fileName = `${Date.now()}-img${path.extname(file.originalname)}`;
-      cb(null, fileName);
-            }
+    filename: function (req, file, cb) {
+        let fileName = `${Date.now()}-img${path.extname(file.originalname)}`;
+        cb(null, fileName);
+    }
 })
- const upload = multer({storage})
+const upload = multer({ storage })
 
 
 /**VALIDACIONES */
@@ -33,6 +33,18 @@ router.get('/', authMiddleware, usersController.list);
 
 /*ruta Login*/
 router.get('/login', usersController.login);
+router.post('/login', [
+    check('email').isEmail().withMessage("Email Invalido"),
+    check('password').isLength({ min: 8 }).withMessage("La contraseña debe tener un minimo de 8 caracteres")
+], usersController.processLogin)
+
+router.get("/check", function (req, res) {
+    if (req.session.usuarioLogueado == undefined) {
+        res.send("No estas Logueado");
+    } else {
+        res.send("El usuario Logueado es" + req.session.usuarioLogueado)
+    }
+})
 router.post('/login', validationLoginMiddleware, usersController.processLogin);
 
 
