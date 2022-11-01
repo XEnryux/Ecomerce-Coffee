@@ -137,12 +137,12 @@ const usersController ={
                 birth_date: req.body.birth_date,
                 adress: req.body.adress,
                 pass:req.body.pass,
-                image: req.body.image,
+                image: "user-image-default.png",
                 product_interest_id:req.body.product_interest_id,
                 profile_id: req.body.profile_id
                 })
                 .then(()=>{
-                    return res.redirect('/login')
+                    return res.redirect('/users/login')
                  })
                 .catch(error => res.send(error))
                 }else {
