@@ -29,7 +29,7 @@ const validationRegister = require('../middleware/validationRegister');
 
 /**ruta "users/"  */
 
-router.get('/', authMiddleware, usersController.list);
+router.get('/', /* authMiddleware, */ usersController.list);
 
 /*ruta Login*/
 router.get('/login', usersController.login);
@@ -52,12 +52,12 @@ router.post('/login', validationLoginMiddleware, usersController.processLogin);
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register'/* , validationRegister */, upload.single('usersImage'), usersController.create);
 
-// router.get('/search', usersController.search);
-router.get('/edit/:idUser', authMiddleware, usersController.edit);
+router.get('/search', usersController.search); 
+router.get('/edit/:id', /*authMiddleware,*/ usersController.edit);
+router.post('/edit/:id', /*authMiddleware,*/ usersController.update);
 router.get('/detail/:id', usersController.detail);
-router.get('/delete/:idUser', usersController.delete)
+router.get('/delete/:id', usersController.delete)
 router.delete('/delete/:id', usersController.destroy);
-//router.get('/delete/:idUser', usersController.delete);
-//router.gep('/delete/:idUser', usersController.destroy);
+
 
 module.exports = router; 

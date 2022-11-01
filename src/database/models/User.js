@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING
             }, 
         product_interest_id:{
-            type: dataTypes.INTEGER,  
+            type: dataTypes.INTEGER,
             },
         profile_id:{
             type: dataTypes.INTEGER,
@@ -39,5 +39,13 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
        const Users = sequelize.define(alias, cols, config);
+    
+    Users.associate = (models) => {
+        Users.belongsTo(models.Profile_user, {
+            as:"profiles",
+            foreignKey: "profile_id",
+        })
+    }
+ 
     return Users;
 }

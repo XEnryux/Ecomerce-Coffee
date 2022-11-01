@@ -178,5 +178,14 @@
   "adress": "",
   "pass": "$2a$10$A5e/fFkHgdAHn3ZH3IiiTeL4h9TCiD9zzR0eVxX4l6shNK6d39GFC",
   "image": "user-image-default.png"
+ },
+ {
+  "id": 19,
+  "name": "Usuarioconfoto",
+  "email": "usuario@confoto.com",
+  "birth_date": "",
+  "adress": "foto1234",
+  "pass": "$2a$10$NgRyH4q4rWgdsLqSBSdJC.2.C8CDVd4ZKenLqDFh2joVnR/GjyCdC",
+  "image": "1666877935571-img.jpg"
  }
 ]
