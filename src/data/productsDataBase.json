@@ -155,5 +155,14 @@
   "presentation": "50gr",
   "price": 900,
   "offer": true
+ },
+ {
+  "id": 16,
+  "name": "david",
+  "description": "",
+  "category": "3",
+  "presentation": "c",
+  "price": "c",
+  "image": "default-image.jpg"
  }
 ]

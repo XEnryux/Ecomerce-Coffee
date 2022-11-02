@@ -5,11 +5,19 @@ const fs = require('fs');
 /** metodo para manejar las rutas relativas y absolutas */
 const path = require('path');
 
+// Aca llamamos a la base de datos
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const Product = db.Products;
+const Category = db.Category;
+const Presentation = db.Presentation;
+
 /** editar archivos del json */
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const product = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const { gzip } = require('zlib');
+
 
 //** logica de controllers */
 const productsController = {
