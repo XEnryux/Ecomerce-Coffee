@@ -197,4 +197,8 @@ views
           <a href=""><i class="producto__icon fas fa-cart-plus"></i></a>
         </div>
 
+
+          <label>Perfil de usuario:</label>
+  <p><input type="text" name="profile_id" value="<%= user.profile_id %>"></p>
+
         

@@ -7,20 +7,19 @@
      <h1>Editar Usuario</h1>
      
 <main class="EditarUsuario">
-<form action="/users/edit/<%= user.id %>" method="POST" enctype="multipart/form-data">
+<form action="/users/edit/<%= user.id %>" method="POST" ><!-- enctype="multipart/form-data" -->
   <label>Nombre:</label>  
   <p><input type="text" name="name" value="<%=user.name %>"></p>
   <label>Email:</label>
   <p><input type="text" name="email" value="<%= user.email %>"></p>
   <label>Direccion:</label>
   <p><input type="text" name="adress" value="<%= user.adress %>"></p>
-  <label>Producto de interes:</label>
-  <p><input type="text" name="product_interest_id" value="<%= user.product_interest_id %>"></p>
+
+ <!--  <label>Imagen de perfil:</label>
+  <img src="/images/usersImage/<%= user.image %>" alt="user image" class="user-img"><p>  
+  <p><input type="file" name="image"></p><br> -->
   <label>Perfil de usuario:</label>
   <p><input type="text" name="profile_id" value="<%= user.profile_id %>"></p>
-  <label>Imagen de perfil:</label>
-  <img src="/images/usersImage/<%= user.image %>" alt="user image" class="user-img"><p>  
-  <p><input type="file" name="image"></p><br>
   
   <p> <button class="botonAgregar" type="submit">Actualizar</button>
 

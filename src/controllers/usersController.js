@@ -3,6 +3,7 @@ const path = require('path');
 const {validationResult} = require('express-validator');
 const fs = require('fs');
 
+
 /* para llamar la Base de datos 
 const { json } = require('sequelize/types');*/
 const db = require('../database/models');
@@ -13,7 +14,8 @@ const Profile = db.Profile_user;
 /* para encriptar la contraseña */
 const bcryptjs = require('bcryptjs');
 const { profile } = require('console');
-
+const { Sequelize } = require('../database/models');
+const { OP } = require("Sequelize") 
 /* Para usar el json en Data */
 const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -34,7 +36,9 @@ const usersController ={
         },
 
     search: (req, res) => {
-        Users.findAll(req.params.id)
+        let target = req.body
+        Users.findAll({where:{ name:{[OP.like]:'%req.params.id'} }})
+        // console.log('1')
             .then( user => {
                 //res.send(user)
                 res.render( 'users/usersResults', {user} )
@@ -69,11 +73,11 @@ const usersController ={
 
     update: function (req,res) {
         let userId = req.params.id; 
-        
+      
         Users.update({
             name: req.body.name,
             email: req.body.email,
-            product_interest_id: req.body.product_interest_id, 
+            adress: req.body.adress,
             profile_id: req.body.profile_id, 
             image: req.body.image,                 
                          
@@ -97,7 +101,7 @@ const usersController ={
                // console.log(profile);
                 res.render('users/register', {allProfile:profile})
             })
-            //faltaria hacer lo mismo con el product_interest_id
+        
     },
 
 //processRegister

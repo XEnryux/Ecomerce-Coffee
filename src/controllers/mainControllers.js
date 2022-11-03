@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
-const fetch = require('node-fetch')
-//const fetch= require('node-fetch'); 
+// const fetch = require('node-fetch')
+// //const fetch= require('node-fetch'); 
 
 
 const productsBaseDatos = require('../data/productsDataBase.json');

@@ -31,9 +31,13 @@ Product.associate = (models) => {
     
 Para el controller de Users: 
 
+
+
+
 register: (req, res) => {
-        Promise
-        .all([users, profile])
+
+
+        Promise.all([users, profile])
         .then(([users, profile])=>{})    
         Profile.findAll()
         Product.findAll()
