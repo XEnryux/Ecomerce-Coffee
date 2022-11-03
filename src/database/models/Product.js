@@ -7,12 +7,27 @@ module.exports = (sequelize,DataTypes) => {
             autoIncrement: true,
             allowNull : false
         },
-        name: DataTypes.STRING,
-        description: DataTypes.STRING,
-        price : DataTypes.DECIMAL,
-        discount: DataTypes.INTEGER,
-        image: DataTypes.STRING,
-        categoryId: DataTypes.INTEGER
+        name: {
+            type: DataTypes.STRING,
+        },
+        description: {
+            type: DataTypes.STRING,
+        },
+        price : {
+            type:DataTypes.DECIMAL,
+        },
+        discount: {
+            type:DataTypes.INTEGER,
+        },
+        image: {
+            type:DataTypes.STRING,
+        },
+        category_Id: {
+            type:DataTypes.INTEGER,
+        },
+        presentation_id:{
+            type: DataTypes.INTEGER,
+        }
     }
     /*
     let config ={
@@ -22,11 +37,16 @@ module.exports = (sequelize,DataTypes) => {
     }
     */
    //creando el modelo
-    const Product = sequelize.define(alias, cols);
+    const Product = sequelize.define(alias, cols,);
     Product.associate = function(models){
         Product.belongsTo(models.Category, {
             as : 'category',
-            foreignKey : 'categoryId'
+            foreignKey : 'category_Id'
+        })
+
+        Product.belongsTo(models.Presentation, {
+            as : 'presentations',
+            foreignKey : 'presentation_id'
         })
     }
     return Product;

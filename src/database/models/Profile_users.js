@@ -7,17 +7,24 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
 
-    let cols ={
-        id:{
+    let cols = {
+        id: {
             type: dataTypes.INTEGER,
-            primaryKey: true, 
-            autoIncrement:true
+            primaryKey: true,
+            autoIncrement: true
         },
-        profile:{
+        profile: {
             type: dataTypes.STRING
         }
     };
 
-const Profile_users = sequelize.define(alias, cols, config);
-return Profile_users;
+    const Profile_users = sequelize.define(alias, cols, config);
+
+    Profile_users.associate = (models) => {
+        Profile_users.hasMany(models.Users, {
+            as: "Users",
+            foreignKey: "profile_id"
+        })
+    }
+    return Profile_users;
 }
