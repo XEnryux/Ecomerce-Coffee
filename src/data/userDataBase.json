@@ -178,5 +178,16 @@
   "adress": "",
   "pass": "$2a$10$A5e/fFkHgdAHn3ZH3IiiTeL4h9TCiD9zzR0eVxX4l6shNK6d39GFC",
   "image": "user-image-default.png"
+ },
+ {
+  "id": 19,
+  "name": "Jenny Maria Tellez Estrada",
+  "email": "jtellezt@summa-sci.com",
+  "birth_date": "1985-04-19",
+  "adress": "Calle 57 n° 69-27",
+  "profile": "buy",
+  "interests": "b",
+  "pass": "$2a$10$5TNH18DRD4ZeHF0rqUbdoeeu9Z1zRn3YfR29UCXIL7AfEhhc0awKO",
+  "image": "user-image-default.png"
  }
 ]

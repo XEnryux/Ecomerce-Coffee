@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 const multer = require('multer');
 const path = require('path');
-let { check, validationResult, body } = require('express-validator');
+let { check } = require('express-validator');
 let guestMiddleware = require('../middleware/guestMiddleware');
 let authMiddleware = require('../middleware/authMiddleware');
 
@@ -46,6 +46,7 @@ router.post('/login', [
 //     }
 // })
 router.post('/login', validationLoginMiddleware, usersController.processLogin);
+//src="/images/relojes/<%= miReloj.image%>"
 
 
 /*register*/

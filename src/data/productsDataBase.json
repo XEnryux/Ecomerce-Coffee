@@ -165,5 +165,14 @@
   "price": 100,
   "image": "default-image.jpg",
   "offer": false
+ },
+ {
+  "id": 17,
+  "name": "Cafe clasico",
+  "description": "Café clásico con un sabor suave que te encantará",
+  "category": "4",
+  "presentation": "Saco",
+  "price": "5",
+  "image": "default-image.jpg"
  }
 ]

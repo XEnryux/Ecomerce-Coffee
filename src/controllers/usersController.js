@@ -1,46 +1,34 @@
-const express = require('express');
 const path = require('path');
-const {validationResult} = require('express-validator');
 const fs = require('fs');
-
-/* para llamar la Base de datos 
-const { json } = require('sequelize/types');*/
-const db = require('../database/models');
-const sequelize = db.sequelize;
-
+const multer = require('multer');
 /* para encriptar la contraseña */
 const bcryptjs = require('bcryptjs')
+const {check,validationResult, body} = require('express-validator');
+
+
+
+
+/* para llamar la Base de datos */
+
+const db = require('../database/models');
+
+const sequelize = db.sequelize;
+
 
 /* Para usar el json en Data */
 const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController ={
-    // search: (req, res) => {
-    //     db.Users.findByPk(req.params.id)
-    //         .then(Users => {
-    //             res.render('users/usersResults', {usersResults:usersResults})
-    //             });
-    //     },
 
     list: (req, res) => {
         res.render('users/usersList', {
             users, 
-        // db.Users.findAll()
-        // .then( respuesta => {
-        //     res.render( 'users/usersList' )
-        // })
-        // .catch( error => {
-        //     res.send( error )
-        // })
+   
         })
     },
     detail: (req, res) => {
-		// let id = req.params.id
-        // console.log(id)
-		// let userDetail = users.find(users => users.id == id)
-		// res.render('users/detail', {
-		// 	userDetail,})
+	
 		    db.Users.findByPk(req.params.id)
             .then(user => {
                 res.render('users/detail', {userDetail});
@@ -48,9 +36,7 @@ const usersController ={
 	},
 
     edit:(res, req) =>{
-        // let idUser = req.params.idUser;
-        // let UserEdit = users.find(users => users.id==id);
-        // res.render('users/userEdit', {UserToEdit: UserToEdit})
+
         db.Users.findByPk(req.params.id)
         .then(user => {
             res.render('users/userEdit', {UserEdit: UserEdit})
