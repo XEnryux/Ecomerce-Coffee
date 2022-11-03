@@ -50,7 +50,7 @@ router.post('/login', validationLoginMiddleware, usersController.processLogin);
 
 /*register*/
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register'/* , validationRegister */, upload.single('usersImage'), usersController.create);
+router.post('/register'/* , validationRegister , upload.single('image'),*/, usersController.create);
 
 router.get('/search', usersController.search); 
 router.get('/edit/:id', /*authMiddleware,*/ usersController.edit);
