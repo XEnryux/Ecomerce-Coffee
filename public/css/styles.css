@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    display: -ms-flexbox;
+
 }
 
 body{ 
@@ -96,6 +98,12 @@ nav > ul > li a {
 
 #items {
     display: flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 section{
@@ -107,7 +115,26 @@ section{
     min-width: fit-content;
     min-height: fit-content;
     font-size: 2.5vmin;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
 }
+/*agregue esta media para poner en vertical*/
+
+@media (min-width: 768px) {
+    .col-md {
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      min-width: 0;
+      max-width: 100%;
+    }
+
 article{
     
     flex-wrap: wrap;
@@ -115,7 +142,7 @@ article{
     align-items: center;
     justify-content: center;
     min-height: fit-content;
-    flex-grow:1;
+    flex-grow:0;
     padding: 1%;
     margin: 1%;
     min-width: fit-content;

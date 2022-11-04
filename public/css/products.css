@@ -7,50 +7,65 @@
 }
 
 body{ 
+    margin: 0;
     font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
     background-color:#ece0d1;
 }
 .productDescription{
     display: flex;
     align-items: center;
     flex-direction: column;
+    
 }
 
-.productsH3{
+.productsH2{
     display: flex;
-    justify-content: center;
     align-items: center;
     font-size: 1.7em;
     color:#38220f;
     background-color: #dbc1ac;
+    justify-content: space-around;
+    padding: 0.5em;
+    margin: 0;
+    padding: 0.2;
+}
+.productsH3{
+    display: flex;
+    align-items: center;
+    font-size: 1.7em;
+    color:#38220f;
+    background-color: #dbc1ac;
+    justify-content: space-around;
+    padding: 0.5em;
+    margin: 0;
+    padding: 0.2;
 }
 
-.containerProductos {
-    padding: 0.5em;
-    font-size: large;
-    flex-direction:inherit;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    width: 300px;
-    height: 300px;
-    margin: 1.5em;
-    text-decoration-style: none;
-}
 #Cafes_products{
-    display: flex;
-    background-color: #967259;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    justify-content: space-between;
-    
+    width: 120px;;
+    margin: 20px 30px;
+    background-color:gainsboro;
+    margin-bottom: 15px;
+    padding-left:12px;
+    padding-top:30px;
+    padding-bottom: 30px;
+    border:black 1px dashed;
+    border-radius:5px;
+    text-align:center;
+    flex-direction: row;
+    box-sizing:border-box;
+       
 }
 
 section#Cafes{
     display: flex;
     flex-direction: row;
-    justify-items: flex-start;
+
 }
 
  section.Cafe_molido{
@@ -92,7 +107,7 @@ section.cafe_especial{
 
 #chocolates p{
  font-size: large;   
- color: #38220f;
+ color: #2a380f;
  
 }
 
@@ -115,11 +130,6 @@ section.cafe_especial{
     margin-top: 0;
 }
 
-.linea-division {
-    width: 80%;
-    height: 2px;
-    background-color: #36221c;
-}
 
 /* ------------------------- */
 /* Estilos de Materialize */

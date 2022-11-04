@@ -10,6 +10,8 @@ const methodOverride = require('method-override');
 const { Cookie } = require('express-session');
 
 const indexRouter = require('./routes/index');
+
+//modelos
 const rutesProducts = require('./routes/products');
 const rutesUsers = require ('./routes/users');
 
@@ -36,6 +38,8 @@ app.use(session({
 
 // para ordenar las rutas de nuesto proyecto//
 app.use('/', indexRouter);
+
+// modelos
 app.use('/products', rutesProducts);
 app.use('/users', rutesUsers);
 

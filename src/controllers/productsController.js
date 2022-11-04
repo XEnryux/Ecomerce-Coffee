@@ -1,5 +1,6 @@
 const express = require('express');
-
+//modelos
+let db = require('../database/models');
 /**fs para llamar la funcion y escribir un archivo*/
 const fs = require('fs');
 /** metodo para manejar las rutas relativas y absolutas */
@@ -9,32 +10,34 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const product = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const { gzip } = require('zlib');
 
-//** logica de controllers */
+//** logica de controllers de modelos */
 const productsController = {
 
+	createProducts: (req, res) => {
+		db.catyegory.findAll()
+		.then('products')
+		return res.render('productsCreate', {products: product})
+	},
+//la lista de los productos
 	products: (req, res) =>{
         res.render('products/products', {products:product})
     },
-    
-    detail: (req, res) => {
+
+	detail: (req, res) => {
 		let id = req.params.id
 		let productDetail = product.find(product => product.id == id)
 		res.render('products/productDetail', {
 			productDetail,
-			})
+		})
 	},
 
-    createProducts: (req, res) =>{
-        res.render('products/productsCreate')
-    },
-        
+
 	//* Create -  Method to store/
 	store: (req, res) => {
 		let image
 		console.log(req.files);
-		if(req.files[0] != undefined){
+		if (req.files[0] != undefined) {
 			image = req.files[0].filename
 		} else {
 			image = 'default-image.jpg'
@@ -49,15 +52,15 @@ const productsController = {
 		res.redirect('/');
 	},
 
-	prueba: (req,res)=>{
-		res.render("products/pruebaproductos", {products:product})
-	}	,
+	prueba: (req, res) => {
+		res.render("products/pruebaproductos", { products: product })
+	},
 
-    /*editar productos*/
-    edit: (req, res) => {
+	/*editar productos*/
+	edit: (req, res) => {
 		let id = req.params.id
 		let productsEdit = product.find(product => product.id == id)
-		res.render('products/productsEdit', {productsEdit})
+		res.render('products/productsEdit', { productsEdit })
 	},
 	// Update - Method to update
 	update: (req, res) => {
@@ -65,7 +68,7 @@ const productsController = {
 		let productsEdit = product.find(product => product.id == id)
 		let image
 
-		if(req.files[0] != undefined){
+		if (req.files[0] != undefined) {
 			image = req.files[0].filename
 		} else {
 			image = productsEdit.image
@@ -76,10 +79,10 @@ const productsController = {
 			...req.body,
 			image: image,
 		};
-		
+
 		let newProducts = product.map(product => {
 			if (product.id == productsEdit.id) {
-				return product = {...productsEdit};
+				return product = { ...productsEdit };
 			}
 			return product;
 		})
@@ -88,25 +91,8 @@ const productsController = {
 		res.redirect('/');
 	},
 
-    //     // Delete - Delete one product from DB
-	// delete: function (req,res) {
-    //     let productId = req.params.id;
-    //     Product
-    //     .findByPk(productId)
-    //     .then(Product => {
-    //         return res.render(path.resolve(__dirname, '..', 'views',  'productDelete'), {Product})})
-    //     .catch(error => res.send(error))
-    // // },
-    // destroy: function (req,res) {
-    //     let productId = req.params.id;
-    //     Products
-    //     .destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
-    //     .then(()=>{
-    //         return res.redirect('/')})
-    //     .catch(error => res.send(error)) 
-    // }
 
-    destroy : (req, res) => {
+	destroy: (req, res) => {
 		let id = req.params.id;
 		let finalProducts = product.filter(product => product.id != id);
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
