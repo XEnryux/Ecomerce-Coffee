@@ -26,31 +26,17 @@ const upload = multer({ storage })
 const validationLoginMiddleware = require('../middleware/validationLoginMiddleware');
 const validationRegister = require('../middleware/validationRegister');
 
-
 /**ruta "users/"  */
 
 router.get('/', /* authMiddleware, */ usersController.list);
 
 /*ruta Login*/
 router.get('/login', usersController.login);
-router.post('/login', [
-    check('email').isEmail().withMessage("Email Invalido"),
-    check('password').isLength({ min: 8 }).withMessage("La contraseña debe tener un minimo de 8 caracteres")
-], usersController.processLogin)
-
-// router.get("/check", function (req, res) {
-//     if (req.session.userToLogin == undefined) {
-//         res.send("No estas Logueado");
-//     } else {
-//         res.send("El usuario Logueado es" + req.session.usuarioLogueado)
-//     }
-// })
 router.post('/login', validationLoginMiddleware, usersController.processLogin);
-
 
 /*register*/
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register'/* , validationRegister , upload.single('image'),*/, usersController.create);
+router.post('/register', validationRegister /*, upload.single('image'),*/, usersController.create);
 
 router.get('/search', usersController.search); 
 router.get('/edit/:id', /*authMiddleware,*/ usersController.edit);

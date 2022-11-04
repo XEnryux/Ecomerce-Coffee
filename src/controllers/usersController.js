@@ -102,21 +102,6 @@ const usersController ={
 
 //processRegister
     create: (req, res) => {
-//         let errors = validationResult(req);
-//          //console.log(errors)
-//         if (errors && errors.errors.length == 0){
-//             let image
-//             if(req.file != undefined){
-//                 image = req.file.filename
-//             } else {
-//                 image = 'user-image-default.png'
-//             }
-//             let newUser = {
-//                 id: users[users.length - 1].id + 1,
-//                 ...req.body,
-//                 image: image,
-//                 pass: bcryptjs.hashSync(req.body.pass, 10)
-//             };
 //             users.push(newUser)
 //             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
 //             res.redirect('/users/login'); //Si no hay errores hace el registr
@@ -157,45 +142,33 @@ const usersController ={
     },
 
     processLogin:(req, res) =>{
-        let errors = validationResult(req);
-        //res.send(errors)
-        //res.send(errors.isEmpty())
-        if (errors.isEmpty()){
-            let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-            let userToLogin = undefined;           
-            for (let i = 0; i < users.length; i ++) {
-                if (users[i].email == req.body.email){
-                    if (bcryptjs.compareSync(req.body.pass, users[i].pass)) {
-                        userToLogin = users[i];
-                        //res.send(userToLogin)
-                        req.session.usuario = userToLogin;
-                        res.redirect('/')
-                    }
+            let errors = validationResult(req);
+            //res.send(errors)
+            //res.send(errors.isEmpty())
+            console.log("validando usuario");
+            console.log(req.body.email);
+            console.log(req.body.pass);
+            console.log(errors);
+            if (errors.isEmpty()) {
+                let users = Users.findAll({
+                    where: {email: req.body.email,},
+                });
+                console.log(users);
+                console.log(users.pass);
+                let userToLogin = undefined;
+                if (req.body.pass == users.pass) {
+                    userToLogin = users.email;
+                    req.session.usuario = userToLogin;
                 }
-            } 
-            
-            if (userToLogin == undefined){
-                res.render('users/login', {errors:
-                    {msg:"Usuario o contraseña invalidos"}                
-                })
-            }
-            
-            
-        }else{
-            return res.render('users/login', {errors:errors.errors})
-        };
-    },
-    
- 
-
-     //store: (req, res) =>{
-      //userId = usersModel.create(users);
-      //res.redirec('/users/login')         
-
-        
-//         /*guardar info*/
-//         res.redirect('/');
-     //}
+                if (userToLogin == undefined) {
+                    res.render('users/login', {
+                        errors:
+                            { msg: "Usuario o contraseña invalidos" }
+                    })
+                } else {
+                return res.render('users/login', { errors: errors.errors })
+            };
+        },
 
      delete: function (req,res) {
     
