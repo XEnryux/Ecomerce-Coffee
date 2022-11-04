@@ -172,8 +172,9 @@ const usersController ={
                 } else {
                 return res.render('users/login', { errors: errors.errors })
             };
-        },
-
+        }
+    },
+    
      delete: function (req,res) {
     
         Users.findByPk(req.params.id)
