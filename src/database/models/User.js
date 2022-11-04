@@ -25,9 +25,6 @@ module.exports = (sequelize, dataTypes) => {
             }, 
         image:{
             type: dataTypes.STRING
-            }, 
-        product_interest_id:{
-            type: dataTypes.INTEGER,
             },
         profile_id:{
             type: dataTypes.INTEGER,
@@ -42,9 +39,12 @@ module.exports = (sequelize, dataTypes) => {
     
     Users.associate = (models) => {
         Users.belongsTo(models.Profile_user, {
-            as:"profiles",
+            as:"Profile_user",
             foreignKey: "profile_id",
         })
+
+      
+        
     }
  
     return Users;
