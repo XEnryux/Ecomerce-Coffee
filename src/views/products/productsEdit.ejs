@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./../partials/head') %>
+
+  <body>
+    <%- include('./../partials/header') %>   
+
+     <title>Editando productos</title>
+
+     
+<main class="EditarProductos">
+<form action="products/products/edit/<%= productsEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+    
+   <p> <label> Edita el nombre del producto</label></p>
+    
+    <input type="text" id="name" name="name" placeholder="<%= productsEdit.name %>" class="form-input">
+
+    <p><label>Descripción</label></p>
+    <textarea name="description" id="description" class="form-input" placeholder="<%= productsEdit.description%>" cols="30" rows="10"></textarea><br>
+    
+    <p><label>Imagen</label></p>
+    <input type="file" class="form-input"><br>
+    <img src="/images/productsImage/<%= productsEdit.image %>" alt="">
+
+    <br>
+    
+    <p><label>Categoría</label></p>
+    <select value="categoria" class="form-input"  placeholder="<%= productsEdit.category%>"> 
+      
+      <p> <option value="1">Grano</option></p>
+      <p> <option value="2">Molido</option></p>
+      <p> <option value="3">Premium</option></p>
+      <p> <option value="4">Saquitos</option></p>
+      <p> <option value="4">Chocolate</option></p>
+        </select><br>
+    <p><label>Presentación</label></p>
+
+    <input type="text" value="presentacion" class="form-input" placeholder="<%= productsEdit.presentation%>"><br>
+    
+    <p><label>Precio</label></p>
+    <input type="number" value="precio" class="precio"><br>
+    
+    <p><label>Destacado</label></p>
+    <select> 
+    <p><option value="true">Si</option></p>
+    <p><option value="false">No</option></p>
+    </select><br>
+    
+    
+    <input type="submit"  value="Editar" class="form-input"><br>
+    
+    
+    <input type="reset" value="Borrar" class="Borrar"><br>
+
+</form>
+</main>
+
+
+    <!-- footer -->
+    <%- include('./../partials/footer') %>   
+</body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+  <%- include('./../partials/head') %>
+
+  <body>
+    <%- include('./../partials/header') %>   
+
+     <title>Crear productos</title>
+
+     
+<main class="CrearProductos">
+<form action="/products/create" method="POST" enctype="multipart/form-data"> 
+    
+   <p> <label> Nombre del producto</label></p>
+    <input type="text" name="name"  class="nombreProducto" required><br>
+    
+    <p><label>Descripción</label></p>
+    <textarea name="description" id="description" class="description" cols="30" rows="10"></textarea><br>
+    
+    <p><label>Imagen</label></p>
+    <input type="file" name='image' class="form-input"><br>   
+    
+    <p><label>Categoría</label></p>
+    <select value="categoria" name="category" class="categoria" required> 
+      
+      <p> <option value="1">Grano</option></p>
+      <p> <option value="2">Molido</option></p>
+      <p> <option value="3">Premium</option></p>
+      <p> <option value="4">Saquitos</option></p>
+      <p> <option value="4">Chocolate</option></p>
+        </select><br>
+
+    <p><label>Presentación</label></p>
+    <input type="text"  name="presentation" class="presentacion" required><br>
+    
+    <p><label>Precio</label></p>
+    <input type="text" name="price" class="precio" required><br>
+    
+    <p><label>Destacado</label></p>
+    <select> 
+    <p><option value="true">Si</option></p>
+    <p><option value="false">No</option></p>
+    </select><br>
+    
+    <input type="submit"  value="Crear" class="create"><br>
+    
+    <input type="reset" value="Borrar" class="delete"><br>
+
+</form>
+</main>
+
+
+    <!-- footer -->
+    <%- include('./../partials/footer') %>   
+</body>
+</html>

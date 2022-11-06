@@ -1,0 +1,168 @@
+[
+ {
+  "id": 1,
+  "name": "Café Sensaciones Torrado Suave",
+  "description": "El café ideal para disfrutar todos los días.",
+  "image": "1A-cafe.webp",
+  "category": "molido",
+  "presentation": "500 gm",
+  "price": 1065,
+  "offer": false
+ },
+ {
+  "id": 2,
+  "name": "Café Sensaciones Torrado Intenso",
+  "description": "El café ideal para disfrutar todos los días.",
+  "image": "2A-cafe.jpg",
+  "category": "molido",
+  "presentation": "500 gm",
+  "price": 1150,
+  "offer": true
+ },
+ {
+  "id": 3,
+  "name": "Café Blanco",
+  "description": "Sabor intenso, aroma fuerte y persistente. Ideal para los amantes del café.",
+  "image": "3A-cafe.jpg",
+  "category": "grano",
+  "presentation": "500 gm",
+  "price": 3242.28,
+  "offer": true
+ },
+ {
+  "id": 4,
+  "name": "Café Sensaciones saquitos",
+  "description": "Café tostado con azúcar blanco molido",
+  "image": "4A-cafe.jpg",
+  "category": "saquitos",
+  "presentation": "10gr 25 unidades",
+  "price": 640,
+  "offer": false
+ },
+ {
+  "id": 5,
+  "name": "Café Molido Intenso saquitos",
+  "description": "El café ideal para la oficina",
+  "image": "5A-cafe.jpg",
+  "category": "saquitos",
+  "presentation": "20gm 8 saquitos",
+  "price": 530,
+  "offer": false
+ },
+ {
+  "id": 6,
+  "name": "Café Franja Blanca",
+  "description": "Blend de Colombia y Brasil con un tostado natural tipo suizo y un torrado español. Sabor fino, fuerte y natural con un aroma fino, pronunciado y fuerte. Ideal para tomar solo o con leche.",
+  "image": "6A-cafe.jpg",
+  "image2": "6B-cafe.jpg",
+  "category": "premium",
+  "presentation": "1kg",
+  "price": 5820,
+  "offer": false
+ },
+ {
+  "id": 7,
+  "name": "Fluminense",
+  "description": "Blend de Brasil con un tostado natural tipo suizo y un torrado español. Sabor y aroma fuerte. Ideal para tomar solo o con leche.",
+  "image": "7A-cafe.jpg",
+  "image2": "7B-cafe.jpg",
+  "category": "premium",
+  "presentation": "1kg",
+  "price": 5310,
+  "offer": false
+ },
+ {
+  "id": 8,
+  "name": "Express",
+  "description": "Blend de Brasil con un tostado natural tipo suizo. Sabor delicado, profundo y pronunciado con un aroma fuerte y persistente. Para tomar solo o con leche.",
+  "image": "8A-cafe.jpg",
+  "image2": "8B-cafe.jpg",
+  "category": "premium",
+  "presentation": "1kg",
+  "price": 9400,
+  "offer": false
+ },
+ {
+  "id": 9,
+  "name": "Descafeinado",
+  "description": "Blend Colombiano con un tostado natural tipo italiano. Sabor delicado y suave, con un aroma fino y persistente. Para tomar solo o con leche.",
+  "image": "9A-cafe.jpg",
+  "image2": "9B-cafe.jpg",
+  "category": "premium",
+  "presentation": "1kg",
+  "price": 5310,
+  "offer": false
+ },
+ {
+  "id": 10,
+  "name": "Cinta Azul",
+  "description": "Blend de Colombia y Brasil con un tostado natural tipo suizo y torrado español. Sabor delicado con un aroma persistente. Ideal para tomar con leche.",
+  "image": "10A-cafe.jpg",
+  "image2": "10B-cafe.jpg",
+  "category": "premium",
+  "presentation": "1kg",
+  "price": 6280,
+  "offer": false
+ },
+ {
+  "id": 11,
+  "name": "Noir",
+  "description": "Blend de Brasil con un torrado tipo español. Sabor y aroma muy fuerte. Para tomar con leche.",
+  "image": "11A-cafe.jpg",
+  "image2": "11B-cafe.jpg",
+  "category": "premium",
+  "presentation": "1kg",
+  "price": 5000,
+  "offer": false
+ },
+ {
+  "id": 12,
+  "name": "Seleccion",
+  "description": "Blend Colombiano y Brasileño, con un tostado natural tipo suizo. Sabor delicado y suave con un aroma profundo, fino y persistente. Ideal para tomar solo.",
+  "image": "12A-cafe.jpg",
+  "image2": "12B-cafe.jpg",
+  "category": "premium",
+  "presentation": "1kg",
+  "price": 10000,
+  "offer": true
+ },
+ {
+  "id": 13,
+  "name": "Barra de chocolate 60% cacao",
+  "description": "Barra de chocolate al 60% de Cacao. Nace de las montañas Andinas de Calda, con su aroma que brinda una experiencia inigualable.",
+  "image": "13-chocolate.jpg",
+  "category": "chocolate",
+  "presentation": "50gr",
+  "price": 510,
+  "offer": true
+ },
+ {
+  "id": 14,
+  "name": "Barra de chocolate 70% cacao",
+  "description": "Chocolate negro semiamargo con 70% de Cacao, con las caracteristicas del sabor único de Calda",
+  "image": "14-chocolate.jpg",
+  "category": "chocolate",
+  "presentation": "50gr",
+  "price": 800,
+  "offer": true
+ },
+ {
+  "id": 15,
+  "name": "Chocolate 90% Cacao",
+  "description": "Chocolate Santo Aroma semiamargo 90% de cacao",
+  "image": "15-chocolate.jpg",
+  "category": "chocolate",
+  "presentation": "50gr",
+  "price": 900,
+  "offer": true
+ },
+ {
+  "id": 16,
+  "name": "david",
+  "description": "",
+  "category": "3",
+  "presentation": "c",
+  "price": "c",
+  "image": "default-image.jpg"
+ }
+]

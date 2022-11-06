@@ -1,0 +1,40 @@
+<%- include('partials/head') -%>
+<%- include ('partials/header') -%>
+<body>
+
+<h1>listado de productos</h1>
+<div class="container products-wrapper">
+    <div class="row">
+       <div class="col-12">
+        <h2 class="products-title">Nuestros productos</h2>
+        
+    <% products.forEach(function(articulo){ %>
+    
+               <div class="col-12 col-lg-8">
+                <section class = "product-box">
+                    <article>
+                    <a href="/products/detail/<%= articulo.id %>">
+                   <img src="/images/productsImage/<%= articulo.image %>" alt="product image" class="product-detail-img">
+                       <p class="product-detail-description"></p>
+
+                        <p><%= articulo.name %></p>
+                        <p><%= articulo.description %></p>
+                        <p><%= articulo.price %></p>
+                                            
+                       <ul class="actions-list">
+                           <li>
+                               <i class="fas fa-credit-card"></i>
+                               <p>Pagá en 12 cuotas sin interes</p>
+                           </li>
+                                                  </ul>
+                       <a href="#" class="buy-now-button">COMPRAR AHORA</a>
+                       <hr>
+                    </a>
+                    </article>
+                    </section>
+                    <% })%>
+                </div>
+                </div>                   
+
+<%- include('partials/footer') -%>
+</body>

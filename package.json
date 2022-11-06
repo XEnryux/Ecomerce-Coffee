@@ -1,15 +1,43 @@
 {
-  "name": "html_css",
+  "name": "cafe",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
   "Jenny": "app.js",
+=======
+  "description": "![](https://media.istockphoto.com/photos/cup-of-espresso-with-coffee-beans-picture-id1177900338?k=20&m=1177900338&s=612x612&w=0&h=rwLAoPzPiKdSbcdBFs4-TTt5O1Qpe0EFVY5KRqRPKmI=)",
+  "main": "app.js",
+>>>>>>> Mariana
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "ejs": "^3.1.8",
     "express": "^4.17.1"
   }
+=======
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.8",
+    "express": "^4.17.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^3.2.10",
+    "sequelize": "^6.21.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XEnryux/Grupo-8-curso-de-programacion-web-full-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XEnryux/Grupo-8-curso-de-programacion-web-full-stack/issues"
+  },
+  "homepage": "https://github.com/XEnryux/Grupo-8-curso-de-programacion-web-full-stack#readme"
+>>>>>>> Mariana
 }

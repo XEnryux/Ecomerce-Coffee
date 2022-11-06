@@ -1,0 +1,52 @@
+Para la vista de register:
+
+<select name="product_interest_id" id="" required>
+            <option value="" disabled selected>- seleccione su producto de preferencia - </option>
+            <% allPoducts.forEach(product => { %>
+            <option value="<%= product.id %>"><%= product.name %></option>
+            <% }); %>
+</select>
+
+para Model Users: 
+
+Users.associate = (models) => {
+        Users.belongsTo(models.Profile_user, {
+            as:"profiles",
+            foreingKey: "profile_id",
+        })
+        Users.belongsTo(models.Product, {
+            as:"Product",
+            foreingKey: "product_interest_id",
+        })
+    }
+
+Para Model product_interest_id
+
+Product.associate = (models) => {
+      Product.hasMany(models.Users, {
+               as:"Users",
+               foreingKey: "product_interest_id"
+            })
+        }
+    
+Para el controller de Users: 
+
+
+
+
+register: (req, res) => {
+
+
+        Promise.all([users, profile])
+        .then(([users, profile])=>{})    
+        Profile.findAll()
+        Product.findAll()
+            .then(profile => {
+               // console.log(profile);
+                {.then (product =>
+                res.render('users/register', {allProfile:profile}, {allPoducts:product})
+                )}
+                
+            })
+            
+    },

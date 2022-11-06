@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./../partials/head') -%>  
+    <body class="products">
+    <%- include('./../partials/header') -%>    
+
+<section class="Conozca nuestros productos">
+    <main class="mainDestacados">
+    <h2 class="productsH3">Nuestro Cafe</h2>
+
+    <% products.forEach(function(articulo){ %>
+
+          <section id="productos" class="containerProductos">
+
+            <div class="producto">
+              <div class="col-12 col-lg-8">
+                <section class = "Cafes_products">
+                   <article>
+                    <a href="/products/detail/<%= articulo.id %>">
+                     <img src="/images/productsImage/<%= articulo.image %>" width='250' alt="product image" class="product-detail-img">
+                       <p class="product-detail-description"></p>
+
+                        <p><%= articulo.name %></p>
+                        <p><%= articulo.category %></p>
+                        <p><%= articulo.price %></p>
+                                            
+                       <ul class="actions-list">
+                           <li>
+                               <i class="fas fa-credit-card"></i>
+                               <p>Pagá en 12 cuotas sin interes</p>
+                           </li>
+                        </ul>
+                       <a href="../cart" class="buy-now-button">COMPRAR AHORA</a>
+                       <hr>
+                    </a>
+                    </article>
+                    </section>
+              
+        
+        <% })%>
+    </section>
+
+
+    <h3 class="productsH3">Nuestro Chocolate</h3>
+        
+    <section id="chocolates"> 
+      <div class="container">
+                 
+                
+                      <article>
+                        <h4 class=>Chocolate 40% Cacao</h4>
+                        <div class="linea-division"></div>
+                        <p class="sabor"></p>
+                        <img src="/images/productsImage/13-chocolate.jpg" alt="" width="200">
+                      </article> 
+                    
+                    <article>
+                      <h4 class=>Chocolate 70% Cacao</h4>
+                      <div class="linea-division"></div>
+                      <p class="sabor"></p>
+                      <img src="/images/productsImage/14-chocolate.jpg" alt="" width="200">
+                    </article>
+                  
+                   
+                  <article> 
+                    <h4 class>Chocolate 90% Cacao</h4>
+                    <div class="linea-division"></div>
+                    <p class="sabor"></p>
+                    <img src="/images/productsImage/15-chocolate.jpg" alt="" width="200">
+                  </article>
+                
+            </div>
+    </section><br>
+
+
+    <%- include('./../partials/footer') %>
+
+  <!-- <scrip src=""> -->
+  </body>
+
+</html>

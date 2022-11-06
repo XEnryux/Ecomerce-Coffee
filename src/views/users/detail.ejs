@@ -1,0 +1,26 @@
+<html>
+    <!-- head-->
+    <%- include('../partials/head') -%>
+<body>
+    <%- include('../partials/header') %>   
+
+    <title>Informacion del Usuario</title>
+    
+    <p><%= user.id %></p>
+    <p><%= user.name %><p> 
+    <p><%= user.email %><p>
+    <img src="/images/usersImage/<%= user.image %>" alt="user image" class="user-img"><p>  
+    <p><%= user.product_interest_id %><br> 
+
+    <a href="../delete/<%= user.id %>">Borrar usuario</a>
+    <a href="../edit/<%= user.id %>">Editar usuario</a>
+    
+
+
+ 
+
+    
+     <!-- footer -->
+     <%- include('../partials/footer') %>   
+</body>
+</html>

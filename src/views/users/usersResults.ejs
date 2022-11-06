@@ -1,0 +1,21 @@
+    
+    <%- include('./../partials/head') -%>
+    <body>
+      <%- include('./../partials/header') -%>
+
+   <h2>Este es el resultado de su busqueda de usuarios</h2> 
+
+   <ul>
+    <% for (let i = 0; i < user.length; i ++) {%>
+      <li>
+          <a href="users/detail/<%= user[i].id %>"><%= user[i].name%></a>  
+      <li>
+    <%}%>
+   </ul>
+   
+   <a href="/users"><input type="button" value="back"></a>
+    
+      <!-- footer -->
+      <%- include('../partials/footer') %>   
+    </body>
+    </html>

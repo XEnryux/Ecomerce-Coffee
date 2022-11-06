@@ -1,0 +1,32 @@
+<html>
+  <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>   
+
+     <h1>Editar Usuario</h1>
+     
+<main class="EditarUsuario">
+<form action="/users/edit/<%= user.id %>" method="POST" ><!-- enctype="multipart/form-data" -->
+  <label>Nombre:</label>  
+  <p><input type="text" name="name" value="<%=user.name %>"></p>
+  <label>Email:</label>
+  <p><input type="text" name="email" value="<%= user.email %>"></p>
+  <label>Direccion:</label>
+  <p><input type="text" name="adress" value="<%= user.adress %>"></p>
+
+ <!--  <label>Imagen de perfil:</label>
+  <img src="/images/usersImage/<%= user.image %>" alt="user image" class="user-img"><p>  
+  <p><input type="file" name="image"></p><br> -->
+  <label>Perfil de usuario:</label>
+  <p><input type="text" name="profile_id" value="<%= user.profile_id %>"></p>
+  
+  <p> <button class="botonAgregar" type="submit">Actualizar</button>
+
+    <a  class="botonVolver" href="/users">Usuarios</a></p>
+</form> 
+</main>
+    <!-- footer -->
+    <%- include('../partials/footer') %>   
+</body>
+</html>

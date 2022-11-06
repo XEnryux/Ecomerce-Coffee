@@ -56,9 +56,9 @@ https://carrierroasting.com/
 - Jenny Tellez, edad 37 años, desarrollador fullstack
 - Marcos Gaviña, edad 37 años, desarrollador fullstack
 - David Jaramillo, edad 37 años, desarrollador fullstack
+- Mariana Elstner, edad 36 años, desarrolladora fullstack
 
 Inspirados por el Café
 
-SPRING 2
 
 https://trello.com/b/gt0YqqgR/proyecto-integrador
