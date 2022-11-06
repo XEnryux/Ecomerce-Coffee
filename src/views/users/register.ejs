@@ -2,14 +2,13 @@
 <html>
   <!-- head-->
     <%- include('../partials/head') -%>
-
-<a link rel="stylesheet" href="../../public/css/register.css"></a> 
+<!-- header -->
+<%- include('../partials/header') %>
 
 <body>
-<!-- header -->
-    <%- include('../partials/header') %>
  
-    <main class="register">
+    <main>
+      <div class="register">
       <% if (locals && locals.errors && locals.errors.length > 0) { %>
         <% for(let i = 0; i < locals.errors.length; i ++) { %> 
           <p><%= locals.errors[i].msg %> </p>
@@ -33,7 +32,7 @@
         </li>
         <li>
         <label><b>Domicilio</b></label>
-        <input type="text" name="adress" placeholder="Direccion" value="<%= locals.old && old.adress ? old.adress : '' %>">
+        <input type="text" name="adress" value="<%= locals.old && old.adress ? old.adress : '' %>">
         </li>  
       </ul>
       <br>
@@ -53,16 +52,16 @@
            <label><b>Contraseña</b></label>
            <input type="password" name="pass" placeholder="Elegí tu contraseña" maxlength="30" pattern="[A-Za-z0-9@#$%!]{8,20}"/>
 
-       
-           <input type="submit" value="Registrarse" class="enviar">
-       
-           <a href="/login"><input type="button" value="Volver" class='borrar'></a>
-
-       
+          <div class="register-button">      
+           <input type="submit" value="Registrarse">    
+          <div>     
            </form>
-
+      </div>
     </div>
-    </main>
+    </div>
+    <a href="/"><input type="button" value="Volver" class="back-button"></a>
+  
+  </main>
       <!-- footer -->
       <%- include('../partials/footer') %>
   </body>

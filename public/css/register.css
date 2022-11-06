@@ -15,6 +15,8 @@
     padding: 1em;
     border: 1px solid 	#38220f;
     border-radius: 1em;
+    background-color: 	#dbc1ac;
+    margin-bottom: 15px;
   }
   
  .register ul {
@@ -38,15 +40,16 @@
   .register input,
   textarea {
     font: 1em sans-serif;
-      width: 300px;
+    width: 20rem;
     box-sizing: border-box;
-    border: 1px solid 	#634832;
+    border: 1.5px solid 	#634832;
+    text-align: center;
   }
   
   .register input:focus,
   textarea:focus {
     /* Destacado adicional para elementos que tienen el cursor */
-    border-color:	#38220f;
+    border-color:	#f8e8db;
   }
   
   .register textarea {
@@ -54,11 +57,15 @@
     vertical-align: top;
       /* Proporcionar espacio para escribir texto */
     height: 5em;
-
   }
   
-  .botones {
-    /* Alinear los botones con los campos de texto */
-    padding: 30px; /* mismo tamaño que los elementos de la etiqueta */
-    width: 50px;
+  .register-button{
+      font-size: large;
+      background-color:#dbc1ac;  
+      margin-top: 1rem;
+      display: flex;
+      border-radius: 5%;
     }
+  input .back-button{
+    width: 5em;
+  }  

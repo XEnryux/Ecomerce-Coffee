@@ -7,20 +7,19 @@
 <div class="container products-wrapper">
      <div class="row">
             <div class="col-12">
-                <h2 class="products-title">Detalle del producto: <%= productDetail.name %></h2>
+                <h2 class="list"><%= productDetail.name %></h2>
             </div>
         </div>
         <div class="product-detail">
             <div class="row">
-                <div class="col-12 col-lg-8">
-                    <img src="/images/productsImage/<%= productDetail.image %>" alt="product image" class="product-detail-img">
+                <div >
+                    <img src="/images/productsImage/<%= productDetail.image %>" alt="product image" class="product-detail-img" width="250px">
                     <p class="product-detail-description">
                         <%= productDetail.description %>
                     </p>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="product-detail-info">
                     <article class="product-detail-info">
-                        <h2 class="product-detail-title"><%= productDetail.name %></h2>
                         <!-- <% if(productDetail.discount > 0) {
                             let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
                         %>
@@ -41,19 +40,20 @@
                         <ul class="actions-list">
                             <li>
                                 <i class="fas fa-credit-card"></i>
-                                <p>Pagá en 12 cuotas sin interes</p>
+                                <p>Pagá en 3 cuotas sin interes</p>
                             </li>
                             <li>
                                 <i class="fas fa-store"></i>
                                 <p>Retiro gratis en locales del vendedor</p>
                             </li>
                         </ul>
-                        <a href="#" class="buy-now-button">COMPRAR AHORA</a>
+                        <br>
+                        <a href="/cart" class="buy-now-button">COMPRAR AHORA</a>                        
                         <hr>
-                        <a href="/products/edit/<%= productDetail.id %>" class="action-button edit">EDITAR PRODUCTO</a>
+                        <br><a href="/products/edit/<%= productDetail.id %>"><button class="action-button delete">Editar</button></a>
                         
                         <form method="POST" action="/products/delete/<%= productDetail.id %>?_method=DELETE"  style="display: inline-flex">
-                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                        <button type="submit" class="action-button delete">Eliminar</button>
                         </form>
                     </article>
                 </div>

@@ -4,27 +4,27 @@
   <body>
     <%- include('../partials/header') -%>
     
-<div class="container products-wrapper">
+<div>
   <div class="row">
          <div class="col-12">
-             <h2 class="products-title">Nombre de Usuario:  <%= user.name %></h2>
+             <h2 class="list">Nombre de Usuario:  <%= user.name %></h2>
          </div>
      </div>
-     <div class="product-detail">
-      <div class="row">
-          <div class="col-12 col-lg-8">
-              <img src="/images/usersImage/<%= user.image %>" class="product-detail-img">
-              <p class="product-detail-description">
-                  <%= user.email %>
-              </p>
-          </div>
-          <div class="col-12 col-lg-4">
-            <form method="POST" action="/users/delete/<%= user.id %>?_method=DELETE"  style="display: inline-flex">
-              <button type="submit" class="action-button delete">ELIMINAR</button>
-              </form>
-              </article>
-          </div>
-      </div>
+     <div class="detail-usuario">
+      <table class="tabla-detail-users">
+        <tr>
+          <td><h4>Foto</h4></td>
+          <td><img src="/images/usersImage/<%= user.image %>" width="150px"><td>
+        <tr>
+          <td><h4>Email</h4></td>
+          <td><p><%= user.email %></p></td>
+      
+      </table>
+    </div> 
+            <form method="POST" action="/users/delete/<%= user.id %>?_method=DELETE">
+              <button type="submit" class="button-delete">ELIMINAR</button>
+            </form>
+          
   </div>
         
 </main>

@@ -4,16 +4,28 @@
 <body>
     <%- include('../partials/header') %>   
 
-    <title>Informacion del Usuario</title>
-    
-    <p><%= user.id %></p>
-    <p><%= user.name %><p> 
-    <p><%= user.email %><p>
-    <img src="/images/usersImage/<%= user.image %>" alt="user image" class="user-img"><p>  
-    <p><%= user.product_interest_id %><br> 
-
-    <a href="../delete/<%= user.id %>">Borrar usuario</a>
-    <a href="../edit/<%= user.id %>">Editar usuario</a>
+    <h2 class="list">Informacion del Usuario</h2>
+    <div class="detail-usuario">
+        <table class="tabla-detail-users">
+            <tr>
+                <td><h4>Nombre</h4></td>
+                <td><p><%= user.name %></p></td>
+            <tr>
+                <td><h4>Email</h4></td>
+                <td><p><%= user.email %></p></td>
+            <tr>
+                <td><h4>Foto</h4></td>
+                <td><img src="/images/usersImage/<%= user.image %>" alt="user image" class="user-img" width="150"></td> 
+            <tr>
+                <td><h4>Perfil de usuario</h4></td>
+                <td><p><%= user.profile_id %></p></td>            
+            </table>    
+    <div class="button">
+        <a href="../delete/<%= user.id %>"><input type="button" value="Borrar usuario"></a>
+        <a href="../edit/<%= user.id %>"><input type="button" value="Editar usuario"></a><br>
+    </div>    
+    </div>  
+    <a href="/users"><input type="button" value="back" class="back-button"></a>
     
 
 

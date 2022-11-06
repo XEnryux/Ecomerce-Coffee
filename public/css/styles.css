@@ -12,7 +12,7 @@ body{
 
 header {
     background-image: url(/images/GranosArriba.jpg);
-    background-size:cover;
+    background-size:170%;
     background-repeat: no-repeat;
     height:fit-content;
     padding: 2%;
@@ -109,7 +109,6 @@ section{
     font-size: 2.5vmin;
 }
 article{
-    
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
@@ -122,7 +121,11 @@ article{
     max-width: fit-content;
     min-height: fit-content;
     font-size: 2vmin;
-    border: black solid 0.5px;
+    border: #38220f solid 0.5px;
+}
+article ul.list a:link, a:visited{
+    text-decoration: none;
+    color: #634832; 
 }
 
 
@@ -167,3 +170,111 @@ footer ul li{
     flex-direction: column;
 }
 
+/*    home    */
+#Items{
+    margin-bottom: 18rem;
+}
+
+/* Users List */
+
+h2.list{
+    margin: 1rem 0rem 1rem 5rem;
+    font-family: 'Jost', sans-serif;
+    background-color:#dbc1ac; 
+    color:#634832;
+    width: 90%;
+    text-align:initial;   
+}
+.contenedor-list{
+    display: flex;
+    justify-content: center;
+}
+ul.list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1em;
+    padding: 2px;
+    text-align: center;
+    font-size:large;
+    background-color: #dbc1ac;
+    border: 1px solid 	#38220f;
+    border-radius: 1em; 
+    width: 25rem;
+    min-height: 40px;
+    box-sizing: border-box;
+}
+ul.list a:link, a:visited{
+    text-decoration: none;
+    color: #634832;
+}
+.search{
+    display: flex;
+}
+.search input{
+    font-size: large;
+    background-color:#dbc1ac;  
+    height: 2rem;
+    margin: 1rem 1rem 2rem 5rem;  
+}
+
+/* userResult y register*/
+.back-button{
+    color: #634832;
+    background-color: #dbc1ac;
+    margin: 0.5em 3em 3em 7em;
+    font: 1em sans-serif;
+    border-color: #38220f;
+    border-radius: 5em;
+    width: 5rem;
+    height: 2rem;
+}
+
+/*users detail*/
+.detail-usuario{
+ display: flex;
+ flex-direction: inherit;   
+ justify-content: center;
+}
+table.tabla-detail-users{
+    display: flex;
+    justify-content: center;
+    padding-left: 8px;
+    font-size: larger;
+    background-color: #dbc1ac;
+    border: 1px solid #634832;
+    border-radius: 4%;
+    min-width: 25rem;
+    max-width: 30rem;
+    margin: 2% 2% 2% 2%;
+    color: #38220f;
+}
+div.button{
+    font-size: x-larger;
+    display: flex;
+    align-items: center;
+    color:#967259;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1em;
+}
+div.button a input{
+    color: #634832;
+    background-color: #dbc1ac;
+    margin: 1em 3em;
+    font: 1em sans-serif;
+    border-color: #38220f;
+    border-radius: 2em;
+    width: 8rem;
+    height: 2rem;
+}
+/*vista delete usuario*/
+.button-delete{color: #634832;
+    font: 0.8em sans-serif;
+    border-radius: 5em;
+    border-color: #38220f;
+    background-color: #dbc1ac;
+    width: 5rem;
+    height: 2rem;
+    margin: 1em 1em 2em 7em;
+}

@@ -42,10 +42,7 @@ module.exports = (sequelize, dataTypes) => {
             as:"Profile_user",
             foreignKey: "profile_id",
         })
-
-      
-        
-    }
+      }
  
     return Users;
 }

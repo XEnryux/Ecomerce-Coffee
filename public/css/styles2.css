@@ -95,16 +95,6 @@ nav > ul > li a {
     font-weight: 500;
 }
 
-#Cafes{
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 2%;
-    margin: 2%;
-    min-height: fit-content;
-}
 
 #Cafes article{
     box-sizing: border-box;
@@ -120,17 +110,8 @@ nav > ul > li a {
     background-color:	#dbc1ac;
     color: #38220f;
     justify-content: center;
-    font-size: 3em
-    }
-
-.slider-container {
-        display: flex;
-        width: 100%;
-        height: 100vh;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-}
-      
+    font-size: 2.5rem
+    }    
 .slider-container img {
         flex: 0 0 100%;
         width: 100%;
@@ -152,10 +133,6 @@ article.product{
 hr.solid{
     border-top: 3px solid #634832;
     margin: 10px;
-}
-section{
-    background-color: #ece0d1;
-
 }
 
 .container{

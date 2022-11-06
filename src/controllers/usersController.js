@@ -15,10 +15,11 @@ const Profile = db.Profile_user;
 const bcryptjs = require('bcryptjs');
 const { profile } = require('console');
 const { Sequelize } = require('../database/models');
-const { OP } = require("Sequelize") 
+const Op = Sequelize.Op 
+
 /* Para usar el json en Data */
-const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/userDataBase.json');
+// const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const usersController ={
 
@@ -36,12 +37,16 @@ const usersController ={
         },
 
     search: (req, res) => {
-        let target = req.body
-        Users.findAll({where:{ name:{[OP.like]:'%req.params.id'} }})
+        console.log(req.params)
+         Users.findAll({
+            where:{ 
+                name:{[db.Sequelize.Op.like]:'%s%'} }
+                //falta la logica para que traiga lo que pide por parametro
+            })
         // console.log('1')
-            .then( user => {
+            .then( users => {
                 //res.send(user)
-                res.render( 'users/usersResults', {user} )
+                res.render( 'users/usersResults', {users} )
             })
             .catch( error => {
                 console.log( error );
@@ -50,7 +55,7 @@ const usersController ={
     },
             
     detail: (req, res) => {
-		Users.findByPk(req.params.id)
+		Users.findByPk(req.params.id, {include:[{association:"Profile_user"}]})
             .then( user => {
                 res.render('users/detail', {user: user});
             })
@@ -79,17 +84,15 @@ const usersController ={
             email: req.body.email,
             adress: req.body.adress,
             profile_id: req.body.profile_id, 
-            image: req.body.image,                 
-                         
+            image: req.body.image 
         },
         { where: {id: userId}             
-    })         
+        })         
         .then(()=> {             
-            return res.redirect('/')
+            return res.redirect('/users/detail/' + req.params.id)
         })            
-    
         .catch(error => res.render('error'))
-},
+    },
 
     login: (req, res) => {
             res.render('users/login');
@@ -104,19 +107,9 @@ const usersController ={
         
     },
 
-//processRegister
+//processRegister//
+
     create: (req, res) => {
-//             users.push(newUser)
-//             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-//             res.redirect('/users/login'); //Si no hay errores hace el registr
-//          }else {
-//            // console.log(errors.errors);
-// //            console.table(errors.mapped())
-//             return res.render('users/register', {
-//                 errors: errors.errors,
-//                 oldData: req.body
-//             })
-//         } 
         let errors = validationResult(req);
         //console.log(errors)
         if (errors && errors.errors.length == 0){
@@ -133,12 +126,11 @@ const usersController ={
                 .then(()=>{
                     return res.redirect('/users/login')
                  })
-                .catch(error => res.send(error))
+                .catch(error => res.render(error))
                 }else {
                    // console.log(errors.errors);
                    // console.table(errors.mapped())
-                
-                   return res.render('/register', {
+                  return res.render('users/register', {
                        errors: errors.errors,
                        oldData: req.body
                     })       
@@ -152,7 +144,7 @@ const usersController ={
             console.log("validando usuario");
             console.log(req.body.email);
             console.log(req.body.pass);
-            console.log(errors);
+            console.log(errors.errors);
             if (errors.isEmpty()) {
                 let users = Users.findAll({
                     where: {email: req.body.email,},
@@ -164,7 +156,7 @@ const usersController ={
                     userToLogin = users.email;
                     req.session.usuario = userToLogin;
                 }
-                if (userToLogin == undefined) {
+                if (userToLogin === undefined) {
                     res.render('users/login', {
                         errors:
                             { msg: "Usuario o contraseña invalidos" }
@@ -174,7 +166,7 @@ const usersController ={
             };
         }
     },
-    
+
      delete: function (req,res) {
     
         Users.findByPk(req.params.id)

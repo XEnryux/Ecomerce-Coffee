@@ -3,21 +3,23 @@
     <body>
       <%- include('./../partials/header') -%>
 
-   <h2>Esta es la lista de usuarios</h2> 
-
-   <ul>
+   <h2 class="list">Listado de usuarios</h2> 
+   <div class="contenedor-list">
+   <ul class="list">
       <%for (let i = 0; i < users.length; i ++) {%>
-    <li>
-      <a href="/users/detail/<%= users[i].id %>"><%= users[i].name %></a>  
-    <li>
+        <li>
+          <a href="/users/detail/<%= users[i].id %>"><%= users[i].name %></a>  
+        <li>
       <% } %>
    </ul>
-    
-    <h3>Buscar usuario</h3>
-    <form action="/users/search" method="GET">
-    <input type="text" name="search">
-    <input type="submit" value="Buscar">
-    </form>
+  </div>
+        <h2 class="list">Buscar usuario</h2>
+        <div class="search">
+            <form action="/users/search" method="GET">
+              <input type="text" name="search" class="search">
+              <input type="submit" value="Buscar" class="search">
+            </form>
+        </div>
     </body>
       <!-- footer -->
       <%- include('../partials/footer') %>   
