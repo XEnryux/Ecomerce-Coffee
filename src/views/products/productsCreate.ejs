@@ -16,30 +16,41 @@
     <p><label>Descripción</label></p>
     <textarea name="description" id="description" class="description" cols="30" rows="10"></textarea><br>
     
-    <p><label>Imagen</label></p>
-    <input type="file" name='image' class="form-input"><br>   
-    
-    <p><label>Categoría</label></p>
-    <select value="categoria" name="category" class="categoria" required> 
-      
-      <p> <option value="1">Grano</option></p>
-      <p> <option value="2">Molido</option></p>
-      <p> <option value="3">Premium</option></p>
-      <p> <option value="4">Saquitos</option></p>
-      <p> <option value="4">Chocolate</option></p>
-        </select><br>
+    <!-- <p><label>Imagen</label></p>
+    <input type="file" name='image' class="form-input"><br>    -->
 
     <p><label>Presentación</label></p>
-    <input type="text"  name="presentation" class="presentacion" required><br>
+    <select value="presentation" name="presentation" class="presentation" required> 
+       <option value="" disabled selected>Elegir presentacion</option>
+       
+       <% presentations.forEach(presentation => { %>
+         <option value="<%= presentation.id %>" ><%= presentation.quantity %></option>
+      
+         <%  }) %>
+     
+         </select><br> 
+    
+    <p><label>Categoría</label></p>
+    <select value="category" name="category" class="category" required> 
+      <option value="" disabled selected>Elegir categoria</option>
+
+      <% categories.forEach(category => { %>
+        <option value="<%= category.id %>" ><%= category.category %></option>
+     
+        <%  }) %>
+    
+        </select><br>
+
+  
     
     <p><label>Precio</label></p>
     <input type="text" name="price" class="precio" required><br>
     
-    <p><label>Destacado</label></p>
+    <!-- <p><label>Destacado</label></p>
     <select> 
     <p><option value="true">Si</option></p>
     <p><option value="false">No</option></p>
-    </select><br>
+    </select><br> -->
     
     <input type="submit"  value="Crear" class="create"><br>
     
