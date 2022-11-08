@@ -3,15 +3,18 @@
 
   <body>
     <%- include('../partials/header') -%>
-    
+      
 <div>
   <div class="row">
          <div class="col-12">
-             <h2 class="list">Nombre de Usuario:  <%= user.name %></h2>
+             <h2 class="list">Eliminar usuario</h2>
          </div>
      </div>
      <div class="detail-usuario">
       <table class="tabla-detail-users">
+        <tr>
+          <td><h4>Nombre de Usuario:</h4></td>  
+          <td><h3><%= user.name %></h3></td>
         <tr>
           <td><h4>Foto</h4></td>
           <td><img src="/images/usersImage/<%= user.image %>" width="150px"><td>

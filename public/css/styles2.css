@@ -489,7 +489,7 @@ main{
 
 }
 
-.enviar, .borrar{
+.enviar .borrar{
     border: #634832;
     border-radius: 1em;
 }

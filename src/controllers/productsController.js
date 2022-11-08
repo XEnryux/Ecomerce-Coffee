@@ -23,7 +23,10 @@ const { gzip } = require('zlib');
 const productsController = {
 
 	products:(req, res) => {
-		 Product.findAll()
+		 Product.findAll({
+			offset:4,
+			limit:8
+		 })
 	      .then( products => {
 		    res.render( 'products/products', {products} )
 	})
@@ -58,8 +61,7 @@ const productsController = {
                 image: "default-image.jpg",
 	            category_id: req.body.category,
 	            presentation_id: req.body.presentation,
-	            price: req.body.price,
-               
+	            price: req.body.price              
                 })
                 .then(()=>{
                     return res.redirect('/products')
@@ -89,11 +91,10 @@ const productsController = {
 		image: "default-image.jpg",
 		category_id: req.body.category,
 		presentation_id: req.body.presentation,
-		price: req.body.price,
-	   
-		},{ where: { id : productid }
-			
-	})
+		price: req.body.price	   
+		},{ 
+			where: { id : productid }
+		})
 		.then(()=>{
 			return res.redirect('/products')
 		 })
@@ -101,7 +102,7 @@ const productsController = {
 	}, 
 
         // Delete - Delete one product from DB
-	delete: function (req,res) {
+	delete: (req,res) => {
         let productId = req.params.id;
         Product
         .findByPk(productId)

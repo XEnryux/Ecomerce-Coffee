@@ -64,12 +64,12 @@ nav > ul > li a {
 /*Cuerpo*/
 
 #cuerpo{
-    padding: 2%;
-    margin: 2%;
+    padding: 0.5% ;
+    margin: 0.5%;
     min-height: fit-content;
 }
 
-#BannerPpal{
+article#BannerPpal{
     display: flex;
     align-items: flex-start;
     justify-content:flex-start;
@@ -78,7 +78,7 @@ nav > ul > li a {
     background-size: cover;
     background-repeat: no-repeat;
     height:fit-content;
-    padding: 10%;
+    padding: 8%;
     background-image: url(/images/manos.jpg);
     text-decoration: none;
     color: #634832;
@@ -170,6 +170,9 @@ footer ul li{
     flex-direction: column;
 }
 
+li.subItemFooter a{
+    text-decoration: none;
+}
 /*    home    */
 #Items{
     margin-bottom: 18rem;
@@ -232,9 +235,9 @@ ul.list a:link, a:visited{
 
 /*users detail*/
 .detail-usuario{
- display: flex;
- flex-direction: inherit;   
- justify-content: center;
+    display: flex;
+    flex-direction: inherit;   
+    justify-content: center;
 }
 table.tabla-detail-users{
     display: flex;
@@ -269,7 +272,9 @@ div.button a input{
     height: 2rem;
 }
 /*vista delete usuario*/
-.button-delete{color: #634832;
+.button-delete{
+    color: #634832;
+    
     font: 0.8em sans-serif;
     border-radius: 5em;
     border-color: #38220f;
@@ -277,4 +282,17 @@ div.button a input{
     width: 5rem;
     height: 2rem;
     margin: 1em 1em 2em 7em;
+}
+/*carrito*/
+table.table-cart{
+    display: flex;
+    align-items: center;
+    border: 1px solid #967259;
+    }
+tr.table-titulo{
+    background-color:#967259;
+    text-align: center;
+}
+tr{
+    text-align: center;
 }

@@ -4,83 +4,88 @@
 
   <body>
     <%- include('partials/header') %>
+  
     <section>
-      <div class="container">
-        <div class="blank"></div>
-        <div class="total-price">PRECIO</div>
-        <div class="quantity">CANT</div>
-        <div class="total-price">TOTAL</div>
-      </div>
-      <hr class="solid" />
-      <div class="container">
-        <div class="product">
-          <img src="/images/productsImage/3A-cafe.jpg" alt="img product 1" /> Café en grano
-        </div>
-        <div class="price">Precio $1150</div>
-        <form class="form" action="/cant" method="get">
-          <select name="quantity" id="quantity">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        </form>
-        <div class="total-price">$ #</div>
-      </div>
-      <div class="container">
-        <div class="product">
-          <img src="/images/productsImage/2A-cafe.jpg" alt="img product 2" />Café molido
-        </div>
-        <div class="price">Precio $5820</div>
-        <form class="form" action="/cant" method="get">
-          <select name="quantity" id="quantity">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        </form>
-        <div class="total-price">$ #</div>
-      </div>
-      <div class="container">
-        <div class="product">
-          <img src="/images/productsImage/12A-cafe.jpg" alt="img product 3" />Café especial
-        </div>
-        <div class="price">Precio $10000</div>
-        <form class="form" action="/cant" method="get">
-          <select name="quantity" id="quantity">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        </form>
-        <div class="total-price">$ #</div>
-      </div>
+ 
+<table class="table-cart">
+<tr class="table-titulo">
+<td></td>
+<td><h4>Producto</h4></td>
+<td><h4>Precio</h4></td>
+<td><h4>Cantidad</h4></td>
+<td><h4>Total</h4></td>
+</tr>
+<tr>
+<td><img src="/images/productsImage/3A-cafe.jpg" alt="img product 1" width='60'></td>
+<td><p>Cafe en grano</p></td>
+<td><p>$1.150</p></td> 
+<td><form class="form" action="/cant" method="get">
+  <select name="quantity" id="quantity">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+  </select>
+</form></td>
+<td>$1.150</td> 
+</tr>
+<tr>
+<td><img src="/images/productsImage/2A-cafe.jpg" alt="img product 2" width="60"></td>
+<td><p>Café molido</p></td>
+<td>$5.820</td>
+<td><form class="form" action="/cant" method="get">
+<select name="quantity" id="quantity">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</form></td>
+<td>$5.820</td>
+</tr>
+<tr>
+<td><img src="/images/productsImage/12A-cafe.jpg" alt="img product 3" width="60"></td>
+<td><p>Café especial</p></td>
+<td>$10.000</td>
+<td><form class="form" action="/cant" method="get">
+<select name="quantity" id="quantity">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+</form></td>
+<td>$10.000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><h4>TOTAL</h4></td>
+<td><h4>$16.970</h4></td>
+</table>
 
-      <hr class="solid" />
-      <div class="total">TOTAL $#</div>
     </section>
     <section class="recently-viewed">
-      <h3 class="subtitle">Recientemente vistos</h3>
+      <h2 class="list">Tambien te puede interesar</h2>
       <hr class="solid2" />
 
       <div class="viewed-container">

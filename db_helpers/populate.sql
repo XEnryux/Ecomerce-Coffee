@@ -26,7 +26,7 @@ INSERT INTO cafe_antonia.products (id, name, description, image, price, offer, c
 (3, "Café Blanco", "Sabor intenso, aroma fuerte y persistente. Ideal para los amantes del café.", "3A-cafe.jpg", 3242.28, 1, 3, 1),
 (4, "Café Sensaciones saquitos", "Café tostado con azúcar blanco molido", "4A-cafe.jpg", 640, 0, 4, 3),
 (5, "Café Molido Intenso saquitos", "El café ideal para la oficina", "5A-cafe.jpg", 530, 0, 4, 3),
-(6, "Café Franja Blanca", "Blend de Colombia y Brasil con un tostado natural tipo suizo y un torrado español. Sabor fino, fuerte y natural con un aroma fino, pronunciado y fuerte. Ideal para tomar solo o con leche.", "6B-cafe.jpg", 5820, 0, 1, 2),
+(6, "Café Franja Blanca", "Blend de Colombia y Brasil con un tostado natural tipo suizo y un torrado español. Sabor fino, fuerte y natural con un aroma fino, pronunciado y fuerte. Ideal para tomar solo o con leche.", "6A-cafe.jpg", 5820, 0, 1, 2),
 (7, "Fluminense", "Blend de Brasil con un tostado natural tipo suizo y un torrado español. Sabor y aroma fuerte. Ideal para tomar solo o con leche.", "7A-cafe.jpg", 5310, 0, 1, 2),
 (8, "Express", "Blend de Brasil con un tostado natural tipo suizo. Sabor delicado, profundo y pronunciado con un aroma fuerte y persistente. Para tomar solo o con leche.", "8A-cafe.jpg", 9400, 0, 1, 2),
 (9, "Descafeinado", "Blend Colombiano con un tostado natural tipo italiano. Sabor delicado y suave, con un aroma fino y persistente. Para tomar solo o con leche.", "9A-cafe.jpg", 5310, 0, 1, 2),
